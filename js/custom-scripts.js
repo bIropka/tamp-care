@@ -57,18 +57,23 @@ $(window).ready(function () {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 981,
                 settings: {
+                    slidesToShow: 3
                 }
             },
             {
-                breakpoint: 980,
+                breakpoint: 769,
                 settings: {
+                    slidesToShow: 2,
+                    arrows: false
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 480,
                 settings: {
+                    slidesToShow: 1,
+                    arrows: false
                 }
             }
 
@@ -89,6 +94,11 @@ $(window).ready(function () {
     $('.burger').click(function() {
         $(this).toggleClass('active');
         $('nav').toggleClass('active');
+    });
+
+    $('.promo-text .show-more').click(function() {
+        $(this).toggleClass('active');
+        $(this).parent().toggleClass('active');
     });
 
 });
