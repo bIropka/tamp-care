@@ -224,6 +224,11 @@ section {
   display: block;
   padding: 100px 0;
 }
+@media (max-width: 980px) {
+  section {
+    padding: 35px 0;
+  }
+}
 h2 {
   font-family: 'Panton Bold', sans-serif;
   font-size: 55px;
@@ -942,6 +947,43 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 .top-block h1 br + .text-large {
   margin-left: 90px;
 }
+@media (max-width: 980px) {
+  .top-block h1 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background: none;
+    color: #333;
+    position: static;
+    padding: 30px 0;
+  }
+  .top-block h1 span.text-large {
+    display: inline;
+    font-size: 36px;
+  }
+  .top-block h1 span.text-large:first-of-type {
+    margin-left: 0;
+  }
+  .top-block h1 span.text-middle {
+    margin-left: 5px;
+  }
+  .top-block h1 span.text-large-thin {
+    margin: 0;
+    font-size: 32px;
+    display: block;
+  }
+  .top-block h1 span:last-of-type {
+    text-align: center;
+    font-size: 22px;
+    padding: 0;
+    margin-top: 5px;
+    color: #c90742;
+  }
+  .top-block h1 br + .text-large {
+    margin-left: 0;
+  }
+}
 .top-block .background-blue-left {
   display: block;
   width: 50%;
@@ -988,9 +1030,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   display: block;
   width: 50%;
   height: 100%;
-  background: url(../source/images/background-top-right.jpg) no-repeat top right;
+  background: url(../source/images/background-top-right.jpg) no-repeat top left;
   position: absolute;
-  right: 0;
+  left: 50%;
   top: 0;
 }
 .top-block .heating-services {
@@ -1106,6 +1148,94 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   top: 0;
   left: -15px;
 }
+@media (max-width: 980px) {
+  .top-block {
+    flex-wrap: wrap;
+    height: auto;
+    background: none;
+  }
+  .top-block:before,
+  .top-block:after {
+    display: none;
+  }
+  .top-block .heating-services {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    padding: 0 0 90px 0;
+  }
+  .top-block .heating-services a {
+    display: block;
+    width: 135px;
+    height: 114px;
+    background: url(../source/images/icon-sun-single.png) no-repeat center;
+    position: static;
+    float: right;
+    margin-right: 5px;
+  }
+  .top-block .heating-services a img {
+    display: none;
+  }
+  .top-block .heating-services .title {
+    font-size: 32px;
+    color: #e53072;
+    position: absolute;
+    top: 125px;
+    right: 0;
+    width: 100%;
+    padding-right: 5px;
+    text-align: right;
+  }
+  .top-block .heating-services .title span {
+    text-align: right;
+    font-size: 29px;
+    color: #e53072;
+    margin: 0;
+  }
+  .top-block .heating-services .title span:before,
+  .top-block .heating-services .title span:after {
+    display: none;
+  }
+  .top-block .cooling-services {
+    position: static;
+    padding: 0 0 90px 0;
+  }
+  .top-block .cooling-services a {
+    display: block;
+    width: 135px;
+    height: 114px;
+    background: url(../source/images/icon-snow-single.png) no-repeat center;
+    position: static;
+    margin-left: 5px;
+  }
+  .top-block .cooling-services a img {
+    display: none;
+  }
+  .top-block .cooling-services .title {
+    font-size: 32px;
+    color: #2366c9;
+    position: absolute;
+    top: 125px;
+    right: 0;
+    width: 100%;
+    padding-left: 5px;
+  }
+  .top-block .cooling-services .title span {
+    text-align: left;
+    font-size: 29px;
+    color: #2366c9;
+    margin: 0;
+  }
+  .top-block .cooling-services .title span:before,
+  .top-block .cooling-services .title span:after {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  .top-block {
+    background: url(../source/images/background-decor-left.png) no-repeat center bottom;
+  }
+}
 /***********************************************************************************************************************
 *********** why-choose-us
 ***********************************************************************************************************************/
@@ -1156,9 +1286,31 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 .why-choose-us .why-choose-us-item:nth-of-type(5) {
   margin-left: 100px;
 }
+@media (max-width: 980px) {
+  .why-choose-us .why-choose-us-item {
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    margin: 15px 0;
+  }
+  .why-choose-us .why-choose-us-item:nth-of-type(1),
+  .why-choose-us .why-choose-us-item:nth-of-type(4),
+  .why-choose-us .why-choose-us-item:nth-of-type(5) {
+    margin: 15px 0;
+  }
+  .why-choose-us .why-choose-us-item:nth-of-type(5) br {
+    display: none;
+  }
+}
 .why-choose-us .why-choose-us-icon {
   width: 119px;
   margin: 0 auto 20px;
+}
+@media (max-width: 480px) {
+  .why-choose-us .why-choose-us-icon {
+    width: 75px;
+    margin: 0 auto 10px;
+  }
 }
 .why-choose-us .why-choose-us-text {
   font-size: 20px;
@@ -1169,6 +1321,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   font-family: 'Panton Bold', sans-serif;
   font-size: 26px;
   color: #4f4f4f;
+}
+@media (max-width: 480px) {
+  .why-choose-us .why-choose-us-text {
+    font-size: 14px;
+  }
+  .why-choose-us .why-choose-us-text span {
+    font-size: 13px;
+  }
 }
 /***********************************************************************************************************************
 *********** our-services
