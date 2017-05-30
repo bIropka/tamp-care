@@ -2381,6 +2381,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   width: 760px;
   padding: 50px 80px;
 }
+@media (max-width: 768px) {
+  .window .window-inner.form-consultation {
+    width: 320px;
+    padding: 40px 20px;
+  }
+}
 .window .window-inner:before {
   content: '';
   display: block;
@@ -2583,6 +2589,27 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  .window .title {
+    font-size: 28px;
+  }
+  .window .sub-title {
+    font-size: 16px;
+  }
+  .window button span {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+  }
+  .window button:hover {
+    background: linear-gradient(to top, #fc609a, #c90742 70%);
+  }
+  .window button:active {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
 }
 .window.window-successful .window-inner {
   width: 320px;
