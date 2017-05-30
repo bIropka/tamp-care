@@ -109,7 +109,7 @@ $(window).ready(function () {
         return false;
     });
 
-    $('.to-schedule').click(function() {
+    $('.callback').click(function() {
         $('.window-consultation').fadeIn();
     });
 
