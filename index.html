@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="wrapper" id="home">
 
     <header role="banner">
 
@@ -21,17 +21,15 @@
             </div>
 
             <nav>
-                <a href="#"><span>HOME</span></a>
-                <a href="#"><span>SERVICES</span></a>
-                <a href="#"><span>WHY US</span></a>
-                <a href="#"><span>ABOUT</span></a>
-                <a href="#"><span>PROMOTIONS</span></a>
-                <a href="#"><span>FAQ</span></a>
+                <a href="#home"><span>HOME</span></a>
+                <a href="#services"><span>SERVICES</span></a>
+                <a href="#why-us"><span>WHY US</span></a>
+                <a href="#about-us"><span>ABOUT</span></a>
             </nav>
 
             <div class="work-schedule">
                 <span class="work-time"><span>24/7</span></span>
-                <a href="#" class="to-schedule"><span>Schedule an<br> appointment</span></a>
+                <button class="to-schedule"><span>Schedule an<br> appointment</span></button>
                 <a href="tel:8005473818" class="phone-number">(800) 547-3818</a>
             </div>
 
@@ -55,7 +53,7 @@
 
                 <div class="title">HEATING<span>SERVICES</span></div>
 
-                <a href="#"><img src="source/images/icon-sun.png" alt="heating"></a>
+                <a><img src="source/images/icon-sun.png" alt="heating"></a>
 
             </div>
 
@@ -67,7 +65,7 @@
 
                 <div class="title">COOLING<span>SERVICES</span></div>
 
-                <a href="#"><img src="source/images/icon-snow.png" alt="cooling"></a>
+                <a><img src="source/images/icon-snow.png" alt="cooling"></a>
 
             </div>
 
@@ -75,7 +73,7 @@
 
     </section>
 
-    <section class="why-choose-us">
+    <section class="why-choose-us" id="C">
 
         <div class="wrapper-inner">
 
@@ -129,7 +127,7 @@
 
     </section>
 
-    <section class="our-services">
+    <section class="our-services" id="services">
 
         <div class="wrapper-inner">
 
@@ -189,7 +187,7 @@
 
     </section>
 
-    <div class="promo-block">
+    <div class="promo-block" id="about-us">
 
         <div class="wrapper-inner">
 
@@ -259,7 +257,7 @@
 
     </section>
 
-    <section class="our-guarantees">
+    <section class="our-guarantees" id="guarantees">
 
         <div class="wrapper-inner">
 
@@ -273,7 +271,6 @@
                     </a>
                     <h3>Optimized Performance</h3>
                     <div class="text">We promise to choose your unit with careful thought and consideration for the unique needs of your home or business.</div>
-                    <a href="#" class="show-more">Read more guarantees</a>
                 </div>
 
                 <div class="guarantees-item">
@@ -282,7 +279,6 @@
                     </a>
                     <h3>Absolute Satisfaction</h3>
                     <div class="text">At TempCare, we are committed to delivering the gold standard of HVAC service throughout Chicagoland.</div>
-                    <a href="#" class="show-more">Read more guarantees</a>
                 </div>
 
                 <div class="guarantees-item">
@@ -291,7 +287,6 @@
                     </a>
                     <h3>Defect-Free Equipment</h3>
                     <div class="text">We are so confident in the superior quality of our equipment that we will replace the entire unit if your air conditioner or heat pump.</div>
-                    <a href="#" class="show-more">Read more guarantees</a>
                 </div>
 
                 <div class="guarantees-item">
@@ -300,7 +295,6 @@
                     </a>
                     <h3>Superior Air Quality</h3>
                     <div class="text">At TempCare, we offer industry-leading air filtration systems that will leave your home cleaner and fresher, guaranteed.</div>
-                    <a href="#" class="show-more">Read more guarantees</a>
                 </div>
 
                 <div class="guarantees-item">
@@ -309,7 +303,6 @@
                     </a>
                     <h3>Up Front Pricing</h3>
                     <div class="text">At TempCare, we are committed to giving you the absolute best customer service experience for a fair and affordable fee. </div>
-                    <a href="#" class="show-more">Read more guarantees</a>
                 </div>
 
                 <div class="guarantees-item">
@@ -318,7 +311,6 @@
                     </a>
                     <h3>No Overtime Charges</h3>
                     <div class="text">We understand that a high-quality result takes time, but that doesn’t mean that your investment should change.</div>
-                    <a href="#" class="show-more">Read more guarantees</a>
                 </div>
 
             </div>
@@ -365,17 +357,12 @@
                 <div class="footer-links">
                     <div class="title">About Us</div>
                     <a href="#">Why Us</a>
-                    <a href="#">Guarantees</a>
-                    <a href="#">Promotions</a>
-                    <a href="#">Financing</a>
-                    <a href="#">Refer a Friend</a>
+                    <a href="#guarantees">Guarantees</a>
                 </div>
 
                 <div class="footer-links">
                     <div class="title">SERVICES</div>
-                    <a href="#">Heating</a>
-                    <a href="#">Cooling</a>
-                    <a href="#">Other Services</a>
+                    <a href="#services">Other Services</a>
                 </div>
 
                 <div class="map-service">
@@ -434,7 +421,7 @@
                     <div class="text">main line:</div>
                     <a class="link-phone" href="tel:8882055554">888-205-5554</a>
                     <div class="social-links">
-                        <a href="#"><img src="source/images/icon-facebook.png" alt="social"></a>
+                        <a href="https://www.facebook.com/tempcarehvac" target="_blank"><img src="source/images/icon-facebook.png" alt="social"></a>
                         <a href="#"><img src="source/images/icon-google-plus.png" alt="social"></a>
                         <a href="#"><img src="source/images/icon-instagram.png" alt="social"></a>
                     </div>
@@ -450,6 +437,28 @@
         </div>
 
     </footer>
+
+</div>
+
+<div class="window window-consultation">
+
+    <form action="#" class="form-consultation window-inner">
+
+        <div class="close-window"></div>
+
+        <div class="title">get free consultation</div>
+
+        <div class="sub-title">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</div>
+
+        <label><input type="text" placeholder="Name"></label>
+
+        <label><input type="text" placeholder="Phone"></label>
+
+        <label><input type="text" placeholder="Email"></label>
+
+        <button type="submit"><span>GET FREE CONSULTATION</span></button>
+
+    </form>
 
 </div>
 

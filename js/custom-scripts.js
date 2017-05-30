@@ -101,4 +101,26 @@ $(window).ready(function () {
         $(this).parent().toggleClass('active');
     });
 
+    $('a[href^="#"]').click(function(){
+
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top - 50}, 800);
+
+        return false;
+    });
+
+    $('.to-schedule').click(function() {
+        $('.window-consultation').fadeIn();
+    });
+
+    $('.window').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.window-inner')).length) {
+            $('.window').fadeOut();
+        }
+        if ($target.hasClass('close-window')){
+            $('.window').fadeOut();
+        }
+    });
+
 });
