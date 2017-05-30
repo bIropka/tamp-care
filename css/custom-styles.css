@@ -769,6 +769,11 @@ footer[role='contentinfo'] .footer-top .wrapper-inner {
   justify-content: space-around;
   align-items: flex-start;
 }
+@media (max-width: 980px) {
+  footer[role='contentinfo'] .footer-top .wrapper-inner {
+    flex-wrap: wrap;
+  }
+}
 footer[role='contentinfo'] .footer-top:before {
   content: '';
   display: block;
@@ -957,6 +962,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
     padding: 40px 0;
   }
   footer[role='contentinfo'] .footer-links {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  footer[role='contentinfo'] .footer-links a:hover:before {
     display: none;
   }
   footer[role='contentinfo'] .map-service {
