@@ -123,4 +123,31 @@ $(window).ready(function () {
         }
     });
 
+    $('form').validatr({
+        showall: true,
+        valid: function() {
+
+            var formID = $(this).attr('id');
+
+            var formNm = $('#' + formID);
+            var scriptFile;
+            if (formID == 'form-consultation') scriptFile = 'mail-consultation.php';
+            if (formID == 'form-request-service') scriptFile = 'mail-request-service.php';
+            $.ajax({
+                type: "POST",
+                url: scriptFile,
+                data: formNm.serialize(),
+                success: function (data) {
+                    $('.window').fadeOut();
+                    $('.window-successful').fadeIn();
+                },
+                error: function (data) {
+                    $('.window').fadeOut();
+                    $('.window-error').fadeIn();
+                }
+            });
+            return false;
+        }
+    });
+
 });

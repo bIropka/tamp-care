@@ -323,19 +323,23 @@
 
         <div class="wrapper-inner">
 
-            <div class="title">Request Service</div>
+            <form action="mail-request-service.php" id="form-request-service">
 
-            <div class="sub-title">You may request an appointment by filling out the form below.</div>
+                <div class="title">Request Service</div>
 
-            <label><input type="text" placeholder="Name"></label>
+                <div class="sub-title">You may request an appointment by filling out the form below.</div>
 
-            <label><input type="text" placeholder="Email"></label>
+                <label><input type="text" id="request-service-name" name="request-service-name" placeholder="Name" required></label>
 
-            <label><input type="text" placeholder="Address"></label>
+                <label><input type="text" id="request-service-email" name="request-service-email" placeholder="Email" required></label>
 
-            <label><input type="text" placeholder="Phone"></label>
+                <label><input type="text" id="request-service-address" name="request-service-address" placeholder="Address"></label>
 
-            <button type="submit"><span>send</span></button>
+                <label><input type="text" id="request-service-phone" name="request-service-phone" placeholder="Phone" required></label>
+
+                <button type="submit"><span>send</span></button>
+
+            </form>
 
         </div>
 
@@ -442,7 +446,7 @@
 
 <div class="window window-consultation">
 
-    <form action="#" class="form-consultation window-inner">
+    <form action="mail-consultation.php" class="form-consultation window-inner" id="form-consultation">
 
         <div class="close-window"></div>
 
@@ -450,15 +454,35 @@
 
         <div class="sub-title">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</div>
 
-        <label><input type="text" placeholder="Name"></label>
+        <label><input type="text" id="consultation-name" name="consultation-name" placeholder="Name" required></label>
 
-        <label><input type="text" placeholder="Phone"></label>
+        <label><input type="text" id="consultation-phone" name="consultation-phone" placeholder="Phone" required></label>
 
-        <label><input type="text" placeholder="Email"></label>
+        <label><input type="text" id="consultation-email" name="consultation-email" placeholder="Email" required></label>
 
         <button type="submit"><span>GET FREE CONSULTATION</span></button>
 
     </form>
+
+</div>
+
+<div class="window window-successful">
+
+    <div class="window-inner">
+
+        <div class="title">successful!</div>
+
+    </div>
+
+</div>
+
+<div class="window window-error">
+
+    <div class="window-inner">
+
+        <div class="title">error!</div>
+
+    </div>
 
 </div>
 

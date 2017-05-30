@@ -2623,7 +2623,7 @@ footer[role='contentinfo'] {
 ***********************************************************************************************************************/
 
 .window {
-  display: block;
+  display: none;
   width: 100%;
   height: 100vh;
   overflow: auto;
@@ -2633,7 +2633,7 @@ footer[role='contentinfo'] {
   left: 0;
   z-index: 1002;
 
-  form {
+  .window-inner {
     display: block;
     background: #e7ebed;
     position: absolute;
@@ -2645,7 +2645,6 @@ footer[role='contentinfo'] {
 
     &.form-consultation {
       width: 760px;
-      height: 560px;
       padding: 50px 80px;
     }
 
@@ -2859,6 +2858,102 @@ footer[role='contentinfo'] {
       -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, .7);
       -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, .7);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, .7);
+    }
+
+  }
+
+  &.window-successful {
+
+    .window-inner {
+      width: 320px;
+      padding: 30px;
+
+      &:before {
+        width: 25px;
+        height: 25px;
+        border-left: 2px solid green;
+        border-bottom: 2px solid green;
+      }
+
+      &:after {
+        width: 25px;
+        height: 25px;
+        border-right: 2px solid green;
+        border-bottom: 2px solid green;
+      }
+
+    }
+
+    .title {
+      color: green;
+
+      &:before {
+        width: 25px;
+        height: 25px;
+        border-left: 2px solid green;
+        border-top: 2px solid green;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-right: 2px solid green;
+        border-top: 2px solid green;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    }
+
+  }
+
+  &.window-error {
+
+    .window-inner {
+      width: 320px;
+      padding: 30px;
+
+      &:before {
+        width: 25px;
+        height: 25px;
+        border-left: 2px solid @color-crimson;
+        border-bottom: 2px solid @color-crimson;
+      }
+
+      &:after {
+        width: 25px;
+        height: 25px;
+        border-right: 2px solid @color-crimson;
+        border-bottom: 2px solid @color-crimson;
+      }
+
+    }
+
+    .title {
+      color: @color-crimson;
+
+      &:before {
+        width: 25px;
+        height: 25px;
+        border-left: 2px solid @color-crimson;
+        border-top: 2px solid @color-crimson;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-right: 2px solid @color-crimson;
+        border-top: 2px solid @color-crimson;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
     }
 
   }
