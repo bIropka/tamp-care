@@ -1,5 +1,9 @@
 $(window).ready(function () {
 
+    setTimeout(function () {
+        $('.wrapper').animate({opacity: 1}, 500);
+    }, 500);
+
     if($(window).scrollTop() > 300) {
         $('header[role="banner"]').addClass('short');
     } else {
@@ -47,10 +51,6 @@ $(window).ready(function () {
         }
 
     });
-
-    setTimeout(function () {
-        $('.slider').animate({opacity: 1}, 500);
-    }, 500);
 
     $('.slider').slick({
         slidesToShow: 5,

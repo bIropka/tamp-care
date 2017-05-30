@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['request-service-name'])) {$name = $_POST['request-service-name'];}
 	if (isset($_POST['request-service-phone'])) {$phone = $_POST['request-service-phone'];}
-	if (isset($_POST['request-service-email'])) {$email = $_POST['request-service-tel'];}
+	if (isset($_POST['request-service-email'])) {$email = $_POST['request-service-email'];}
 	if (isset($_POST['request-service-address'])) {$address = $_POST['request-service-address'];}
 	if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 

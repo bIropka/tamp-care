@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['consultation-name'])) {$name = $_POST['consultation-name'];}
 	if (isset($_POST['consultation-phone'])) {$phone = $_POST['consultation-phone'];}
-	if (isset($_POST['consultation-email'])) {$email = $_POST['consultation-tel'];}
+	if (isset($_POST['consultation-email'])) {$email = $_POST['consultation-email'];}
 	if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
 	$to = "biropka@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
