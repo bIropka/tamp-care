@@ -8,7 +8,13 @@
 *********** slick
 ***********************************************************************************************************************/
 
-@import "slick";
+@import "../lib/slick/slick";
+
+/***********************************************************************************************************************
+*********** font-awesome
+***********************************************************************************************************************/
+
+@import "../lib/font-awesome-4.7.0/less/font-awesome";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////// variables
@@ -550,8 +556,6 @@ header[role='banner'].short {
 
     }
 
-
-
   }
 
   nav {
@@ -647,46 +651,38 @@ header[role='banner'].short {
 
       }
 
+      @media(max-width: 768px) {
+        position: relative;
+        font-size: 0;
+        color: transparent;
+        width: 34px;
+        height: 34px;
+        background: url(../source/images/icon-phone.png) no-repeat 0 0;
+        transform: none;
+        padding: 0;
+        margin-right: 80px;
+
+        span {
+          display: none;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 44px;
+          background: #ccc;
+          position: absolute;
+          right: -15px;
+          top: -5px;
+        }
+
+      }
+
     }
 
     /*.to-schedule {
-      position: absolute;
-      margin: auto;
-      top: 0;
-      right: auto;
-      bottom: 0;
-      left: 0;
-      font-size: 0;
-      color: transparent;
-      width: 34px;
-      height: 34px;
-      background: url(../source/images/icon-phone.png) no-repeat 0 0;
-      transform: none;
-      padding: 0;
 
-      span {
-        display: none;
-      }
-
-      &:after {
-        content: '';
-        display: block;
-        width: 1px;
-        height: 44px;
-        background: #ccc;
-        position: absolute;
-        right: -15px;
-        top: -5px;
-      }
-
-      @media (max-width: 768px) {
-        position: relative;
-        top:  auto;
-        bottom:  auto;
-        left:  auto;
-        right:  auto;
-        margin-right: 80px;
-      }
 
     }*/
 
@@ -1888,6 +1884,8 @@ footer[role='contentinfo'] {
       background: linear-gradient(to bottom, @color-crimson-light, @color-crimson);
       .turned(-18deg);
       margin-top: 15px;
+      position: relative;
+      z-index: 1;
 
       span {
         display: block;
@@ -2277,7 +2275,16 @@ footer[role='contentinfo'] {
     }
 
     @media(max-width: 768px) {
-      width: 100%;
+      width: ~"calc(100% - 80px)";
+
+      .slick-prev {
+        left: -33px;
+      }
+
+      .slick-next {
+        right: -33px;
+      }
+
     }
 
   }

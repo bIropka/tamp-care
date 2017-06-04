@@ -55,6 +55,8 @@ $(window).ready(function () {
     $('.slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
         responsive: [
             {
                 breakpoint: 981,
@@ -65,15 +67,13 @@ $(window).ready(function () {
             {
                 breakpoint: 769,
                 settings: {
-                    slidesToShow: 2,
-                    arrows: false
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    arrows: false
+                    slidesToShow: 1
                 }
             }
 
