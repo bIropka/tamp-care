@@ -4,7 +4,7 @@ $(window).ready(function () {
         $('.wrapper').animate({opacity: 1}, 500);
     }, 500);
 
-    if($(window).scrollTop() > 300) {
+    if ($(window).scrollTop() > 300) {
         $('header[role="banner"]').addClass('short');
     } else {
 
@@ -16,11 +16,11 @@ $(window).ready(function () {
 
     $(window).scroll(function() {
 
-        if($(window).scrollTop() > 300) {
+        if ($(window).scrollTop() > 300) {
             $('header[role="banner"]').addClass('short');
         } else {
 
-            if($(window).width() > 1200) {
+            if ($(window).width() > 1200) {
                 $('header[role="banner"]').removeClass('short');
             }
 
@@ -28,11 +28,11 @@ $(window).ready(function () {
 
     });
 
-    if($(window).width() < 1201) {
+    if ($(window).width() < 1201) {
         $('header[role="banner"]').addClass('short');
     } else {
 
-        if($(window).scrollTop() < 301) {
+        if ($(window).scrollTop() < 301) {
             $('header[role="banner"]').removeClass('short');
         }
 
@@ -40,7 +40,7 @@ $(window).ready(function () {
 
     $(window).resize(function() {
 
-        if($(window).width() < 1201) {
+        if ($(window).width() < 1201) {
             $('header[role="banner"]').addClass('short');
         } else {
 
@@ -149,5 +149,69 @@ $(window).ready(function () {
             return false;
         }
     });
+
+    /* for cooling-page */
+
+    $('.cooling-info .show-more').click(function() {
+        $(this).toggleClass('active');
+        $(this).siblings('p, ul, h3').toggleClass('active');
+    });
+
+    if($(window).width() > 1230) {
+
+        if ($(window).scrollTop() > $('.cooling-advantages').offset().top + 70 && $(window).scrollTop() < $('.cooling-advantages').offset().top + 300)  {
+            showAdvantages();
+        }
+
+        if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
+            $('.cooling-advantages-item').removeClass('active');
+        }
+
+        if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
+            $('.cooling-advantages-item').removeClass('active');
+        }
+
+    }
+
+    $(window).scroll(function() {
+
+        if($(window).width() > 1230) {
+
+            if ($(window).scrollTop() > $('.cooling-advantages').offset().top + 70 && $(window).scrollTop() < $('.cooling-advantages').offset().top + 300)  {
+                showAdvantages();
+            }
+
+            if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
+                $('.cooling-advantages-item').removeClass('active');
+            }
+
+            if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
+                $('.cooling-advantages-item').removeClass('active');
+            }
+
+        }
+
+    });
+
+    var items = $('.cooling-advantages-list').find('.cooling-advantages-item');
+
+    function showAdvantages() {
+
+        var counter = 0;
+
+        (function showAdvantagesInner() {
+
+            $(items[counter++]).addClass('active');
+
+            if (counter >= items.length) {
+                counter = 0;
+                return;
+            }
+
+            setTimeout(showAdvantagesInner, 200);
+
+        })();
+
+    }
 
 });
