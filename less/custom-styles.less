@@ -23,6 +23,10 @@
 @color-blue: #2366c9;
 @color-crimson-light: #fc609a;
 @color-crimson: #c90742;
+@color-green: #00c69a;
+@color-green-light: #00e1af;
+@color-violet: #8d46d5;
+@color-violet-light: #a14af9;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////// mixes
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -57,7 +61,7 @@
 *********** general styles
 ***********************************************************************************************************************/
 
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -105,6 +109,16 @@ a {
 }
 
 button {
+  .smooth(.4s);
+  cursor: pointer;
+
+  &:focus, &:active {
+    outline: none;
+  }
+
+}
+
+input {
   .smooth(.4s);
   cursor: pointer;
 
@@ -245,6 +259,12 @@ h2 {
     font-size: 35px;
   }
 
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 30px;
+  color: @color-blue;
 }
 
 /***********************************************************************************************************************
@@ -2659,6 +2679,588 @@ footer[role='contentinfo'] {
 }
 
 /***********************************************************************************************************************
+*********** cooling-page top-block
+***********************************************************************************************************************/
+
+.cooling-page {
+
+  .top-block {
+    background: url(../source/images/cooling-background-top.jpg) no-repeat center top;
+    background-size: cover;
+    padding: 90px 0 110px;
+    height: auto;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    h1 {
+      display: block;
+      background: none;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      font-family: 'Panton Bold', sans-serif;
+      font-size: 65px;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      position: static;
+
+      span {
+        display: block;
+        font-family: 'Panton Light', sans-serif;
+        font-size: 45px;
+        text-transform: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+}
+
+.cooling-top-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 30px;
+  margin: 120px 0 0 0;
+}
+
+.cooling-top-item {
+  display: block;
+  width: 330px;
+  position: relative;
+  padding: 50px 0 0 0;
+  z-index: 1;
+
+  .image-wrap {
+    display: block;
+    width: 233px;
+    height: 271px;
+    background: url(../source/images/cooling-image-cooler.png) no-repeat 0 0;
+    margin: 0 auto;
+  }
+
+  .icon {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .decor {
+    display: block;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    bottom: 100px;
+    z-index: -1;
+    transform: skew(0, -30deg);
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 8px;
+      background: inherit;
+      position: absolute;
+      left: 0;
+      top: -20px;
+      opacity: .6;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 8px;
+      background: inherit;
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      opacity: .6;
+    }
+
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 53px;
+    background: linear-gradient(to bottom, #fd629b, #e53072 50%);
+    font-family: 'Panton Semibold', sans-serif;
+    color: #fff;
+    line-height: 53px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    padding: 0 40px 0 0;
+    margin: 30px 0 0 0;
+    -webkit-box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .5);
+    -moz-box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .5);
+    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .5);
+    .smooth(0s);
+
+    &:before {
+      content: '';
+      display: block;
+      width: 1px;
+      background: rgba(255, 255, 255, .6);
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      right: 40px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 8px solid #fff;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 16px;
+      margin: auto;
+    }
+
+  }
+
+  &:nth-child(1) {
+
+    .icon {
+      background: @color-blue;
+    }
+
+    .decor {
+      background: linear-gradient(to right, #0053a8, #0c99eb);
+    }
+
+  }
+
+  &:nth-child(2) {
+
+    .icon {
+      background: @color-violet;
+    }
+
+    .decor {
+      background: linear-gradient(to right, @color-violet, @color-violet-light);
+    }
+
+  }
+
+  &:nth-child(3) {
+
+    .icon {
+      background: @color-green;
+    }
+
+    .decor {
+      background: linear-gradient(to right, @color-green, @color-green-light);
+    }
+
+  }
+
+  &:hover {
+
+    .image-wrap {
+      background: url(../source/images/cooling-image-cooler-hover.png) no-repeat 0 0;
+    }
+
+    &:nth-child(1) {
+
+      .icon {
+        background:#1e90f1;
+      }
+
+    }
+
+    &:nth-child(2) {
+
+      .icon {
+        background: @color-violet-light;
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      .icon {
+        background: @color-green-light;
+      }
+
+    }
+
+    a {
+      background: linear-gradient(to bottom, #ed578f, #da2366 50%);
+      -webkit-box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .85);
+      -moz-box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .85);
+      box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .85);
+      .smooth(0s);
+    }
+
+  }
+
+}
+
+/***********************************************************************************************************************
+*********** cooling-about
+***********************************************************************************************************************/
+
+.cooling-about {
+  position: relative;
+
+  .wrapper-inner {
+    .clearfix();
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 555px;
+    height: 681px;
+    background: url(../source/images/background-decor-left.png) no-repeat 0 0;
+    position: absolute;
+    right: ~"calc(50% + 405px)";
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 607px;
+    height: 643px;
+    background: url(../source/images/background-decor-right.png) no-repeat 0 0;
+    position: absolute;
+    left: ~"calc(50% + 353px)";
+    top: 0;
+    z-index: -1;
+  }
+
+  h2 {
+    color: @color-blue;
+    font-size: 40px;
+    text-align: left;
+    line-height: 1;
+  }
+
+  .cooling-info {
+    width: ~"calc(100% - 430px)";
+    padding: 0 30px;
+    float: left;
+
+    p {
+      font-family: 'Panton Semibold', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    a {
+      display: inline-block;
+      font-size: inherit;
+      font-family: inherit;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+    ul {
+      display: block;
+      padding: 0 15px;
+    }
+
+    li {
+      display: block;
+      font-family: 'Panton Semibold', sans-serif;
+      font-size: 18px;
+      line-height: 1;
+      margin: 15px 0;
+      padding: 0 0 0 20px;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 9px;
+        height: 9px;
+        background: @color-blue;
+        transform: rotate(45deg);
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+    }
+
+  }
+
+  .form-appointment {
+    display: block;
+    width: 400px;
+    float: right;
+    padding: 0 0 40px;
+    margin: 0 0 30px 0;
+    background: #e3e6e7;
+    -webkit-box-shadow: -10px 10px 0 0 rgba(0, 0, 0, .3);
+    -moz-box-shadow: -10px 10px 0 0 rgba(0, 0, 0, .3);
+    box-shadow: -10px 10px 0 0 rgba(0, 0, 0, .3);
+
+    .title {
+      display: block;
+      width: 100%;
+      background: @color-blue;
+      text-align: center;
+      color: #fff;
+      font-family: 'Panton Bold', sans-serif;
+      font-size: 30px;
+      line-height: 1.2;
+      padding: 15px 0;
+    }
+
+    .sub-title {
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    label {
+      display: block;
+      width: ~"calc(100% - 50px)";
+      margin: 25px auto;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        position: absolute;
+        left: -8px;
+        bottom: -8px;
+        top: -8px;
+        border: 1px solid #96b3db;
+        border-right: none;
+        .smooth(.4s);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 20px;
+        position: absolute;
+        right: -8px;
+        bottom: -8px;
+        top: -8px;
+        border: 1px solid #96b3db;
+        border-left: none;
+        .smooth(.4s);
+      }
+
+      &:hover:before,
+      &:hover:after {
+        width: 60%;
+      }
+
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      border: none;
+      height: 50px;
+      background: #fff;
+      padding: 0 20px;
+    }
+
+    button {
+      display: block;
+      width: ~"calc(100% - 50px)";
+      margin: 20px auto 0;
+      border: none;
+      background: linear-gradient(to bottom, #fb5d97, #e53072 40%);
+      height: 53px;
+      line-height: 53px;
+      font-family: 'Panton Semibold', sans-serif;
+      text-transform: uppercase;
+      font-size: 20px;
+      color: #fff;
+
+      &:hover {
+        background: linear-gradient(to top, #fb5d97, #e53072 40%);
+      }
+
+    }
+
+  }
+
+  .cooling-logos {
+    display: block;
+    width: 400px;
+    float: right;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 100%;
+      margin: 15px 10px;
+
+      img {
+        width: auto;
+        max-width: 100%;
+      }
+
+      &:hover {
+        opacity: .7;
+      }
+
+    }
+
+  }
+
+}
+
+/***********************************************************************************************************************
+*********** cooling-advantages
+***********************************************************************************************************************/
+
+.cooling-advantages {
+  background: url(../source/images/cooling-background-advantages.jpg) no-repeat center top;
+  background-size: cover;
+  padding: 80px 0;
+
+  .wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  h2 {
+    color: @color-crimson;
+    text-align: right;
+    font-size: 45px;
+    line-height: 1;
+    margin: 10px;
+
+    span {
+      font-size: 45px;
+      line-height: 1;
+      color: @color-blue;
+    }
+
+  }
+
+  .logo {
+    display: block;
+    width: 359px;
+    margin: 10px;
+  }
+
+  .cooling-advantages-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 70px 0 400px;
+  }
+
+  .cooling-advantages-item {
+    display: block;
+    width: 184px;
+    height: 241px;
+    text-align: center;
+    background: url(../source/images/cooling-advantages-item-background.png) no-repeat 0 0;
+    padding: 20px 15px 0;
+
+    .icon {
+      display: block;
+      width: 95px;
+      margin: 0 auto 10px;
+    }
+
+    .text {
+      display: block;
+      width: 100%;
+      font-family: 'Panton Bold', sans-serif;
+      font-size: 20px;
+      color: #4f4f4f;
+      max-height: 75px;
+      overflow: hidden;
+
+      span {
+        font-family: inherit;
+        font-size: 22px;
+        color: inherit;
+      }
+
+    }
+
+  }
+
+  .track {
+    display: none;
+  }
+
+}
+
+/***********************************************************************************************************************
+***********
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+***********
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+***********
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+***********
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+***********
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+***********
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+***********
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
 *********** window
 ***********************************************************************************************************************/
 
@@ -3037,12 +3639,3 @@ footer[role='contentinfo'] {
   }
 
 }
-
-
-/***********************************************************************************************************************
-***********
-***********************************************************************************************************************/
-
-/***********************************************************************************************************************
-***********
-***********************************************************************************************************************/
