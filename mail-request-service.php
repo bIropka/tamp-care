@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['request-service-address'])) {$address = $_POST['request-service-address'];}
 	if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
-	$to = "sereda.maksim95@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
-	$sendfrom   = "tamp-care"; /*Укажите адрес, с которого будет приходить письмо, можно не настоящий, нужно для формирования заголовка письма*/
+	$to = "sereda.maksim95@gmail.com";
+	$sendfrom   = "tamp-care";
 	$headers  = "From: " . strip_tags($sendfrom) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
@@ -17,14 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$send = mail ($to, $subject, $message, $headers);
 	if ($send == 'true')
 	{
-		echo '<p class="success">Спасибо за обращение к нам!</p>';
+		echo '<p class="success">Success!</p>';
 	}
 	else
 	{
-		echo '<p class="fail"><b>Ошибка. Сообщение не отправлено!</b></p>';
+		echo '<p class="fail"><b>Error!</b></p>';
 	}
 } else {
 	http_response_code(403);
-	echo "Попробуйте еще раз";
+	echo "try again";
 }
 ?>

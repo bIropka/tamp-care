@@ -157,18 +157,23 @@ $(window).ready(function () {
         $(this).siblings('p, ul, h3').toggleClass('active');
     });
 
+    var track = $('.cooling-advantages .track');
+
     if($(window).width() > 1230) {
 
         if ($(window).scrollTop() > $('.cooling-advantages').offset().top + 70 && $(window).scrollTop() < $('.cooling-advantages').offset().top + 300)  {
             showAdvantages();
+            track.addClass('active');//animate({bottom: '200px', right: '-800px'}, 4500);
         }
 
         if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
             $('.cooling-advantages-item').removeClass('active');
+            track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
         }
 
         if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
             $('.cooling-advantages-item').removeClass('active');
+            track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
         }
 
     }
@@ -179,14 +184,17 @@ $(window).ready(function () {
 
             if ($(window).scrollTop() > $('.cooling-advantages').offset().top + 70 && $(window).scrollTop() < $('.cooling-advantages').offset().top + 300)  {
                 showAdvantages();
+                track.addClass('active');//animate({bottom: '200px', right: '-800px'}, 4500);
             }
 
             if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
                 $('.cooling-advantages-item').removeClass('active');
+                track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
             }
 
             if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
                 $('.cooling-advantages-item').removeClass('active');
+                track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
             }
 
         }
@@ -208,7 +216,7 @@ $(window).ready(function () {
                 return;
             }
 
-            setTimeout(showAdvantagesInner, 200);
+            setTimeout(showAdvantagesInner, 300);
 
         })();
 

@@ -1,18 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	if (isset($_POST['consultation-name'])) {$name = $_POST['consultation-name'];}
-	if (isset($_POST['consultation-phone'])) {$phone = $_POST['consultation-phone'];}
-	if (isset($_POST['consultation-email'])) {$email = $_POST['consultation-email'];}
+	if (isset($_POST['appointment-name'])) {$name = $_POST['appointment-name'];}
+	if (isset($_POST['appointment-phone'])) {$phone = $_POST['appointment-phone'];}
 	if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
-	$to = "sereda.maksim95@gmail.com";
+	$to = "biropka@gmail.com";
 	$sendfrom   = "tamp-care";
 	$headers  = "From: " . strip_tags($sendfrom) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html;charset=utf-8 \r\n";
 	$subject = "$formData";
-	$message = "$formData <br><b>Client need consultation </b> <br> <b>Client`s name:</b> $name <br><b>Client`s phone:</b> $phone <br><b>Client`s email:</b> $email";
+	$message = "$formData <br><b>Client need an appointment </b> <br> <b>Client`s name:</b> $name <br><b>Client`s phone:</b> $phone";
 	$send = mail ($to, $subject, $message, $headers);
 	if ($send == 'true')
 	{
