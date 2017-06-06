@@ -132,6 +132,8 @@ $(window).ready(function () {
             var formNm = $('#' + formID);
             var scriptFile;
             if (formID == 'form-consultation') scriptFile = 'mail-consultation.php';
+            if (formID == 'form-cooling-consultation') scriptFile = 'mail-cooling-consultation.php';
+            if (formID == 'form-appointment') scriptFile = 'mail-appointment.php';
             if (formID == 'form-request-service') scriptFile = 'mail-request-service.php';
             $.ajax({
                 type: "POST",
