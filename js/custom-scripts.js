@@ -165,17 +165,20 @@ $(window).ready(function () {
 
         if ($(window).scrollTop() > $('.cooling-advantages').offset().top + 70 && $(window).scrollTop() < $('.cooling-advantages').offset().top + 300)  {
             showAdvantages();
-            track.addClass('active');//animate({bottom: '200px', right: '-800px'}, 4500);
+            track.addClass('active');
+            setTimeout(function () {
+                track.addClass('stopped');
+            }, 3000);
         }
 
         if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
             $('.cooling-advantages-item').removeClass('active');
-            track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
+            track.removeClass('active');
         }
 
         if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
             $('.cooling-advantages-item').removeClass('active');
-            track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
+            track.removeClass('active');
         }
 
     }
@@ -186,17 +189,23 @@ $(window).ready(function () {
 
             if ($(window).scrollTop() > $('.cooling-advantages').offset().top + 70 && $(window).scrollTop() < $('.cooling-advantages').offset().top + 300)  {
                 showAdvantages();
-                track.addClass('active');//animate({bottom: '200px', right: '-800px'}, 4500);
+                track.addClass('active');
+                setTimeout(function () {
+                    track.addClass('braked');
+                    setTimeout(function () {
+                        track.removeClass('braked').addClass('stopped');
+                    }, 1000);
+                }, 2000);
             }
 
             if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
                 $('.cooling-advantages-item').removeClass('active');
-                track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
+                track.removeClass('active');
             }
 
             if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
                 $('.cooling-advantages-item').removeClass('active');
-                track.removeClass('active');//animate({bottom: '-50px', right: '110%'}, 100);
+                track.removeClass('active');
             }
 
         }

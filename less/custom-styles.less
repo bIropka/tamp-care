@@ -3695,7 +3695,7 @@ footer[role='contentinfo'] {
       left: 163px;
       bottom: 59px;
       animation-name: spin;
-      animation-duration: 600ms;
+      animation-duration: 700ms;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
@@ -3710,15 +3710,33 @@ footer[role='contentinfo'] {
       right: 108px;
       bottom: 85px;
       animation-name: spin;
-      animation-duration: 600ms;
+      animation-duration: 700ms;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
 
     &.active {
-      right: -800px;
-      bottom: 200px;
-      .smooth(4.5s);
+      right: ~"calc(50% - 381px)";
+      bottom: 50px;
+      .smooth(3.5s);
+    }
+
+    &.braked {
+
+      &:before,
+      &:after {
+        animation-duration: 1500ms;
+      }
+
+    }
+
+    &.stopped {
+
+      &:before,
+      &:after {
+        animation-name: none;
+      }
+
     }
 
   }

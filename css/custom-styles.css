@@ -5589,7 +5589,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   left: 163px;
   bottom: 59px;
   animation-name: spin;
-  animation-duration: 600ms;
+  animation-duration: 700ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -5603,18 +5603,26 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   right: 108px;
   bottom: 85px;
   animation-name: spin;
-  animation-duration: 600ms;
+  animation-duration: 700ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 .cooling-advantages .track.active {
-  right: -800px;
-  bottom: 200px;
-  -webkit-transition: 4.5s;
-  -moz-transition: 4.5s;
-  -ms-transition: 4.5s;
-  -o-transition: 4.5s;
-  transition: 4.5s;
+  right: calc(50% - 381px);
+  bottom: 50px;
+  -webkit-transition: 3.5s;
+  -moz-transition: 3.5s;
+  -ms-transition: 3.5s;
+  -o-transition: 3.5s;
+  transition: 3.5s;
+}
+.cooling-advantages .track.braked:before,
+.cooling-advantages .track.braked:after {
+  animation-duration: 1500ms;
+}
+.cooling-advantages .track.stopped:before,
+.cooling-advantages .track.stopped:after {
+  animation-name: none;
 }
 @media (max-width: 768px) {
   .cooling-advantages {
