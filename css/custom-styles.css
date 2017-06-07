@@ -4890,9 +4890,10 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 .cooling-top-item .image-wrap {
   display: block;
   width: 233px;
-  height: 271px;
-  background: url(../source/images/cooling-image-cooler.png) no-repeat 0 0;
   margin: 0 auto;
+}
+.cooling-top-item .image-wrap img:last-child {
+  display: none;
 }
 .cooling-top-item .icon {
   display: block;
@@ -5004,8 +5005,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 .cooling-top-item:nth-child(3) .decor {
   background: linear-gradient(to right, #00c69a, #00e1af);
 }
-.cooling-top-item:hover .image-wrap {
-  background: url(../source/images/cooling-image-cooler-hover.png) no-repeat 0 0;
+.cooling-top-item:hover .image-wrap img:first-child {
+  display: none;
+}
+.cooling-top-item:hover .image-wrap img:last-child {
+  display: block;
 }
 .cooling-top-item:hover:nth-child(1) .icon {
   background: #1e90f1;
@@ -5618,11 +5622,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 }
 .cooling-advantages .track.braked:before,
 .cooling-advantages .track.braked:after {
-  animation-duration: 1500ms;
+  animation-duration: 1100ms;
 }
 .cooling-advantages .track.stopped:before,
 .cooling-advantages .track.stopped:after {
-  animation-name: none;
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
 }
 @media (max-width: 768px) {
   .cooling-advantages {

@@ -167,18 +167,21 @@ $(window).ready(function () {
             showAdvantages();
             track.addClass('active');
             setTimeout(function () {
-                track.addClass('stopped');
-            }, 3000);
+                track.addClass('braked');
+                setTimeout(function () {
+                    track.removeClass('braked').addClass('stopped');
+                }, 1500);
+            }, 1500);
         }
 
         if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
             $('.cooling-advantages-item').removeClass('active');
-            track.removeClass('active');
+            track.removeClass('active stopped');
         }
 
         if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
             $('.cooling-advantages-item').removeClass('active');
-            track.removeClass('active');
+            track.removeClass('active stopped');
         }
 
     }
@@ -194,18 +197,18 @@ $(window).ready(function () {
                     track.addClass('braked');
                     setTimeout(function () {
                         track.removeClass('braked').addClass('stopped');
-                    }, 1000);
-                }, 2000);
+                    }, 1600);
+                }, 1500);
             }
 
             if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
                 $('.cooling-advantages-item').removeClass('active');
-                track.removeClass('active');
+                track.removeClass('active stopped');
             }
 
             if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
                 $('.cooling-advantages-item').removeClass('active');
-                track.removeClass('active');
+                track.removeClass('active stopped');
             }
 
         }

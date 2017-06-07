@@ -2872,9 +2872,12 @@ footer[role='contentinfo'] {
   .image-wrap {
     display: block;
     width: 233px;
-    height: 271px;
-    background: url(../source/images/cooling-image-cooler.png) no-repeat 0 0;
     margin: 0 auto;
+
+    img:last-child {
+      display: none;
+    }
+
   }
 
   .icon {
@@ -3013,7 +3016,15 @@ footer[role='contentinfo'] {
   &:hover {
 
     .image-wrap {
-      background: url(../source/images/cooling-image-cooler-hover.png) no-repeat 0 0;
+
+      img:first-child {
+        display: none;
+      }
+
+      img:last-child {
+        display: block;
+      }
+
     }
 
     &:nth-child(1) {
@@ -3725,7 +3736,7 @@ footer[role='contentinfo'] {
 
       &:before,
       &:after {
-        animation-duration: 1500ms;
+        animation-duration: 1100ms;
       }
 
     }
@@ -3734,7 +3745,9 @@ footer[role='contentinfo'] {
 
       &:before,
       &:after {
-        animation-name: none;
+        animation-duration: 1500ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
       }
 
     }
