@@ -3475,6 +3475,11 @@ footer[role='contentinfo'] {
     display: block;
     width: 359px;
     margin: 10px;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+
   }
 
   .cooling-advantages-list {
@@ -3492,10 +3497,6 @@ footer[role='contentinfo'] {
 
     @media(max-width: 768px) {
       margin: 0;
-    }
-
-    @media(max-width: 480px) {
-      margin: 0 0 365px 0;
     }
 
   }
@@ -3750,6 +3751,10 @@ footer[role='contentinfo'] {
         animation-timing-function: ease-out;
       }
 
+    }
+
+    @media(max-width: 1200px) {
+      display: none;
     }
 
   }
@@ -4011,8 +4016,6 @@ footer[role='contentinfo'] {
   }
 
   @media(max-width: 480px) {
-    background: url(../source/images/cooling-callback-background-mobile.jpg) no-repeat center top;
-    background-size: cover;
     padding: 30px 0 105px;
 
     .wrapper-inner {

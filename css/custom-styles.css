@@ -5380,6 +5380,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   width: 359px;
   margin: 10px;
 }
+@media (max-width: 768px) {
+  .cooling-advantages .logo {
+    display: none;
+  }
+}
 .cooling-advantages .cooling-advantages-list {
   display: flex;
   justify-content: space-between;
@@ -5397,11 +5402,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 @media (max-width: 768px) {
   .cooling-advantages .cooling-advantages-list {
     margin: 0;
-  }
-}
-@media (max-width: 480px) {
-  .cooling-advantages .cooling-advantages-list {
-    margin: 0 0 365px 0;
   }
 }
 .cooling-advantages .cooling-advantages-item {
@@ -5629,6 +5629,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   animation-duration: 1500ms;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
+}
+@media (max-width: 1200px) {
+  .cooling-advantages .track {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .cooling-advantages {
@@ -5862,8 +5867,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 }
 @media (max-width: 480px) {
   .cooling-callback {
-    background: url(../source/images/cooling-callback-background-mobile.jpg) no-repeat center top;
-    background-size: cover;
     padding: 30px 0 105px;
   }
   .cooling-callback .wrapper-inner {
