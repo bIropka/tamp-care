@@ -1,0 +1,361 @@
+/***********************************************************************************************************************
+*********** cooling-advantages
+***********************************************************************************************************************/
+
+.cooling-advantages {
+  background: url(../source/images/cooling-background-advantages.jpg) no-repeat center top;
+  background-size: cover;
+  padding: 80px 0;
+  position: relative;
+
+  .wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: static;
+  }
+
+  h2 {
+    color: @color-crimson;
+    text-align: right;
+    font-size: 45px;
+    line-height: 1;
+    margin: 10px;
+
+    span {
+      font-size: inherit;
+      line-height: 1;
+      color: @color-blue;
+    }
+
+    @media(max-width: 1230px) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 33px;
+    }
+
+  }
+
+  .logo {
+    display: block;
+    width: 359px;
+    margin: 10px;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+
+  }
+
+  .cooling-advantages-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 70px 0 400px;
+
+    @media(max-width: 1230px) {
+      display: block;
+      text-align: center;
+      margin: 70px 0;
+    }
+
+    @media(max-width: 768px) {
+      margin: 0;
+    }
+
+  }
+
+  .cooling-advantages-item {
+    display: block;
+    width: 184px;
+    height: 241px;
+    text-align: center;
+    background: url(../source/images/cooling-advantages-item-background.png) no-repeat 0 0;
+    padding: 20px 15px 0;
+    position: relative;
+    .smooth(.6s);
+    transform: rotateY(180deg);
+    right: 100px;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+      right: 0;
+      transform: rotateY(0);
+    }
+
+    .icon {
+      width: 70px;
+      margin: 20px auto 35px;
+      border: 2px solid @color-blue;
+      transform: rotate(45deg);
+      .smooth(.4s);
+      position: relative;
+
+      img {
+        transform: rotate(-45deg);
+        .smooth(.4s);
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-left: 2px solid @color-blue;
+        border-top: 2px solid @color-blue;
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        opacity: .5;
+        .smooth(.8s);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-right: 2px solid @color-blue;
+        border-bottom: 2px solid @color-blue;
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        opacity: .5;
+        .smooth(.8s);
+      }
+
+    }
+
+    .text {
+      display: block;
+      width: 100%;
+      font-family: 'Panton Bold', sans-serif;
+      font-size: 20px;
+      color: #4f4f4f;
+      max-height: 75px;
+      overflow: hidden;
+
+      span {
+        font-family: inherit;
+        font-size: 22px;
+        color: inherit;
+      }
+
+    }
+
+    &:hover {
+
+      .icon {
+        transform: rotate(-135deg);
+
+        img {
+          transform: rotate(135deg);
+        }
+
+        &:before {
+          width: 83px;
+          height: 83px;
+          opacity: 1;
+        }
+
+        &:after {
+          width: 83px;
+          height: 83px;
+          opacity: 1;
+        }
+
+      }
+
+    }
+
+    @media(max-width: 1230px) {
+      opacity: 1;
+      right: 0;
+      transform: rotateY(0);
+      display: inline-block;
+      vertical-align: top;
+      margin: 20px;
+    }
+
+    @media(max-width: 768px) {
+      background: none;
+      width: 120px;
+      height: auto;
+      margin: 10px;
+
+      .text {
+        font-size: 16px;
+        max-height: 100%;
+        overflow: inherit;
+
+        span {
+          font-size: inherit;
+        }
+
+      }
+
+      .icon {
+        width: 50px;
+        margin: 20px auto 35px;
+
+        &:before {
+          width: 10px;
+          height: 10px;
+          border-left: 1px solid @color-blue;
+          border-top: 1px solid @color-blue;
+          left: -8px;
+          top: -8px;
+        }
+
+        &:after {
+          width: 35px;
+          height: 35px;
+          border-right: 1px solid @color-blue;
+          border-bottom: 1px solid @color-blue;
+          right: -8px;
+          bottom: -8px;
+        }
+
+      }
+
+      &:hover {
+
+        .icon {
+
+          &:before {
+            width: 10px;
+            height: 10px;
+          }
+
+          &:after {
+            width: 35px;
+            height: 35px;
+          }
+
+        }
+
+      }
+
+    }
+
+    @media(max-width: 480px) {
+      width: 90px;
+      margin: 0;
+      padding: 10px 0;
+
+      .text {
+        font-size: 12px;
+      }
+
+    }
+
+  }
+
+  .track {
+    display: block;
+    width: 762px;
+    position: absolute;
+    margin: auto;
+    bottom: -50px;
+    right: 110%;
+    transition: none;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 54px;
+      height: 54px;
+      background: url(../source/images/cooling-advantages-track-left.png) no-repeat;
+      position: absolute;
+      left: 163px;
+      bottom: 59px;
+      animation-name: spin;
+      animation-duration: 700ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 53px;
+      height: 53px;
+      background: url(../source/images/cooling-advantages-track-right.png) no-repeat;
+      position: absolute;
+      right: 108px;
+      bottom: 85px;
+      animation-name: spin;
+      animation-duration: 700ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    &.active {
+      right: ~"calc(50% - 381px)";
+      bottom: 50px;
+      .smooth(3.5s);
+    }
+
+    &.braked {
+
+      &:before,
+      &:after {
+        animation-duration: 1100ms;
+      }
+
+    }
+
+    &.stopped {
+
+      &:before,
+      &:after {
+        animation-duration: 1500ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+      }
+
+    }
+
+    @media(max-width: 1200px) {
+      display: none;
+    }
+
+  }
+
+  @media(max-width: 768px) {
+    padding: 30px 0;
+    background: url(../source/images/cooling-background-advantages-mobile.jpg) no-repeat center top;
+    background-size: cover;
+  }
+
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform-origin: center;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+    transform-origin: center;
+  }
+  to {
+    transform:rotate(360deg);
+    transform-origin: center;
+  }
+}

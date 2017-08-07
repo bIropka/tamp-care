@@ -4,53 +4,53 @@ $(window).ready(function () {
         $('.wrapper').animate({opacity: 1}, 500);
     }, 500);
 
-    if ($(window).scrollTop() > 300) {
-        $('header[role="banner"]').addClass('short');
-    } else {
+    // if ($(window).scrollTop() > 300) {
+    //     $('header[role="banner"]').addClass('short');
+    // } else {
+    //
+    //     if($(window).width() > 1200) {
+    //         $('header[role="banner"]').removeClass('short');
+    //     }
+    //
+    // }
+    //
+    // $(window).scroll(function() {
+    //
+    //     if ($(window).scrollTop() > 300) {
+    //         $('header[role="banner"]').addClass('short');
+    //     } else {
+    //
+    //         if ($(window).width() > 1200) {
+    //             $('header[role="banner"]').removeClass('short');
+    //         }
+    //
+    //     }
+    //
+    // });
 
-        if($(window).width() > 1200) {
-            $('header[role="banner"]').removeClass('short');
-        }
+    // if ($(window).width() < 1201) {
+    //     $('header[role="banner"]').addClass('short');
+    // } else {
+    //
+    //     if ($(window).scrollTop() < 301) {
+    //         $('header[role="banner"]').removeClass('short');
+    //     }
+    //
+    // }
 
-    }
-
-    $(window).scroll(function() {
-
-        if ($(window).scrollTop() > 300) {
-            $('header[role="banner"]').addClass('short');
-        } else {
-
-            if ($(window).width() > 1200) {
-                $('header[role="banner"]').removeClass('short');
-            }
-
-        }
-
-    });
-
-    if ($(window).width() < 1201) {
-        $('header[role="banner"]').addClass('short');
-    } else {
-
-        if ($(window).scrollTop() < 301) {
-            $('header[role="banner"]').removeClass('short');
-        }
-
-    }
-
-    $(window).resize(function() {
-
-        if ($(window).width() < 1201) {
-            $('header[role="banner"]').addClass('short');
-        } else {
-
-            if($(window).scrollTop() < 301) {
-                $('header[role="banner"]').removeClass('short');
-            }
-
-        }
-
-    });
+    // $(window).resize(function() {
+    //
+    //     if ($(window).width() < 1201) {
+    //         $('header[role="banner"]').addClass('short');
+    //     } else {
+    //
+    //         if($(window).scrollTop() < 301) {
+    //             $('header[role="banner"]').removeClass('short');
+    //         }
+    //
+    //     }
+    //
+    // });
 
     $('.slider').slick({
         slidesToShow: 5,

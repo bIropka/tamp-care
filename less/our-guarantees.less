@@ -1,0 +1,123 @@
+/***********************************************************************************************************************
+*********** our-guarantees
+***********************************************************************************************************************/
+
+.our-guarantees {
+  background: url(../source/images/background-guarantees.png) no-repeat center top;
+  background-size: cover;
+
+  h2 {
+    color: @color-blue;
+  }
+
+  .guarantees-list {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .guarantees-item {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin: 25px 35px;
+    text-align: left;
+    position: relative;
+    padding-left: 85px;
+  }
+
+  .icon {
+    display: block;
+    width: 65px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    img {
+      width: auto;
+      margin: 0 auto;
+    }
+
+  }
+
+  h3 {
+    font-family: 'Panton Bold', sans-serif;
+    font-size: 20px;
+    color: @color-blue;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-family: 'Panton Semibold', sans-serif;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  @media(max-width: 480px) {
+
+    .guarantees-list {
+      font-size: 0;
+    }
+
+    .guarantees-item {
+      width: 45%;
+      margin: 20px 0;
+      padding: 0;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: #ccc;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+        background: #ccc;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      &:nth-of-type(2n):after {
+        display: none;
+      }
+
+      &:nth-last-child(1):before,
+      &:nth-last-child(2):before {
+        display: none;
+      }
+
+    }
+
+    h3 {
+      display: block;
+      font-size: 18px;
+      text-align: center;
+      max-width: 120px;
+      margin: 0 auto;
+    }
+
+    .text,
+    .show-more {
+      display: none;
+    }
+
+    .icon {
+      position: static;
+      margin: 0 auto 20px;
+    }
+
+  }
+
+}

@@ -1,0 +1,29 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////// mixes
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.smooth(@speed) {
+  -webkit-transition: @speed;
+  -moz-transition: @speed;
+  -ms-transition: @speed;
+  -o-transition: @speed;
+  transition: @speed;
+}
+
+.clearfix() {
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+}
+
+.turned(@cut) {
+  -webkit-transform: skew(@cut);
+  -moz-transform: skew(@cut);
+  -ms-transform: skew(@cut);
+  -o-transform: skew(@cut);
+  transform: skew(@cut);
+}

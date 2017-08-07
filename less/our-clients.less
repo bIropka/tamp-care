@@ -1,0 +1,84 @@
+/***********************************************************************************************************************
+*********** our-clients
+***********************************************************************************************************************/
+
+.our-clients {
+
+  h2 {
+    color: @color-blue;
+  }
+
+  .slider-clients {
+    display: block;
+    width: 80%;
+    margin: 100px auto 30px;
+
+    .slide {
+      outline: 0;
+      padding: 0 10px;
+
+      img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      &:hover,
+      &:active {
+        outline: 0;
+      }
+
+    }
+
+    .slick-arrow {
+      display: block;
+      width: 29px;
+      height: 52px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      color: transparent;
+      font-size: 0;
+      border: none;
+      cursor: pointer;
+      .smooth(none);
+    }
+
+    .slick-prev {
+      background: url(../source/images/arrow-left.png) no-repeat right top;
+      left: -70px;
+
+      &:hover {
+        background: url(../source/images/arrow-left.png) no-repeat left top;
+      }
+
+    }
+
+    .slick-next{
+      background: url(../source/images/arrow-right.png) no-repeat left top;
+      right: -70px;
+
+      &:hover {
+        background: url(../source/images/arrow-right.png) no-repeat right top;
+      }
+
+    }
+
+    @media(max-width: 768px) {
+      width: ~"calc(100% - 80px)";
+
+      .slick-prev {
+        left: -33px;
+      }
+
+      .slick-next {
+        right: -33px;
+      }
+
+    }
+
+  }
+
+}
