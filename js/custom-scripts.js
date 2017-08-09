@@ -188,4 +188,23 @@ $(window).ready(function () {
 
     }
 
+    $('.custom-select .current-value').click(function() {
+
+        $(this).parent().toggleClass('active');
+
+    });
+
+    $('.custom-select ul li').click(function() {
+
+        var value = $(this).text();
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.custom-select').find('.current-value').find('span').text(value);
+        $(this).parents('.custom-select').find('input').attr('value', value);
+
+        $(this).parents('.custom-select').removeClass('active');
+
+    });
+
 });

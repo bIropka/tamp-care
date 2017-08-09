@@ -82,6 +82,7 @@
 
     img {
       width: 85%;
+      max-width: 400px;
       height: auto;
     }
 
@@ -118,6 +119,25 @@
 
     }
 
+  }
+
+  @media(max-width: 980px) {
+
+    .conditioner-repair-info,
+    .condition-repair-image,
+    .conditioner-repair-logos {
+      width: 100%;
+      float: none;
+    }
+
+    .condition-repair-image  img {
+      margin: 0 auto;
+    }
+
+  }
+
+  @media(max-width: 480px) {
+    padding-top: 0;
   }
 
 }

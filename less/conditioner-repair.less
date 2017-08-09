@@ -26,6 +26,7 @@
       font-family: 'Panton SemiBold', sans-serif;
       font-size: 36px;
       text-transform: none;
+      color: inherit;
     }
 
     &:before {
@@ -110,12 +111,14 @@
       font-family: inherit;
       font-size: 55px;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+      color: inherit;
     }
 
     sup {
       font-family: 'Panton Bold', sans-serif;
       font-size: 30px;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+      color: inherit;
     }
 
   }
@@ -130,7 +133,65 @@
     margin: 0 0 10px 0;
   }
 
+  @media(max-width: 980px) {
+    background: #fff;
+
+    h1 {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 20px 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+    }
+
+    .service-call {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
+
+    .service-call-cost {
+      position: static;
+      margin: 25px auto;
+    }
+
+    .service-call-title {
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .form-side {
+      box-shadow: none;
+    }
+
+  }
+
+  @media(max-width: 480px) {
+    padding: 25px 0;
+
+    h1 {
+      font-size: 36px;
+
+      span {
+        margin-top: 15px;
+        font-size: 32px;
+      }
+
+    }
+
+    .service-call-title {
+      font-size: 32px;
+    }
+
+    .form-side .title {
+      font-size: 28px;
+    }
+
+  }
+
 }
-
-
-
