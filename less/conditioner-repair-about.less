@@ -1,0 +1,123 @@
+/***********************************************************************************************************************
+*********** conditioner-repair-about
+***********************************************************************************************************************/
+
+.conditioner-repair-about {
+  position: relative;
+  padding-top: 40px;
+
+  .wrapper-inner {
+    .clearfix();
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 319px;
+    height: 781px;
+    background: url(../source/images/condition-repair-background-decor-left.png) no-repeat 0 0;
+    position: absolute;
+    left: ~"calc(50% - 960px)";
+    top: 0;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 396px;
+    height: 791px;
+    background: url(../source/images/condition-repair-background-decor-right.png) no-repeat 0 0;
+    position: absolute;
+    right: ~"calc(50% - 960px)";
+    top: 0;
+    z-index: -1;
+  }
+
+  .conditioner-repair-info {
+    width: ~"calc(100% - 500px)";
+    padding: 0 30px;
+    float: left;
+    margin-top: 20px;
+
+    h3 {
+      color: @color-crimson-medium;
+      font-size: 24px;
+      font-family: 'Panton Bold', sans-serif;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 2px;
+        background: @color-crimson-medium;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+    }
+
+    p {
+      font-family: 'Panton Semibold', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 20px 0;
+
+      & + h3 {
+        margin-top: 40px;
+      }
+
+    }
+
+  }
+
+  .condition-repair-image {
+    display: block;
+    width: 485px;
+    float: right;
+
+    img {
+      width: 85%;
+      height: auto;
+    }
+
+  }
+
+  .conditioner-repair-logos {
+    display: block;
+    width: 485px;
+    float: right;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 100%;
+      margin: 15px 10px;
+
+      img {
+        width: auto;
+        max-width: 100%;
+      }
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &:nth-of-type(-n + 3) {
+        width: 110px;
+      }
+
+      &:nth-last-of-type(-n + 2) {
+        width: 170px;
+      }
+
+    }
+
+  }
+
+}

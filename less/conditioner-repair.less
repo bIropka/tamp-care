@@ -1,0 +1,136 @@
+/***********************************************************************************************************************
+*********** conditioner-repair
+***********************************************************************************************************************/
+
+.conditioner-repair {
+  padding: 50px 0;
+  background: url(../source/images/background-condition-repair.jpg) no-repeat center;
+  background-size: auto 100%;
+  text-align: right;
+
+  h1 {
+    display: inline-block;
+    font-family: 'Panton ExtraBold', sans-serif;
+    font-size: 52px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    text-align: center;
+    background: rgba(22, 186, 255, .7);
+    padding: 10px 0 20px 30px;
+    position: relative;
+    margin: 0 45px 0 0;
+
+    span {
+      display: block;
+      font-family: 'Panton SemiBold', sans-serif;
+      font-size: 36px;
+      text-transform: none;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-left: 20px solid rgba(22, 186, 255, .7);
+      border-top: 20px solid rgba(22, 186, 255, .7);
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: ~"calc(100% - 40px)";
+      background: rgba(22, 186, 255, .7);
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+
+  }
+
+  .service-call {
+    display: inline-block;
+    width: 400px;
+    text-align: center;
+    margin: 80px 140px 0 0;
+    position: relative;
+  }
+
+  .service-call-cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: url(../source/images/background-condition-repair-cost.png) no-repeat;
+    border-radius: 50%;
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, .5);
+    position: absolute;
+    left: -150px;
+    top: -30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+
+    span {
+      display: block;
+      width: 100%;
+      font-family: 'Panton ExtraBold', sans-serif;
+      font-size: 70px;
+      color: #fff;
+      margin: 0 0 10px 0;
+      position: relative;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+
+      &:after {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+    }
+
+    small {
+      font-family: inherit;
+      font-size: 55px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    }
+
+    sup {
+      font-family: 'Panton Bold', sans-serif;
+      font-size: 30px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    }
+
+  }
+
+  .service-call-title {
+    font-size: 43px;
+    color: #fff;
+    padding: 20px 0 20px 30px;
+    line-height: 1;
+    background: @color-crimson-medium;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    margin: 0 0 10px 0;
+  }
+
+}
+
+
+
