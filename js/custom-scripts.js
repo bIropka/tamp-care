@@ -87,6 +87,9 @@ $(window).ready(function () {
             if (formID == 'form-cooling-consultation') scriptFile = 'mail-cooling-consultation.php';
             if (formID == 'form-appointment') scriptFile = 'mail-appointment.php';
             if (formID == 'form-request-service') scriptFile = 'mail-request-service.php';
+            if (formID == 'form-ac-control') scriptFile = 'mail-ac-control.php';
+            if (formID == 'form-ac-control-2') scriptFile = 'mail-ac-control-2.php';
+            if (formID == 'form-fvac-expert') scriptFile = 'mail-fvac-expert.php';
             $.ajax({
                 type: "POST",
                 url: scriptFile,
