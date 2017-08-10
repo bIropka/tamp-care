@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html;charset=utf-8 \r\n";
 	$subject = "$formData";
-	$message = "$formData <br><b>Client need HVAC expert </b> <b>Client`s problem:</b> $name <br> <b>Client`s name:</b> $name <br><b>Client`s phone:</b> $phone";
+	$message = "$formData <br><b>Client need HVAC expert </b> <br><b>Client`s problem:</b> $problem <br> <b>Client`s name:</b> $name <br><b>Client`s phone:</b> $phone";
 	$send = mail ($to, $subject, $message, $headers);
 	if ($send == 'true')
 	{
