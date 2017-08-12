@@ -84,13 +84,24 @@
 
             <div class="conditioner-repair-info">
 
-                <h3>30+ point a/c maintance with TempCare</h3>
+                <h3>Your A/C was a Big Investment, and You Want to Keep it in Great Shape.</h3>
 
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                <p>Like a car, your air conditioner runs best when it gets the attention it deserves. Proper A/C maintenance ensures that the unit will offer peak performance all year long. It can extend the life of your air conditioner, reduce energy costs, and more. So, don’t ignore your routine air conditioner service needs. You’ll notice a major difference after it has been serviced.</p>
 
-                <h3>Protect Your Air Conditioner with A/C Service</h3>
+                <h3>A/C Care and Maintenance Facts You Should Know</h3>
 
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                <ul>
+                    <li>Almost all air conditioner failures are the result of neglecting system maintenance.</li>
+                    <li>Dirty air conditioning units take two times longer to cool a space than a well-maintained unit.</li>
+                    <li>Also, because it works so much harder, a dirty a/c will cost you about 50% more to operate.</li>
+                    <li>A well-maintained air conditioner can last you as long as 15-20 years! A neglected unit will fail several years earlier.</li>
+                </ul>
+
+                <h3>Call TempCare for all of Your A/C Maintenance Needs</h3>
+
+                <p>At TempCare, we offer a thorough 30-point inspection that is carried out by our expert team of certified HVAC technicians. Our focus is always on you, the customer, and delivering the highest quality of service at a fair and affordable price. We’ll leave you with peace of mind and an air conditioning unit that is operating at peak performance!</p>
+
+                <p>Call TempCare today at [phone number to request an on-site appointment with a member of our team!</p>
 
             </div>
 
@@ -564,5 +575,51 @@
 <script src="lib/slick/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
 <script src="js/custom-scripts.js"></script>
+
+<script>
+
+    if($(window).width() > 1230) {
+        if ($(window).scrollTop() > $('.points').offset().top + 70)  {
+            showPoints();
+        }
+    }
+
+    $(window).scroll(function() {
+
+        if($(window).width() > 1230) {
+            if ($(window).scrollTop() > $('.points').offset().top + 70)  {
+                showPoints();
+            }
+        }
+
+    });
+
+    var pointsItems = $('.point-list').find('.point-item');
+
+    function showPoints() {
+
+        setTimeout(function() {
+            $('.points').addClass('active');
+        }, 2500);
+
+        var counter = 0;
+
+        (function showPointsInner() {
+
+            $(pointsItems[counter++]).addClass('active');
+
+            if (counter >= pointsItems.length) {
+                counter = 0;
+                return;
+            }
+
+            setTimeout(showPointsInner, 100);
+
+        })();
+
+    }
+
+</script>
+
 </body>
 </html>

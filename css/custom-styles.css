@@ -42,8 +42,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot');
-  src: url('../fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2') format('woff2'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg') format('svg');
+  src: url('../lib/font-awesome-4.7.0/fonts/fontawesome-webfont.eot');
+  src: url('../lib/font-awesome-4.7.0/fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('../lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'), url('../lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff') format('woff'), url('../lib/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf') format('truetype'), url('../lib/font-awesome-4.7.0/fonts/fontawesome-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2768,7 +2768,7 @@ header[role='banner'] .work-schedule {
   align-items: flex-end;
   position: relative;
   margin-right: 20px;
-  padding-left: 75px;
+  padding-left: 25px;
 }
 header[role='banner'] .work-schedule .work-time {
   -webkit-transform: skew(-30deg);
@@ -3357,16 +3357,16 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   display: block;
   width: 50%;
   height: 100%;
-  background: rgba(0, 82, 166, 0);
+  background: rgba(201, 7, 66, 0);
   position: relative;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  /*&:hover {
-      background: rgba(0, 82, 166, .5);
-    }*/
+}
+.top-block .background-blue-left:hover {
+  background: rgba(201, 7, 66, 0.5);
 }
 .top-block .background-blue-right {
   display: block;
@@ -3380,9 +3380,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   -o-transition: 0.4s;
   transition: 0.4s;
   z-index: 10;
-  /*&:hover {
-      background: rgba(0, 82, 166, .5);
-    }*/
+}
+.top-block .background-blue-right:hover {
+  background: rgba(0, 82, 166, 0.5);
 }
 .top-block:before {
   content: '';
@@ -4605,6 +4605,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   outline: 0;
   padding: 0 10px;
   position: relative;
+  margin: 0 10px;
 }
 .our-clients .slider-clients .slide img {
   display: block;
@@ -6343,6 +6344,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   text-transform: uppercase;
   padding-bottom: 15px;
   position: relative;
+  margin-top: 40px;
 }
 .conditioner-repair-about .conditioner-repair-info h3:after {
   content: '';
@@ -6354,14 +6356,45 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   left: 0;
   bottom: 0;
 }
+.conditioner-repair-about .conditioner-repair-info h3:first-of-type {
+  margin-top: 0;
+}
 .conditioner-repair-about .conditioner-repair-info p {
   font-family: 'Panton Semibold', sans-serif;
   font-size: 18px;
   line-height: 1.7;
   margin: 20px 0;
 }
-.conditioner-repair-about .conditioner-repair-info p + h3 {
-  margin-top: 40px;
+.conditioner-repair-about .conditioner-repair-info ul {
+  display: block;
+  padding: 0 15px;
+}
+.conditioner-repair-about .conditioner-repair-info li {
+  display: block;
+  font-family: 'Panton Semibold', sans-serif;
+  font-size: 18px;
+  margin: 15px 0;
+  padding: 0 0 0 20px;
+  position: relative;
+  line-height: 1.5;
+}
+.conditioner-repair-about .conditioner-repair-info li:before {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: #e53072;
+  transform: rotate(45deg);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.conditioner-repair-about .conditioner-repair-info li span {
+  font-family: 'Panton ExtraBold', sans-serif;
+  font-size: inherit;
+  color: inherit;
 }
 .conditioner-repair-about .condition-repair-image {
   display: block;
@@ -6495,8 +6528,16 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   right: -40px;
   bottom: -20px;
   background: #fff;
-  box-shadow: inset 0 0 0 6px #e53072, 0 0 0 6px rgba(229, 48, 114, 0.3), 0 0 0 9px rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 0 0 6px #e53072, 0 0 0 rgba(229, 48, 114, 0.3), 0 0 0 0 rgba(255, 255, 255, 0.35);
   border: 3px solid #7d153b;
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 .common-problems .problem-item:nth-of-type(1) {
   left: 165px;
@@ -6824,6 +6865,22 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
     font-size: 48px;
   }
 }
+@-webkit-keyframes hvr-pulse {
+  25% {
+    box-shadow: inset 0 0 0 6px #e53072, 0 0 0 3px rgba(229, 48, 114, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.35);
+  }
+  75% {
+    box-shadow: inset 0 0 0 6px #e53072, 0 0 0 6px rgba(229, 48, 114, 0.3), 0 0 0 9px rgba(255, 255, 255, 0.35);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    box-shadow: inset 0 0 0 6px #e53072, 0 0 0 3px rgba(229, 48, 114, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.35);
+  }
+  75% {
+    box-shadow: inset 0 0 0 6px #e53072, 0 0 0 6px rgba(229, 48, 114, 0.3), 0 0 0 9px rgba(255, 255, 255, 0.35);
+  }
+}
 .form-fvac-expert {
   display: block;
   width: 100%;
@@ -7102,9 +7159,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   color: #e53072;
 }
 .steps .step-list {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   height: 694px;
   margin: 75px 0 0 0;
-  background: url(../source/images/condition-repair-step-list.png) no-repeat center;
 }
 .steps ul {
   display: block;
@@ -7116,9 +7177,15 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   counter-increment: list;
 }
 .steps .step-item {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   display: block;
   max-width: 320px;
   padding: 55px 0 0 0;
+  opacity: 0;
 }
 .steps .step-item:before {
   display: flex;
@@ -7183,7 +7250,15 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   right: 45px;
   top: 400px;
 }
+.steps .step-item.active {
+  opacity: 1;
+}
 .steps .callback {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   display: block;
   padding: 0 60px;
   border: none;
@@ -7191,6 +7266,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   position: absolute;
   left: 45px;
   top: 260px;
+  opacity: 0;
 }
 .steps .callback span {
   display: block;
@@ -7205,6 +7281,21 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 }
 .steps .callback:active span {
   line-height: 55px;
+}
+.steps.active .step-list {
+  background: url(../source/images/condition-repair-step-list.png) no-repeat center;
+}
+.steps.active .callback {
+  opacity: 1;
+}
+@media (max-width: 1230px) {
+  .steps .step-list {
+    background: url(../source/images/condition-repair-step-list.png) no-repeat center;
+  }
+  .steps .callback,
+  .steps .step-list .step-item {
+    opacity: 1;
+  }
 }
 @media (max-width: 1200px) {
   .steps .step-list {
@@ -7478,7 +7569,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   margin: 0 auto 30px;
 }
 .points .points-note {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   margin: 0 0 15px 30px;
+  opacity: 0;
 }
 .points .points-note span {
   display: block;
@@ -7496,13 +7593,18 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   font-size: 15px;
 }
 .points .point-list {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: calc(100% - 60px);
   height: 155px;
   margin: 0 30px;
-  border: 2px solid #2366c9;
+  border: 2px solid transparent;
   padding: 0 135px;
   position: relative;
 }
@@ -7520,8 +7622,8 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   right: -2px;
   bottom: 0;
   z-index: 1;
-  border-right: 2px solid #2366c9;
-  border-bottom: 2px solid #2366c9;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   border-radius: 50px;
 }
 .points .point-list:nth-of-type(1):after {
@@ -7572,11 +7674,17 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   top: 0;
 }
 .points .point-item {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   min-width: 60px;
   text-align: center;
   position: relative;
   padding-top: 30px;
   z-index: 10;
+  opacity: 0;
 }
 .points .point-item span {
   font-family: 'Panton Semibold', sans-serif;
@@ -7599,7 +7707,16 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   margin: auto;
   z-index: 1;
 }
+.points .point-item.active {
+  opacity: 1;
+}
 .points .callback {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
   display: block;
   width: 100%;
   max-width: 270px;
@@ -7620,6 +7737,53 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
 }
 .points .callback:hover {
   background: linear-gradient(to top, #fc609a, #c90742 70%);
+}
+.points.active .point-list {
+  border: 2px solid #2366c9;
+}
+.points.active .point-list:nth-of-type(1) {
+  border-left: none;
+  border-bottom: none;
+}
+.points.active .point-list:nth-of-type(1):before {
+  border-right: 2px solid #2366c9;
+  border-bottom: 2px solid #2366c9;
+}
+.points.active .point-list:nth-of-type(2) {
+  border-right: none;
+}
+.points.active .point-list:nth-of-type(3) {
+  border: none;
+}
+.points.active .points-note,
+.points.active .callback {
+  opacity: 1;
+}
+@media (max-width: 1230px) {
+  .points .point-list {
+    border: 2px solid #2366c9;
+  }
+  .points .point-list:nth-of-type(1) {
+    border-left: none;
+    border-bottom: none;
+  }
+  .points .point-list:nth-of-type(1):before {
+    border-right: 2px solid #2366c9;
+    border-bottom: 2px solid #2366c9;
+  }
+  .points .point-list:nth-of-type(2) {
+    border-right: none;
+  }
+  .points .point-list:nth-of-type(3) {
+    border: none;
+  }
+  .points .points-note,
+  .points .callback {
+    opacity: 1;
+  }
+  .points .point-item {
+    opacity: 1;
+  }
 }
 @media (max-width: 1200px) {
   .points .points-note {

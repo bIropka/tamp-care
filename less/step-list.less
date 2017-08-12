@@ -12,9 +12,9 @@
   }
 
   .step-list {
+    .smooth(.4s);
     height: 694px;
     margin: 75px 0 0 0;
-    background: url(../source/images/condition-repair-step-list.png) no-repeat center;
   }
 
   ul {
@@ -30,9 +30,11 @@
   }
 
   .step-item {
+    .smooth(.4s);
     display: block;
     max-width: 320px;
     padding: 55px 0 0 0;
+    opacity: 0;
 
     &:before {
       display: flex;
@@ -106,9 +108,14 @@
       top: 400px;
     }
 
+    &.active {
+      opacity: 1;
+    }
+
   }
 
   .callback {
+    .smooth(.4s);
     display: block;
     padding: 0 60px;
     border: none;
@@ -116,6 +123,7 @@
     position: absolute;
     left: 45px;
     top: 260px;
+    opacity: 0;
 
     span {
       display: block;
@@ -132,6 +140,31 @@
 
     &:active span {
       line-height: 55px;
+    }
+
+  }
+
+  &.active {
+
+    .step-list {
+      background: url(../source/images/condition-repair-step-list.png) no-repeat center;
+    }
+
+    .callback {
+      opacity: 1;
+    }
+
+  }
+
+  @media(max-width: 1230px) {
+
+    .step-list {
+      background: url(../source/images/condition-repair-step-list.png) no-repeat center;
+    }
+
+    .callback,
+    .step-list .step-item {
+      opacity: 1;
     }
 
   }

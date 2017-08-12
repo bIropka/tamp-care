@@ -47,6 +47,7 @@
       text-transform: uppercase;
       padding-bottom: 15px;
       position: relative;
+      margin-top: 40px;
 
       &:after {
         content: '';
@@ -59,6 +60,10 @@
         bottom: 0;
       }
 
+      &:first-of-type {
+        margin-top: 0;
+      }
+
     }
 
     p {
@@ -66,9 +71,40 @@
       font-size: 18px;
       line-height: 1.7;
       margin: 20px 0;
+    }
 
-      & + h3 {
-        margin-top: 40px;
+    ul {
+      display: block;
+      padding: 0 15px;
+    }
+
+    li {
+      display: block;
+      font-family: 'Panton Semibold', sans-serif;
+      font-size: 18px;
+      margin: 15px 0;
+      padding: 0 0 0 20px;
+      position: relative;
+      line-height: 1.5;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 9px;
+        height: 9px;
+        background: @color-crimson-medium;
+        transform: rotate(45deg);
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      span {
+        font-family: 'Panton ExtraBold', sans-serif;
+        font-size: inherit;
+        color: inherit;
       }
 
     }

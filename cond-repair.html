@@ -58,7 +58,7 @@
                     Reg. $99.95
                 </div>
 
-                <div class="service-call-title">Service call free</div>
+                <div class="service-call-title">Service call fee</div>
 
                 <form action="php/mail-ac-control.php" class="form-side" id="form-ac-control">
 
@@ -88,13 +88,27 @@
 
             <div class="conditioner-repair-info">
 
-                <h3>30+ point a/c maintance with TempCare</h3>
+                <h3>Quick and Affordable Air Conditioning Repair in Chicago</h3>
 
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                <p>Chicago summers are hot and humid, which means your unit will be working overtime. Unfortunately, the heat can often overwhelm your A/C, causing it to break down at the most inconvenient times. You won’t have to worry for long, though, because at TempCare, we will respond to your call in just a few hours. Our fees are fair and affordable, and we serve homes and businesses throughout Chicago and the surrounding suburbs.</p>
 
-                <h3>Protect Your Air Conditioner with A/C Service</h3>
+                <h3>Reliable A/C Repair Throughout Chicagoland</h3>
 
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                <p>With TempCare, you’ll love how quick and easy it is to get the help you need. Our skilled team of HVAC technicians are ready to respond to your call as quickly as possible, and we offer solutions that last. For reliable air conditioning repairs, no matter the make or model, we are the team to call. Here’s what you can expect from your TempCare experience:</p>
+
+                <ul>
+                    <li><span>We are available around the clock. </span>We are here to answer your call, even on nights, weekends, and holidays.</li>
+                    <li><span>Our fees are fair and affordable. </span>Best of all, it’s all upfront! We will never hit you with hidden charges or unexpected overtime fees.</li>
+                    <li><span>We service all makes and models. </span>It doesn’t matter how old or what brand your unit is. We can help!</li>
+                    <li><span>Our team is available throughout Chicagoland. </span>We’ll travel to your location, and you won’t be charged extra because of it. If you are in Chicago or the surrounding suburbs, give us call.</li>
+                    <li><span>You can trust that you’re getting the best A/C repair that Chicago has to offer! </span>We have a reputation for excellence, and it’s back by our six-point satisfaction guarantee.</li>
+                </ul>
+
+                <h3>Call TempCare for All of Your Air Conditioning Repair Needs</h3>
+                
+                <p>We are a locally-owned and operated business in Chicagoland, and we are proud to provide superior service to our fellow residents and businesses. We are fully licensed and insured, and we have the experience necessary to restore comfort to your home in no time. </p>
+
+                <p>Call us today at [PHONE NUMBER] for A/C repair in Chicago and the surrounding suburbs. </p>
 
             </div>
 
@@ -592,5 +606,51 @@
 <script src="lib/slick/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
 <script src="js/custom-scripts.js"></script>
+
+<script>
+
+    if($(window).width() > 1230) {
+        if ($(window).scrollTop() > $('.steps').offset().top + 70)  {
+            showSteps();
+        }
+    }
+
+    $(window).scroll(function() {
+
+        if($(window).width() > 1230) {
+            if ($(window).scrollTop() > $('.steps').offset().top + 70)  {
+                showSteps();
+            }
+        }
+
+    });
+
+    var stepsItems = $('.step-list').find('.step-item');
+
+    function showSteps() {
+
+        setTimeout(function() {
+            $('.steps').addClass('active');
+        }, 2000);
+
+        var counter = 0;
+
+        (function showStepsInner() {
+
+            $(stepsItems[counter++]).addClass('active');
+
+            if (counter >= stepsItems.length) {
+                counter = 0;
+                return;
+            }
+
+            setTimeout(showStepsInner, 300);
+
+        })();
+
+    }
+
+</script>
+
 </body>
 </html>

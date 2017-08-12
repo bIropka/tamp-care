@@ -4,34 +4,6 @@ $(window).ready(function () {
         $('.wrapper').animate({opacity: 1}, 500);
     }, 500);
 
-    $('.slider').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        responsive: [
-            {
-                breakpoint: 981,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-
-        ]
-    });
-
     $('#Layer_3').hover(
         function() {
             $(this).find('polygon').css('fill', '#E53072');
@@ -114,6 +86,53 @@ $(window).ready(function () {
         $(this).siblings('p, ul, h3').toggleClass('active');
     });
 
+    $('.custom-select .current-value').click(function() {
+
+        $(this).parent().toggleClass('active');
+
+    });
+
+    $('.custom-select ul li').click(function() {
+
+        var currentValue = $(this).text();
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.custom-select').find('.current-value').find('span').text(currentValue);
+        $(this).parents('.custom-select').find('input').attr('value', currentValue);
+
+        $(this).parents('.custom-select').removeClass('active');
+
+    });
+
+    $('.slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 981,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+
+        ]
+    });
+
     var track = $('.cooling-advantages .track');
 
     if($(window).width() > 1230) {
@@ -128,16 +147,6 @@ $(window).ready(function () {
                 }, 1500);
             }, 1500);
         }
-
-        /*if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
-            $('.cooling-advantages-item').removeClass('active');
-            track.removeClass('active stopped');
-        }
-
-        if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
-            $('.cooling-advantages-item').removeClass('active');
-            track.removeClass('active stopped');
-        }*/
 
     }
 
@@ -156,21 +165,11 @@ $(window).ready(function () {
                 }, 1500);
             }
 
-            /*if ($(window).scrollTop() < $('.cooling-advantages').offset().top - 700) {
-                $('.cooling-advantages-item').removeClass('active');
-                track.removeClass('active stopped');
-            }
-
-            if ($(window).scrollTop() > $('.cooling-page .our-clients').offset().top) {
-                $('.cooling-advantages-item').removeClass('active');
-                track.removeClass('active stopped');
-            }*/
-
         }
 
     });
 
-    var items = $('.cooling-advantages-list').find('.cooling-advantages-item');
+    var advantagesItems = $('.cooling-advantages-list').find('.cooling-advantages-item');
 
     function showAdvantages() {
 
@@ -178,9 +177,9 @@ $(window).ready(function () {
 
         (function showAdvantagesInner() {
 
-            $(items[counter++]).addClass('active');
+            $(advantagesItems[counter++]).addClass('active');
 
-            if (counter >= items.length) {
+            if (counter >= advantagesItems.length) {
                 counter = 0;
                 return;
             }
@@ -190,24 +189,5 @@ $(window).ready(function () {
         })();
 
     }
-
-    $('.custom-select .current-value').click(function() {
-
-        $(this).parent().toggleClass('active');
-
-    });
-
-    $('.custom-select ul li').click(function() {
-
-        var value = $(this).text();
-
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        $(this).parents('.custom-select').find('.current-value').find('span').text(value);
-        $(this).parents('.custom-select').find('input').attr('value', value);
-
-        $(this).parents('.custom-select').removeClass('active');
-
-    });
 
 });
