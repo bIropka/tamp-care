@@ -7564,16 +7564,178 @@ footer[role='contentinfo'] .footer-bottom .copyrights {
   padding: 35px 0;
   background-image: linear-gradient(to top, #2366c9 23%, #1281da 65%, #009beb 100%);
 }
+.benefits .benefit-list {
+  display: flex;
+  width: calc(100% + 300px);
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0 -150px;
+}
+.benefits .benefit-item {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: skew(-12deg);
+  -moz-transform: skew(-12deg);
+  -ms-transform: skew(-12deg);
+  -o-transform: skew(-12deg);
+  transform: skew(-12deg);
+  width: 12%;
+  height: 630px;
+  position: relative;
+  overflow: hidden;
+}
+.benefits .benefit-item:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 19, 47, 0.3);
+  z-index: 1;
+}
+.benefits .benefit-item:before {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 120%;
+  top: 0;
+  background: #dedede;
+  z-index: 2;
+}
+.benefits .benefit-item img {
+  -webkit-transform: skew(12deg);
+  -moz-transform: skew(12deg);
+  -ms-transform: skew(12deg);
+  -o-transform: skew(12deg);
+  transform: skew(12deg);
+  display: block;
+  margin: 0;
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+}
+.benefits .benefit-item:nth-of-type(1) {
+  width: 32%;
+}
+.benefits .benefit-item:nth-of-type(1) img {
+  right: -160px;
+}
+.benefits .benefit-item:nth-of-type(1) h3 {
+  right: 90px;
+  left: auto;
+  width: 250px;
+}
+.benefits .benefit-item:nth-of-type(1) p {
+  right: -120%;
+  left: auto;
+}
+.benefits .benefit-item:nth-of-type(2) {
+  border-left: 2px solid #dedede;
+}
+.benefits .benefit-item:nth-of-type(2) img {
+  right: -100px;
+}
+.benefits .benefit-item:nth-of-type(2):hover {
+  width: 32%;
+}
+.benefits .benefit-item:nth-of-type(3) {
+  border-left: 2px solid #dedede;
+}
+.benefits .benefit-item:nth-of-type(3) img {
+  left: calc(-50% - 170px);
+}
+.benefits .benefit-item:nth-of-type(3):hover {
+  width: 32%;
+}
+.benefits .benefit-item:nth-of-type(4) {
+  border-left: 2px solid #dedede;
+  border-right: 2px solid #dedede;
+}
+.benefits .benefit-item:nth-of-type(4) img {
+  left: calc(-50% - 190px);
+}
+.benefits .benefit-item:nth-of-type(4):hover {
+  width: 32%;
+}
+.benefits .benefit-item:nth-of-type(5) {
+  width: 32%;
+}
+.benefits .benefit-item:nth-of-type(5) img {
+  left: -250px;
+}
+.benefits .benefit-item h3 {
+  -webkit-transform: skew(12deg);
+  -moz-transform: skew(12deg);
+  -ms-transform: skew(12deg);
+  -o-transform: skew(12deg);
+  transform: skew(12deg);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  font-family: 'Panton Bold', sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  max-height: 108px;
+  overflow: hidden;
+}
+.benefits .benefit-item p {
+  -webkit-transform: skew(12deg);
+  -moz-transform: skew(12deg);
+  -ms-transform: skew(12deg);
+  -o-transform: skew(12deg);
+  transform: skew(12deg);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  display: block;
+  width: 250px;
+  font-family: 'Panton Bold', sans-serif;
+  font-size: 22px;
+  position: absolute;
+  top: 175px;
+  left: 120%;
+  z-index: 10;
+}
+.benefits .benefit-item:hover:nth-of-type(1) p {
+  right: 50px;
+  left: auto;
+}
+.benefits .benefit-item:hover:before {
+  left: 0;
+}
+.benefits .benefit-item:hover h3 {
+  color: #2366c9;
+}
+.benefits .benefit-item:hover p {
+  left: 90px;
+}
 @media (max-width: 980px) {
   .benefits h2 {
     padding: 15px 0;
     font-size: 32px;
-  }
-}
-@media (max-width: 768px) {
-  .benefits .benefits-image {
-    width: 150%;
-    margin-left: -25%;
   }
 }
 /***********************************************************************************************************************
