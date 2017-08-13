@@ -19,11 +19,14 @@
   }
 
   .image-wrap {
+    .smooth(.6s);
     height: 190px;
     width: 190px;
     background: linear-gradient(to bottom, @color-blue-light, @color-blue);
     transform: skew(0, -30deg);
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     img {
       width: auto;
@@ -61,6 +64,19 @@
   .our-service-item {
     margin: 0 85px;
     position: relative;
+    padding: 190px 0 0 0;
+
+    &:hover {
+
+      .image-wrap {
+        top: -20px;
+      }
+
+      .title {
+        top: 160px;
+      }
+
+    }
 
     &:last-of-type {
 
@@ -83,6 +99,7 @@
   }
 
   .title {
+    .smooth(.6s);
     display: block;
     min-width: 210px;
     background: @color-crimson;
