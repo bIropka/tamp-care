@@ -135,6 +135,20 @@
       color: inherit;
     }
 
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid #ea426c;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      position: absolute;
+      left: ~"calc(100% - 2px)";
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
   }
 
   .form-side {
@@ -148,10 +162,14 @@
   }
 
   @media(max-width: 980px) {
-    background: #fff;
+    background: url(../source/images/background-points-top-no-man.jpg) no-repeat center;
+    background-size: auto 100%;
+    padding-top: 0;
+    padding-bottom: 40px;
 
     .wrapper-inner {
       display: block;
+      padding: 0;
     }
 
     .points-header {
@@ -179,8 +197,41 @@
     }
 
     .service-call-cost {
-      position: static;
-      margin: 25px auto;
+      padding: 0 0 20px 5px;
+      align-items: flex-end;
+      align-content: flex-end;
+      left: -20px;
+      top: -50px;
+      width: 140px;
+      height: 140px;
+      font-size: 14px;
+      margin: 0;
+
+      span {
+        font-size: 43px;
+        margin: 0;
+
+        &:after {
+          display: none;
+        }
+
+      }
+
+      small {
+        font-size: 34px;
+      }
+
+      sup {
+        font-size: 18px;
+      }
+
+      &:after {
+        border-left: 15px solid #ea426c;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        left: ~"calc(100% - 2px)";
+      }
+
     }
 
     .service-call-title {
@@ -196,16 +247,20 @@
   }
 
   @media(max-width: 480px) {
-    padding: 25px 0;
-
 
     h1 {
-      font-size: 36px;
+      font-size: 22px;
       padding-left: 15px;
       padding-right: 15px;
+      padding-top: 30px;
+      text-align: right;
 
-      span {
-        font-size: 32px!important;
+      span:first-of-type {
+        font-size: 32px;
+      }
+
+      span:last-of-type {
+        font-size: 16px;
       }
 
     }
@@ -215,13 +270,65 @@
     }
 
     .form-side {
-      width: 100%;
+      width: ~"calc(100% - 40px)";
       max-width: 400px;
 
       .title {
-        font-size: 28px;
+        font-family: 'Panton Light', sans-serif;
+        text-transform: uppercase;
+        font-size: 22px;
+
+        span {
+          display: block;
+          font-family: 'Panton ExtraBold', sans-serif;
+          text-transform: uppercase;
+        }
+
       }
 
+    }
+
+  }
+
+}
+
+@media(max-width: 980px) {
+
+  .our-clients + .conditioner-repair-points {
+
+    .service-call-cost {
+      width: 135px;
+      height: auto;
+      left: 0;
+      top: 0;
+      bottom: auto;
+      right: auto;
+      background-size: 120% auto;
+      padding: 10px 5px;
+      text-align: center;
+      border-radius: 0;
+      background-position: center;
+
+      &:after {
+        display: none;
+      }
+
+    }
+
+  }
+
+}
+
+@media(max-width: 480px) {
+
+  .our-clients + .conditioner-repair-points {
+    background: url(../source/images/bottom-man.png) no-repeat right bottom,
+                url(../source/images/background-points-bottom-no-man.jpg) no-repeat left top;
+    background-size: auto, auto 100%;
+    padding-bottom: 280px;
+
+    h1 {
+      padding-top: 60px;
     }
 
   }

@@ -20,7 +20,7 @@ $(window).ready(function () {
         $('nav').toggleClass('active');
     });
 
-    $('.promo-text .show-more').click(function() {
+    $('.show-more').click(function() {
         $(this).toggleClass('active');
         $(this).parent().toggleClass('active');
     });
@@ -80,11 +80,6 @@ $(window).ready(function () {
     });
 
     /* for cooling-page */
-
-    $('.cooling-info .show-more').click(function() {
-        $(this).toggleClass('active');
-        $(this).siblings('p, ul, h3').toggleClass('active');
-    });
 
     $('.custom-select .current-value').click(function() {
 

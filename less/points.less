@@ -11,6 +11,13 @@
     text-transform: none;
     max-width: 760px;
     margin: 0 auto 30px;
+
+    span {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
   }
 
   .points-note {
@@ -269,22 +276,18 @@
   @media(max-width: 1200px) {
 
     .points-note {
-      text-align: center;
-      margin: 0 0 40px;
+      display: none;
     }
 
     .point-list {
       position: static;
       border: none!important;
       width: 100%!important;
-      padding: 0!important;
       height: auto;
-      display: flex;
-      justify-content: center;
-      align-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      display: block;
+      text-align: center;
       margin: 25px 0;
+      padding: 0 20px!important;
 
       &:before,
       &:after {
@@ -294,15 +297,39 @@
     }
 
     .point-item {
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
       margin: 25px 10px;
+
+      i {
+        text-align: center;
+      }
+
     }
+
+    .callback {
+      opacity: 1;
+      position: static;
+      display: block;
+      margin: 30px auto 0;
+    }
+
 
   }
 
   @media(max-width: 768px) {
 
     h2 {
-      font-size: 42px;
+      font-family: 'Panton Light', sans-serif;
+      font-size: 30px;
+
+      span {
+        display: block;
+        font-family: 'Panton Bold', sans-serif;
+        font-size: 36px;
+      }
+
     }
 
   }
@@ -320,9 +347,9 @@
 
     .point-item {
       width: 100%;
-      margin: 20px 0;
+      margin: 10px 0;
       text-align: left;
-      padding: 0 0 0 55px;
+      padding: 0 0 0 35px;
 
       br {
         display: none;
@@ -335,7 +362,15 @@
         text-align: center;
         border-left: none;
         border-right: none;
-        width: 40px;
+        width: 30px;
+        font-size: 20px;
+        color: @color-blue;
+        background: #fff;
+      }
+
+      span {
+        font-family: "Panton Regular", sans-serif;
+        font-size: 18px;
       }
 
     }
