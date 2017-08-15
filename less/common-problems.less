@@ -26,9 +26,19 @@
     height: 650px;
     overflow: hidden;
     margin: 0 auto;
+
+    img:first-of-type {
+      display: block;
+    }
+
+    img:last-of-type {
+      display: none;
+    }
+
   }
 
   .problem-item {
+    display: block;
     position: absolute;
     padding: 5px 0;
 
@@ -370,11 +380,66 @@
   @media(max-width: 1200px) {
 
     h2 {
-      margin-bottom: 50px;
+      margin-bottom: 0;
     }
 
     .problems-chart {
-      display: none;
+      padding-top: 30px;
+    }
+
+    .problems-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+
+      img:first-of-type {
+        display: none;
+      }
+
+      img:last-of-type {
+        display: block;
+      }
+
+    }
+
+    .problems-list {
+      display: block;
+      max-width: 300px;
+      counter-reset: list;
+      margin: 10px auto 40px;
+    }
+
+    .problem-item {
+      position: relative;
+      left: auto!important;
+      top: auto!important;;
+      right: auto!important;;
+      bottom: auto!important;
+      padding-left: 30px;
+
+      .problem-relation {
+        display: none;
+      }
+
+      span {
+        font-size: 24px;
+        line-height: 24px;
+        color: #000;
+      }
+
+      &:before {
+        content: counter(list)'';
+        counter-increment: list;
+        display: block;
+        font-family: 'Panton Bold', sans-serif;
+        font-size: 24px;
+        line-height: 24px;
+        color: @color-crimson;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+
     }
 
   }
@@ -384,6 +449,31 @@
 
     h2 {
       font-size: 48px;
+    }
+
+  }
+
+  @media(max-width: 480px) {
+    background: url(../source/images/background-common.jpg) no-repeat center top;
+    background-size: cover;
+
+    .problems-list {
+      max-width: 220px;
+    }
+
+    .problem-item {
+
+      span {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      &:before {
+        font-size: 16px;
+        line-height: 16px;
+        top: 7px;
+      }
+
     }
 
   }
@@ -428,6 +518,11 @@
   .sub-title {
     font-size: 22px;
     margin: 5px 0 20px;
+
+    span {
+      font-size: inherit;
+    }
+
   }
 
   fieldset {
@@ -681,8 +776,22 @@
   }
 
   @media(max-width: 480px) {
-    padding: 0;
-    border: none;
+
+    .title {
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .sub-title {
+      font-size: 22px;
+      margin: 20px 0 30px;
+
+      span {
+        font-family: 'Panton Bold', sans-serif;
+      }
+
+    }
+
   }
 
 }

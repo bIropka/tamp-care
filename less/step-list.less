@@ -9,6 +9,11 @@
     font-family: 'Panton', sans-serif;
     font-size: 72px;
     color: @color-crimson-medium;
+
+    br {
+      display: none;
+    }
+
   }
 
   .step-list {
@@ -216,9 +221,73 @@
   }
 
   @media(max-width: 480px) {
+    background: url(../source/images/background-how.jpg) no-repeat center top;
+    background-size: cover;
+
+    .wrapper-inner {
+      padding: 0 20px;
+    }
 
     h2 {
-      font-size: 30px;
+      font-family: 'Panton', sans-serif;
+      text-transform: none;
+      font-size: 60px;
+      color: #fff;
+      font-weight: 400;
+      line-height: 55px;
+
+      br {
+        display: block;
+      }
+
+    }
+
+    .step-item {
+      padding: 0;
+      position: relative!important;
+      left: auto!important;
+      right: auto!important;
+      top: auto!important;
+      bottom: auto!important;
+      text-align: left;
+      margin: 0 0 30px 0!important;
+
+      &:before {
+        background: #16baff;
+        font-family: 'Roboto Slab', serif;
+        position: absolute;
+        left: 0;
+        top: -10px;
+      }
+
+      h3 {
+        color: #fff;
+        padding: 0 0 0 90px;
+      }
+
+      p {
+        color: #fff;
+      }
+
+      &:nth-of-type(2n) {
+
+        &:before {
+          left: auto;
+          right: 0;
+        }
+
+        h3 {
+          padding: 0 90px 0 0;
+          text-align: right;
+        }
+
+        p {
+          text-align: right;
+          padding-top: 10px;
+        }
+
+      }
+
     }
 
   }

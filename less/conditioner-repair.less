@@ -61,6 +61,11 @@
     text-align: center;
     margin: 80px 140px 0 0;
     position: relative;
+
+    br {
+      display: none;
+    }
+
   }
 
   .service-call-cost {
@@ -134,13 +139,17 @@
   }
 
   @media(max-width: 980px) {
-    background: #fff;
+    padding-top: 0;
+
+    .wrapper-inner {
+      padding: 0 20px;
+    }
 
     h1 {
       display: block;
-      width: 100%;
-      margin: 0;
-      padding: 20px 0;
+      width: ~"calc(100% + 40px)";
+      margin: 0 0 0 -20px;
+      padding: 20px 10px;
 
       &:before,
       &:after {
@@ -153,16 +162,36 @@
       display: block;
       width: 100%;
       margin: 0;
+
+      br {
+        display: block;
+      }
+
     }
 
     .service-call-cost {
-      position: static;
-      margin: 25px auto;
+      width: 150px;
+      height: 150px;
+      left: -15px;
+      top: -20px;
+      background-size: cover;
+
+      span {
+        font-size: 52px;
+      }
+
+      small {
+        font-size: 41px;
+      }
+
+      sup {
+        font-size: 22px;
+      }
+
     }
 
     .service-call-title {
-      margin: 0;
-      padding-left: 0;
+      margin: 15px 0;
     }
 
     .form-side {
@@ -172,24 +201,80 @@
   }
 
   @media(max-width: 480px) {
-    padding: 25px 0;
+    background: url(../source/images/background-repair-top-no-man.jpg) no-repeat center bottom;
+    background-size: cover;
+    padding: 0 0 25px 0;
 
     h1 {
-      font-size: 36px;
+      font-size: 30px;
 
       span {
-        margin-top: 15px;
-        font-size: 32px;
+        font-size: 24px;
+      }
+
+    }
+
+    .service-call {
+      display: block;
+      width: 100%;
+      margin: 0;
+
+      br {
+        display: block;
+      }
+
+    }
+
+    .service-call-cost {
+      width: 150px;
+      height: 150px;
+      left: -15px;
+      top: -20px;
+      background-size: cover;
+
+      span {
+        font-size: 52px;
+      }
+
+      small {
+        font-size: 41px;
+      }
+
+      sup {
+        font-size: 22px;
       }
 
     }
 
     .service-call-title {
-      font-size: 32px;
+      margin: 15px 0;
+      padding-left: ~"calc(100% - 130px)";
+      text-align: left;
+      font-size: 30px;
     }
 
     .form-side .title {
-      font-size: 28px;
+      font-family: 'Panton', sans-serif;
+      font-size: 22px;
+      text-transform: uppercase;
+      text-align: right;
+      padding: 15px;
+
+      br {
+        display: none;
+      }
+
+      span {
+        display: block;
+        font-family: 'Panton Bold', sans-serif;
+      }
+
+    }
+
+    .form-side .sub-title {
+      font-size: 22px;
+      padding: 0 10px;
+      margin: 10px 0 0 0;
     }
 
   }
