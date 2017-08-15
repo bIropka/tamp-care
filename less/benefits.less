@@ -154,7 +154,7 @@
       color: #fff;
       position: absolute;
       top: 50px;
-      left: 50px;
+      left: 20px;
       z-index: 10;
       max-height: 108px;
       overflow: hidden;
@@ -190,10 +190,75 @@
 
       h3 {
         color: @color-blue;
+        left: 50px;
       }
 
       p {
         left: 90px;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 1230px) {
+
+    .benefit-item {
+
+      &:nth-of-type(1) {
+
+        h3 {
+          right: 30px;
+          width: 200px;
+        }
+
+      }
+
+      h3 {
+        font-size: 26px;
+        line-height: 28px;
+        max-height: 84px;
+      }
+
+      p {
+        .turned(12deg);
+        .smooth(.4s);
+        display: block;
+        width: 250px;
+        font-family: 'Panton Bold', sans-serif;
+        font-size: 22px;
+        position: absolute;
+        top: 175px;
+        left: 120%;
+        z-index: 10;
+      }
+
+      &:hover {
+
+        &:nth-of-type(1) {
+
+          h3 {
+            width: 200px;
+            right: 75px;
+            left: auto;
+          }
+
+          p {
+            width: 200px;
+            right: 15px;
+          }
+
+        }
+
+        h3 {
+          left: 30px;
+        }
+
+        p {
+          left: 70px;
+          width: 200px;
+        }
+
       }
 
     }
@@ -210,6 +275,143 @@
         display: block;
         font-size: 45px;
         text-transform: uppercase;
+      }
+
+    }
+
+    .benefit-list {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
+
+    .benefit-item {
+      .turned(0);
+      width: 100%!important;
+      height: auto;
+      padding: 40px 0;
+      position: relative;
+      border-bottom: 2px solid #fff;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .25);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      img {
+        display: none;
+      }
+
+      h3 {
+        .turned(0);
+        width: 100%!important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: relative!important;
+        left: auto!important;
+        right: auto!important;
+        top: auto!important;
+        bottom: auto!important;
+
+        &:before {
+          content: '\f0d7';
+          font-family: FontAwesome;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          border: 2px solid #fff;
+          color: #fff;
+          border-radius: 50%;
+          margin: 0 20px 0 0;
+        }
+
+      }
+
+      p {
+        display: none;
+        width: 100%!important;
+        max-width: 260px;
+        .turned(0);
+        font-size: 20px;
+        position: relative!important;
+        left: auto!important;
+        right: auto!important;
+        top: auto!important;
+        bottom: auto!important;
+        text-align: center;
+        margin: 30px auto 0;
+      }
+
+      &:nth-of-type(1) {
+        background: transparent url(../source/images/benefits-1.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+      &:nth-of-type(2) {
+        background: url(../source/images/benefits-2.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+      &:nth-of-type(3) {
+        background: url(../source/images/benefits-3.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+      &:nth-of-type(4) {
+        background: url(../source/images/benefits-4.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+      &:nth-of-type(5) {
+        background: url(../source/images/benefits-5.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+      &.active {
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, .8);
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        h3 {
+          color: @color-blue;
+
+          &:before {
+            border: 2px solid @color-blue;
+            color: @color-blue;
+          }
+
+        }
+
+        p {
+          display: block;
+        }
+
       }
 
     }

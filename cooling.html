@@ -22,7 +22,7 @@
 
             <nav>
                 <a href="#home"><span>HOME</span></a>
-                <a href="index.html#services"><span>SERVICES</span></a>
+                <a class="nav-services"><span>SERVICES</span></a>
                 <a href="index.html#why-us"><span>WHY US</span></a>
                 <a href="index.html#about-us"><span>ABOUT</span></a>
                 <a href="#"><span>COUPONS</span></a>
@@ -128,7 +128,7 @@
 
                 <label><input type="text" id="appointment-phone" name="appointment-phone" placeholder="Phone" required></label>
 
-                <button type="submit">request</button>
+                <button type="submit" onclick="yaCounter45632331.reachGoal('Request_main_cooling'); return true;">request</button>
 
             </form>
 
@@ -294,7 +294,7 @@
 
                 <label><input type="text" id="cooling-consultation-phone" name="cooling-consultation-phone" placeholder="Phone" required></label>
 
-                <button type="submit"><span>send</span></button>
+                <button type="submit" onclick="yaCounter45632331.reachGoal('Request_main_cooling'); return true;"><span>send</span></button>
 
             </form>
 
@@ -423,7 +423,7 @@
 
         <label><input type="text" id="consultation-email" name="consultation-email" placeholder="Email" required></label>
 
-        <button type="submit"><span>GET FREE CONSULTATION</span></button>
+        <button type="submit" onclick="yaCounter45632331.reachGoal('Request_menu_247'); return true;"><span>GET FREE CONSULTATION</span></button>
 
     </form>
 
@@ -449,6 +449,55 @@
 
 </div>
 
+<div class="modal modal-services">
+
+    <div class="our-services-list">
+
+        <a href="#" class="our-service-item">
+            <div class="image-wrap">
+                <img src="source/images/image-pc.png" alt="service">
+            </div>
+            <div class="title"><span>heating</span></div>
+            <ul>
+                <li>Furnace Maintenance</li>
+                <li>Furnace Repair</li>
+                <li>Furnace Replacement</li>
+                <li>Heater Maintenance</li>
+                <li>Heater Repair</li>
+                <li>Heater Replacement</li>
+            </ul>
+        </a>
+
+        <a href="cooling.html" class="our-service-item">
+            <div class="image-wrap">
+                <img src="source/images/image-cooler.png" alt="service">
+            </div>
+            <div class="title"><span>COOLING</span></div>
+            <ul>
+                <li>Air Conditioner Maintenance</li>
+                <li>Air Conditioner Repair</li>
+                <li>Air Conditioner Replacement</li>
+                <li>Ductless Split AC Systems</li>
+            </ul>
+        </a>
+
+        <a href="#" class="our-service-item">
+            <div class="image-wrap">
+                <img src="source/images/image-other-services.png" alt="service">
+            </div>
+            <div class="title"><span>OTHER SERVICES</span></div>
+            <ul>
+                <li>Emergency HVAC Services</li>
+                <li>Indoor Air Quality</li>
+                <li>Duct Work</li>
+                <li>Water Heater replacement</li>
+            </ul>
+        </a>
+
+    </div>
+
+</div>
+
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="lib/slick/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
@@ -459,6 +508,36 @@
 
 
 </script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter45632331 = new Ya.Metrika({
+                    id:45632331,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45632331" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 </body>
 </html>

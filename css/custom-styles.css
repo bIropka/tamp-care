@@ -2644,6 +2644,9 @@ h3 {
   font-size: 30px;
   color: #2366c9;
 }
+.show-more {
+  display: none;
+}
 @media (max-width: 480px) {
   .page-cond-points .footer-top {
     display: none;
@@ -2785,6 +2788,7 @@ header[role='banner'] nav a {
   font-size: 18px;
   text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
 }
 header[role='banner'] nav a span {
   display: block;
@@ -5657,7 +5661,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background: url(../source/images/cooling-callback-background.jpg) no-repeat center top;
   background-size: cover;
   text-align: right;
-  padding: 50px 0 40px;
+  padding: 0 0 40px;
 }
 .cooling-callback .wrapper-inner {
   position: relative;
@@ -5676,11 +5680,31 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   display: block;
   width: 740px;
   text-align: right;
-  color: #c90742;
+  color: #fff;
+  padding: 40px 30px 20px 0;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
 }
 .cooling-callback h2 span {
   font-family: 'Panton Thin', sans-serif;
   color: inherit;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.cooling-callback h2:before {
+  -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -ms-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg);
+  content: '';
+  width: 1500px;
+  height: 100%;
+  background: rgba(22, 186, 255, 0.7);
+  position: absolute;
+  right: -10px;
+  top: 0;
+  z-index: -1;
 }
 .cooling-callback .form-cooling-consultation {
   display: inline-block;
@@ -5831,6 +5855,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
   .cooling-callback h2 span {
     font-family: 'Panton Light', sans-serif;
+  }
+  .cooling-callback h2:before {
+    display: none;
   }
   .cooling-callback .form-cooling-consultation {
     margin: 30px 0 0 0;
@@ -6201,6 +6228,232 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   right: 0;
   top: 0;
 }
+.modal-services {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}
+.modal-services .our-services-list {
+  display: flex;
+  width: 860px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: url(../source/images/background-modal.jpg) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  left: calc(50% - 350px);
+  top: 57px;
+  padding: 150px 50px 50px 80px;
+}
+.modal-services .our-services-list .image-wrap {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  height: 115px;
+  width: 115px;
+  background: linear-gradient(to bottom, #357de8, #2366c9);
+  transform: skew(0, -30deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.modal-services .our-services-list .image-wrap img {
+  width: auto;
+  height: 120px;
+  transform: skew(0, 30deg);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal-services .our-services-list .image-wrap:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #357de8;
+  position: absolute;
+  top: -10px;
+  opacity: .2;
+}
+.modal-services .our-services-list .image-wrap:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 8px;
+  background: #357de8;
+  position: absolute;
+  bottom: -16px;
+  opacity: .5;
+}
+.modal-services .our-services-list .our-service-item {
+  display: block;
+  margin: 0;
+  position: relative;
+  padding: 100px 0 0 0;
+  min-width: 200px;
+}
+.modal-services .our-services-list .our-service-item:hover .image-wrap {
+  top: -20px;
+}
+.modal-services .our-services-list .our-service-item:hover .title {
+  top: 80px;
+}
+.modal-services .our-services-list .our-service-item:last-of-type .image-wrap img {
+  left: -5px;
+}
+@media (max-width: 1200px) {
+  .modal-services .our-services-list .our-service-item {
+    width: 200px;
+    margin: 0 auto 100px;
+    padding-left: 20px;
+  }
+}
+.modal-services .our-services-list .our-service-item:last-of-type .image-wrap img {
+  height: 140px;
+}
+.modal-services .our-services-list .title {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  display: block;
+  min-width: 160px;
+  background: #fff;
+  position: absolute;
+  top: 100px;
+  left: -15px;
+  z-index: 11;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 15px;
+}
+.modal-services .our-services-list .title:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 11px solid transparent;
+  border-right: 11px solid #fff;
+  border-bottom: 11px solid #fff;
+  position: absolute;
+  top: calc(100% - 22px);
+  left: -22px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.modal-services .our-services-list .title:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 11px solid transparent;
+  border-right: 11px solid #fff;
+  border-top: 11px solid #fff;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.modal-services .our-services-list .title span {
+  display: block;
+  width: 100%;
+  height: 30px;
+  font-family: 'Panton Bold', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #c90742;
+  line-height: 30px;
+}
+.modal-services .our-services-list .title span:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  margin: auto;
+  right: calc(100% + 23px);
+  bottom: 0;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.modal-services .our-services-list .title span:after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border: 2px solid #fff;
+  position: absolute;
+  margin: auto;
+  right: calc(100% + 17px);
+  bottom: 0;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+@media (max-width: 1200px) {
+  .modal-services .our-services-list .title {
+    left: 0;
+  }
+}
+.modal-services .our-services-list ul {
+  width: calc(100% + 30px);
+  margin: 100px 0 0 -30px;
+}
+.modal-services .our-services-list li {
+  display: block;
+  width: 100%;
+  padding: 10px 0 10px 20px;
+  margin: 0;
+  color: #fff;
+  font-family: 'Panton Semibold', sans-serif;
+  font-size: 16px;
+  position: relative;
+  border-bottom: 1px solid #464e5d;
+}
+.modal-services .our-services-list li:last-child {
+  border-bottom: none;
+}
+.modal-services .our-services-list li:hover {
+  background: #2366c9;
+}
+.modal-services .our-services-list:before,
+.modal-services .our-services-list:after {
+  display: none;
+}
 /***********************************************************************************************************************
 *********** conditioner-repair
 ***********************************************************************************************************************/
@@ -6553,20 +6806,19 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
+  width: 30%;
   margin: 15px 10px;
 }
 .conditioner-repair-about .conditioner-repair-logos a img {
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-width: none;
 }
 .conditioner-repair-about .conditioner-repair-logos a:hover {
   opacity: .7;
 }
-.conditioner-repair-about .conditioner-repair-logos a:nth-of-type(-n + 3) {
-  width: 110px;
-}
 .conditioner-repair-about .conditioner-repair-logos a:nth-last-of-type(-n + 2) {
-  width: 170px;
+  width: 35%;
 }
 @media (max-width: 980px) {
   .conditioner-repair-about .conditioner-repair-info,
@@ -6655,6 +6907,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 ***********************************************************************************************************************/
 .common-problems {
   padding: 0 0 90px;
+  background: url(../source/images/background-common-desctop.png) no-repeat center top;
 }
 .common-problems h2 {
   font-family: 'Panton Bold', sans-serif;
@@ -7434,12 +7687,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 *********** step-list
 ***********************************************************************************************************************/
 .steps {
-  background: url(../source/images/background-guarantees.png);
+  background: url(../source/images/background-how-desctop.jpg) no-repeat left bottom;
+  background-size: cover;
 }
 .steps h2 {
   font-family: 'Panton', sans-serif;
   font-size: 72px;
-  color: #e53072;
+  color: #fff;
+  font-weight: 400;
 }
 .steps h2 br {
   display: none;
@@ -7479,7 +7734,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   align-items: center;
   width: 70px;
   height: 70px;
-  background: #e53072;
+  background: #16baff;
   font-family: 'Roboto Slab', serif;
   font-size: 55px;
   color: #fff;
@@ -7492,7 +7747,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   font-family: Panton SemiBold, sans-serif;
   font-size: 24px;
   line-height: 1;
-  color: inherit;
+  color: #fff;
   text-transform: uppercase;
   overflow: hidden;
   height: 48px;
@@ -7501,6 +7756,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .steps .step-item p {
   font-size: 16px;
   line-height: 18px;
+  color: #fff;
 }
 .steps .step-item:nth-of-type(1) {
   position: absolute;
@@ -8098,7 +8354,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   color: #fff;
   position: absolute;
   top: 50px;
-  left: 50px;
+  left: 20px;
   z-index: 10;
   max-height: 108px;
   overflow: hidden;
@@ -8132,9 +8388,57 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .benefits .benefit-item:hover h3 {
   color: #2366c9;
+  left: 50px;
 }
 .benefits .benefit-item:hover p {
   left: 90px;
+}
+@media (max-width: 1230px) {
+  .benefits .benefit-item:nth-of-type(1) h3 {
+    right: 30px;
+    width: 200px;
+  }
+  .benefits .benefit-item h3 {
+    font-size: 26px;
+    line-height: 28px;
+    max-height: 84px;
+  }
+  .benefits .benefit-item p {
+    -webkit-transform: skew(12deg);
+    -moz-transform: skew(12deg);
+    -ms-transform: skew(12deg);
+    -o-transform: skew(12deg);
+    transform: skew(12deg);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    display: block;
+    width: 250px;
+    font-family: 'Panton Bold', sans-serif;
+    font-size: 22px;
+    position: absolute;
+    top: 175px;
+    left: 120%;
+    z-index: 10;
+  }
+  .benefits .benefit-item:hover:nth-of-type(1) h3 {
+    width: 200px;
+    right: 75px;
+    left: auto;
+  }
+  .benefits .benefit-item:hover:nth-of-type(1) p {
+    width: 200px;
+    right: 15px;
+  }
+  .benefits .benefit-item:hover h3 {
+    left: 30px;
+  }
+  .benefits .benefit-item:hover p {
+    left: 70px;
+    width: 200px;
+  }
 }
 @media (max-width: 980px) {
   .benefits h2 {
@@ -8145,6 +8449,130 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     display: block;
     font-size: 45px;
     text-transform: uppercase;
+  }
+  .benefits .benefit-list {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .benefits .benefit-item {
+    -webkit-transform: skew(0);
+    -moz-transform: skew(0);
+    -ms-transform: skew(0);
+    -o-transform: skew(0);
+    transform: skew(0);
+    width: 100%!important;
+    height: auto;
+    padding: 40px 0;
+    position: relative;
+    border-bottom: 2px solid #fff;
+  }
+  .benefits .benefit-item:last-of-type {
+    border-bottom: none;
+  }
+  .benefits .benefit-item:after {
+    display: none;
+  }
+  .benefits .benefit-item:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .benefits .benefit-item img {
+    display: none;
+  }
+  .benefits .benefit-item h3 {
+    -webkit-transform: skew(0);
+    -moz-transform: skew(0);
+    -ms-transform: skew(0);
+    -o-transform: skew(0);
+    transform: skew(0);
+    width: 100%!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative!important;
+    left: auto!important;
+    right: auto!important;
+    top: auto!important;
+    bottom: auto!important;
+  }
+  .benefits .benefit-item h3:before {
+    content: '\f0d7';
+    font-family: FontAwesome;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+  }
+  .benefits .benefit-item p {
+    display: none;
+    width: 100%!important;
+    max-width: 260px;
+    -webkit-transform: skew(0);
+    -moz-transform: skew(0);
+    -ms-transform: skew(0);
+    -o-transform: skew(0);
+    transform: skew(0);
+    font-size: 20px;
+    position: relative!important;
+    left: auto!important;
+    right: auto!important;
+    top: auto!important;
+    bottom: auto!important;
+    text-align: center;
+    margin: 30px auto 0;
+  }
+  .benefits .benefit-item:nth-of-type(1) {
+    background: transparent url(../source/images/benefits-1.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .benefits .benefit-item:nth-of-type(2) {
+    background: url(../source/images/benefits-2.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .benefits .benefit-item:nth-of-type(3) {
+    background: url(../source/images/benefits-3.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .benefits .benefit-item:nth-of-type(4) {
+    background: url(../source/images/benefits-4.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .benefits .benefit-item:nth-of-type(5) {
+    background: url(../source/images/benefits-5.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .benefits .benefit-item.active:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .benefits .benefit-item.active h3 {
+    color: #2366c9;
+  }
+  .benefits .benefit-item.active h3:before {
+    border: 2px solid #2366c9;
+    color: #2366c9;
+  }
+  .benefits .benefit-item.active p {
+    display: block;
   }
 }
 /***********************************************************************************************************************

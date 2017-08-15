@@ -15,6 +15,26 @@ $(window).ready(function () {
         }
     );
 
+    $('.nav-services').click(function() {
+        $('.modal-services').fadeIn(600);
+    });
+
+    $('.modal-services').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.our-services-list')).length) {
+            $('.modal-services').fadeOut();
+        }
+    });
+
+    $('.benefit-item').click(function() {
+
+        if($(window).width() < 981) {
+            $(this).siblings().removeClass('active');
+            $(this).toggleClass('active');
+        }
+
+    });
+
     $('.burger').click(function() {
         $(this).toggleClass('active');
         $('nav').toggleClass('active');
