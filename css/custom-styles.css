@@ -3054,9 +3054,35 @@ header[role='banner'] .burger {
     height: 65px;
     line-height: 65px;
   }
+  header[role='banner'] nav a:hover {
+    background: none;
+    color: #2366c9;
+  }
   header[role='banner'] nav.active {
     left: 0;
   }
+}
+.nav-services-list {
+  display: none;
+  padding: 0 30px;
+  border-bottom: 1px solid #454950;
+}
+.nav-services-list .our-service-item {
+  display: block;
+  padding: 15px 20px 15px 50px;
+}
+.nav-services-list .our-service-item .title {
+  color: inherit;
+}
+.nav-services-list .our-service-item .title span {
+  height: auto;
+  line-height: 1;
+}
+.nav-services-list .our-service-item ul {
+  display: none;
+}
+.nav-services-list .our-service-item .image-wrap {
+  display: none;
 }
 /***********************************************************************************************************************
 *********** footer
@@ -6240,7 +6266,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   z-index: 1002;
 }
 .modal-services .our-services-list {
-  display: flex;
+  display: flex!important;
   width: 860px;
   justify-content: space-between;
   align-items: flex-start;

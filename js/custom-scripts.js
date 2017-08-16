@@ -16,7 +16,31 @@ $(window).ready(function () {
     );
 
     $('.nav-services').click(function() {
-        $('.modal-services').fadeIn(600);
+
+        if($(window).width() > 1200) {
+            $('.modal-services').fadeIn(600);
+        } else {
+            $('.nav-services-list').slideToggle();
+        }
+
+    });
+
+    if($(window).width() < 1201) {
+        $('.modal-services').fadeOut();
+        $('.modal-services .our-services-list').toggleClass('our-services-list nav-services-list').insertAfter('.nav-services');
+    } else {
+        $('.nav-services-list').toggleClass('our-services-list nav-services-list').prependTo('.modal-services');
+    }
+
+    $(window).resize(function() {
+
+        if($(window).width() < 1201) {
+            $('.modal-services').fadeOut();
+            $('.modal-services .our-services-list').toggleClass('our-services-list nav-services-list').insertAfter('.nav-services');
+        } else {
+            $('.nav-services-list').toggleClass('our-services-list nav-services-list').prependTo('.modal-services');
+        }
+
     });
 
     $('.modal-services').click(function (event) {

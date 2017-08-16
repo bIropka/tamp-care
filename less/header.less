@@ -368,12 +368,48 @@ header[role='banner'] {
           line-height: 65px;
         }
 
+        &:hover {
+          background: none;
+          color: @color-blue;
+        }
+
       }
 
       &.active {
         left: 0;
       }
 
+    }
+
+  }
+
+}
+
+.nav-services-list {
+  display: none;
+  padding: 0 30px;
+  border-bottom: 1px solid #454950;
+
+  .our-service-item {
+    display: block;
+    padding: 15px 20px 15px 50px;
+
+    .title {
+      color: inherit;
+
+      span {
+        height: auto;
+        line-height: 1;
+      }
+
+    }
+
+    ul {
+      display: none;
+    }
+
+    .image-wrap {
+      display: none;
     }
 
   }
