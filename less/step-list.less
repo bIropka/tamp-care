@@ -7,7 +7,7 @@
   background-size: cover;
 
   h2 {
-    font-family: 'Panton', sans-serif;
+    .font-regular;
     font-size: 72px;
     color: #fff;
     font-weight: 400;
@@ -22,6 +22,7 @@
     .smooth(.4s);
     height: 694px;
     margin: 75px 0 0 0;
+    background: url(../source/images/condition-repair-step-list.png) no-repeat center;
   }
 
   ul {
@@ -60,7 +61,7 @@
     }
 
     h3 {
-      font-family: Panton SemiBold, sans-serif;
+      .font-semibold;
       font-size: 24px;
       line-height: 1;
       color: #fff;
@@ -136,7 +137,7 @@
     span {
       display: block;
       height: 50px;
-      font-family: 'Panton Bold', sans-serif;
+      .font-bold;
       line-height: 50px;
       font-size: 20px;
       color: #fff;
@@ -153,10 +154,6 @@
   }
 
   &.active {
-
-    .step-list {
-      background: url(../source/images/condition-repair-step-list.png) no-repeat center;
-    }
 
     .callback {
       opacity: 1;
@@ -232,7 +229,7 @@
     }
 
     h2 {
-      font-family: 'Panton', sans-serif;
+      .font-regular;
       text-transform: none;
       font-size: 60px;
       color: #fff;
@@ -289,6 +286,15 @@
           padding-top: 10px;
         }
 
+      }
+
+    }
+
+    .callback {
+      padding: 0 15px;
+
+      span {
+        font-size: 16px;
       }
 
     }

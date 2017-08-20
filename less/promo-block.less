@@ -35,6 +35,13 @@
     align-items: stretch;
   }
 
+  h2 {
+    color: @color-blue;
+    font-size: 40px;
+    text-align: left;
+    line-height: 1;
+  }
+
   .promo-text {
     width: 50%;
     padding: 30px 60px;
@@ -76,7 +83,7 @@
   .work-schedule-hours {
     background: linear-gradient(to bottom, @color-crimson-light, @color-crimson);
     padding: 15px 20px;
-    font-family: 'Panton Bold', sans-serif;
+    .font-bold;
     font-size: 48px;
     color: #fff;
 
@@ -87,12 +94,12 @@
       .turned(30deg);
 
       &:first-of-type {
-        font-family: 'Panton Bold', sans-serif;
+        .font-bold;
         font-size: 48px;
       }
 
       &:last-of-type {
-        font-family: 'Panton', sans-serif;
+        .font-regular;
         font-size: 30px;
         margin-top: -10px;
       }
@@ -112,12 +119,12 @@
       .turned(30deg);
 
       &:first-of-type {
-        font-family: 'Panton Bold', sans-serif;
+        .font-bold;
         font-size: 48px;
       }
 
       &:last-of-type {
-        font-family: 'Panton', sans-serif;
+        .font-regular;
         font-size: 30px;
         margin-top: -10px;
       }
@@ -172,7 +179,7 @@
         span {
           color: @color-crimson;
           text-transform: uppercase;
-          font-family: 'Panton Bold', sans-serif;
+          .font-bold;
 
           &:last-of-type {
             display: none;

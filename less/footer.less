@@ -47,7 +47,7 @@ footer[role='contentinfo'] {
   }
 
   .title {
-    font-family: 'Panton Bold', sans-serif;
+    .font-bold;
     font-size: 18px;
     color: #e62c73;
     text-transform: uppercase;
@@ -62,7 +62,7 @@ footer[role='contentinfo'] {
 
     a {
       display: block;
-      font-family: 'Panton Semibold', sans-serif;
+      .font-semibold;
       font-size: 18px;
       color: #1d2324;
       position: relative;
@@ -71,7 +71,7 @@ footer[role='contentinfo'] {
       margin: 15px 0 0;
 
       &:hover {
-        font-family: 'Panton ExtraBold', sans-serif;
+        .font-black;
         color: #3467b1;
 
         &:before {
@@ -131,13 +131,13 @@ footer[role='contentinfo'] {
     .note {
       display: none;
       position: absolute;
-      bottom: 0;
-      right: 160px;
+      bottom: -5px;
+      right: 200px;
 
       span {
         display: block;
         white-space: nowrap;
-        font-family: 'Panton Semibold', sans-serif;
+        .font-semibold;
         color: #1d2324;
         text-align: right;
       }
@@ -152,33 +152,33 @@ footer[role='contentinfo'] {
     position: relative;
 
     .our-name {
-      font-family: 'Panton Semibold', sans-serif;
+      .font-semibold;
       font-size: 30px;
       color: #1d2324;
       margin-top: 30px;
     }
 
     .link-email {
-      font-family: 'Panton Semibold', sans-serif;
+      .font-semibold;
       font-size: 18px;
       color: #1d2324;
     }
 
     .sub-title {
-      font-family: 'Panton Semibold Italic', sans-serif;
+      .font-semibold-italic;
       font-size: 30px;
       color: #e62c73;
       margin: 30px 0 10px;
     }
 
     .text {
-      font-family: 'Panton Semibold Italic', sans-serif;
+      .font-semibold-italic;
       color: #1d2324;
       font-size: 18px;
     }
 
     .link-phone {
-      font-family: 'Panton Semibold Italic', sans-serif;
+      .font-semibold-italic;
       color: #1d2324;
       font-size: 30px;
     }
@@ -236,7 +236,7 @@ footer[role='contentinfo'] {
     .copyrights {
       text-align: center;
       color: #fff;
-      font-family: 'Panton Light', sans-serif;
+      .font-light;
 
       br {
         display: none;
@@ -289,6 +289,18 @@ footer[role='contentinfo'] {
           background: @color-blue;
         }
 
+      }
+
+    }
+
+  }
+
+  @media(max-width: 480px) {
+
+    .footer-bottom {
+
+      .copyrights {
+        font-size: 14px;
       }
 
     }

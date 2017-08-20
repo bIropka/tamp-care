@@ -5,7 +5,7 @@
 .points {
 
   h2 {
-    font-family: 'Panton Bold', sans-serif;
+    .font-bold;
     font-size: 55px;
     color: @color-crimson-medium;
     text-transform: none;
@@ -13,7 +13,7 @@
     margin: 0 auto 30px;
 
     span {
-      font-family: inherit;
+      font-weight: inherit;
       font-size: inherit;
       color: inherit;
     }
@@ -22,12 +22,11 @@
 
   .points-note {
     .smooth(.4s);
-    margin: 0 0 15px 30px;
-    opacity: 0;
+    margin: 0 0 30px 30px;
 
     span {
       display: block;
-      font-family: 'Panton Bold', sans-serif;
+      .font-bold;
       line-height: 1;
 
       &:nth-of-type(1) {
@@ -55,9 +54,9 @@
     width: ~"calc(100% - 60px)";
     height: 155px;
     margin: 0 30px;
-    border: 2px solid transparent;
     padding: 0 135px;
     position: relative;
+    border: 2px solid #2366c9;
 
     &:nth-of-type(1) {
       border-left: none;
@@ -73,9 +72,9 @@
         right: -2px;
         bottom: 0;
         z-index: 1;
-        border-right: 2px solid transparent;
-        border-bottom: 2px solid transparent;
         border-radius: 50px;
+        border-right: 2px solid #2366c9;
+        border-bottom: 2px solid #2366c9;
       }
 
       &:after {
@@ -147,7 +146,7 @@
     opacity: 0;
 
     span {
-      font-family: 'Panton Semibold', sans-serif;
+      .font-semibold;
       font-size: 18px;
     }
 
@@ -177,7 +176,6 @@
 
   .callback {
     .smooth(.4s);
-    opacity: 0;
     display: block;
     width: 100%;
     max-width: 270px;
@@ -190,7 +188,7 @@
 
     span {
       display: block;
-      font-family: 'Panton Bold', sans-serif;
+      .font-bold;
       width: 100%;
       line-height: 30px;
       font-size: 32px;
@@ -199,39 +197,6 @@
 
     &:hover {
       background: linear-gradient(to top, @color-crimson-light, @color-crimson 70%);
-    }
-
-  }
-
-  &.active {
-
-    .point-list {
-      border: 2px solid #2366c9;
-
-      &:nth-of-type(1) {
-        border-left: none;
-        border-bottom:  none;
-
-        &:before {
-          border-right: 2px solid #2366c9;
-          border-bottom: 2px solid #2366c9;
-        }
-
-      }
-
-      &:nth-of-type(2) {
-        border-right: none;
-      }
-
-      &:nth-of-type(3) {
-        border: none;
-      }
-
-    }
-
-    .points-note,
-    .callback {
-      opacity: 1;
     }
 
   }
@@ -283,10 +248,11 @@
       position: static;
       border: none!important;
       width: 100%!important;
+      max-width: 450px;
       height: auto;
       display: block;
       text-align: center;
-      margin: 25px 0;
+      margin: 25px auto;
       padding: 0 20px!important;
 
       &:before,
@@ -297,13 +263,27 @@
     }
 
     .point-item {
-      display: inline-block;
-      vertical-align: top;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       text-align: left;
-      margin: 25px 10px;
+      margin: 15px 0;
+      padding: 0;
+
+      span {
+        order: 2;
+
+        br {
+          display: none;
+        }
+
+      }
 
       i {
         text-align: center;
+        position: static;
+        margin: 0 10px 0 0;
+        order: 1;
       }
 
     }
@@ -321,12 +301,12 @@
   @media(max-width: 768px) {
 
     h2 {
-      font-family: 'Panton Light', sans-serif;
+      .font-light;
       font-size: 30px;
 
       span {
         display: block;
-        font-family: 'Panton Bold', sans-serif;
+        .font-bold;
         font-size: 36px;
       }
 
@@ -369,7 +349,7 @@
       }
 
       span {
-        font-family: "Panton Regular", sans-serif;
+        .font-regular;
         font-size: 18px;
       }
 

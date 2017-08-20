@@ -33,9 +33,10 @@
     text-shadow: 1px 2px 2px rgba(0, 0, 0, .5);
     position: relative;
     z-index: 1;
+    font-size: 46px;
 
     span {
-      font-family: 'Panton Thin', sans-serif;
+      .font-thin;
       color: inherit;
       text-shadow: 1px 2px 2px rgba(0, 0, 0, .5);
     }
@@ -50,6 +51,11 @@
       right: -10px;
       top: 0;
       z-index: -1;
+    }
+
+    @media(max-width: 640px) {
+      font-size: 42px;
+      padding-right: 0;
     }
 
   }
@@ -68,13 +74,13 @@
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
 
     .title {
-      font-family: 'Panton Semibold', sans-serif;
+      .font-semibold;
       font-size: 26px;
       color: #fff;
       text-shadow: 0 0 2px rgba(0, 0, 0, 1);
 
       span {
-        font-family: 'Panton ExtraBold', sans-serif;
+        .font-black;
         font-size: 26px;
         color: #ff75a8;
         text-transform: uppercase;
@@ -84,8 +90,8 @@
 
     .sub-title {
       color: #fff;
-      font-size: 50px;
-      font-family: 'Panton Bold', sans-serif;
+      font-size: 42px;
+      .font-bold;
       text-shadow: 0 0 2px rgba(0, 0, 0, 1);
       text-transform: uppercase;
       position: absolute;
@@ -206,7 +212,7 @@
       text-shadow: 0 0 20px #fff;
 
       span {
-        font-family: 'Panton Light', sans-serif;
+        .font-light;
       }
 
       &:before {

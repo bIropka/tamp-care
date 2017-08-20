@@ -86,7 +86,7 @@ header[role='banner'] {
       .turned(-30deg);
       .smooth(.2s);
       background: @color-blue;
-      font-size: 18px;
+      font-size: 15px;
       text-transform: uppercase;
       color: #fff;
       cursor: pointer;
@@ -98,6 +98,7 @@ header[role='banner'] {
         line-height: 44px;
         padding: 0 10px;
         color: inherit;
+        font-size: inherit;
       }
 
       &:hover {
@@ -122,7 +123,7 @@ header[role='banner'] {
 
       span {
         font-size: 18px;
-        font-family: 'Panton Bold Italic', sans-serif;
+        .font-bold-italic;
         color: #fff;
         text-shadow: 1px 0 2px #000;
         padding: 0 5px;
@@ -145,7 +146,7 @@ header[role='banner'] {
       left: auto;
       color: @color-blue;
       margin-left: 20px;
-      font-size: 24px;
+      font-size: 20px;
 
       @media (max-width: 768px) {
         display: none;
@@ -169,14 +170,10 @@ header[role='banner'] {
         align-items: center;
         align-content: center;
         justify-content: center;
-        font-family: 'Panton', sans-serif;
-        font-size: 14px;
+        .font-regular;
+        font-size: 12px;
         line-height: 1;
         color: #fff;
-      }
-
-      @media(max-width: 768px) {
-        margin-right: 100px;
       }
 
       @media(max-width: 480px) {
@@ -214,6 +211,10 @@ header[role='banner'] {
           position: absolute;
           right: -15px;
           top: -5px;
+        }
+
+        &:hover {
+          background: url(../source/images/icon-phone.png) no-repeat 0 0;
         }
 
       }

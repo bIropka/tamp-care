@@ -99,13 +99,13 @@ $(window).ready(function () {
 
             var formNm = $('#' + formID);
             var scriptFile;
-            if (formID == 'form-consultation') scriptFile = 'mail-consultation.php';
-            if (formID == 'form-cooling-consultation') scriptFile = 'mail-cooling-consultation.php';
-            if (formID == 'form-appointment') scriptFile = 'mail-appointment.php';
-            if (formID == 'form-request-service') scriptFile = 'mail-request-service.php';
-            if (formID == 'form-ac-control') scriptFile = 'mail-ac-control.php';
-            if (formID == 'form-ac-control-2') scriptFile = 'mail-ac-control-2.php';
-            if (formID == 'form-fvac-expert') scriptFile = 'mail-fvac-expert.php';
+            if (formID == 'form-consultation') scriptFile = 'php/mail-consultation.php';
+            if (formID == 'form-cooling-consultation') scriptFile = 'php/mail-cooling-consultation.php';
+            if (formID == 'form-appointment') scriptFile = 'php/mail-appointment.php';
+            if (formID == 'form-request-service') scriptFile = 'php/mail-request-service.php';
+            if (formID == 'form-ac-control') scriptFile = 'php/mail-ac-control.php';
+            if (formID == 'form-ac-control-2') scriptFile = 'php/mail-ac-control-2.php';
+            if (formID == 'form-fvac-expert') scriptFile = 'php/mail-fvac-expert.php';
             $.ajax({
                 type: "POST",
                 url: scriptFile,

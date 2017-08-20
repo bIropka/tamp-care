@@ -10,7 +10,7 @@
 
   h1 {
     display: inline-block;
-    font-family: 'Panton ExtraBold', sans-serif;
+    .font-black;
     font-size: 52px;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
@@ -23,7 +23,7 @@
 
     span {
       display: block;
-      font-family: 'Panton SemiBold', sans-serif;
+      .font-semibold;
       font-size: 36px;
       text-transform: none;
       color: inherit;
@@ -90,8 +90,8 @@
     span {
       display: block;
       width: 100%;
-      font-family: 'Panton ExtraBold', sans-serif;
-      font-size: 70px;
+      .font-black;
+      font-size: 60px;
       color: #fff;
       margin: 0 0 10px 0;
       position: relative;
@@ -113,15 +113,15 @@
     }
 
     small {
-      font-family: inherit;
-      font-size: 55px;
+      font-weight: inherit;
+      font-size: 50px;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
       color: inherit;
     }
 
     sup {
-      font-family: 'Panton Bold', sans-serif;
-      font-size: 30px;
+      .font-bold;
+      font-size: 26px;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
       color: inherit;
     }
@@ -129,13 +129,21 @@
   }
 
   .service-call-title {
-    font-size: 43px;
+    font-size: 38px;
     color: #fff;
-    padding: 20px 0 20px 30px;
+    padding: 20px 0 20px 40px;
     line-height: 1;
     background: @color-crimson-medium;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
     margin: 0 0 10px 0;
+  }
+
+  .form-side {
+
+    .title {
+      padding-left: 30px;
+    }
+
   }
 
   @media(max-width: 980px) {
@@ -175,17 +183,18 @@
       left: -15px;
       top: -20px;
       background-size: cover;
+      font-size: 18px;
 
       span {
-        font-size: 52px;
+        font-size: 44px;
       }
 
       small {
-        font-size: 41px;
+        font-size: 36px;
       }
 
       sup {
-        font-size: 22px;
+        font-size: 18px;
       }
 
     }
@@ -225,27 +234,6 @@
 
     }
 
-    .service-call-cost {
-      width: 150px;
-      height: 150px;
-      left: -15px;
-      top: -20px;
-      background-size: cover;
-
-      span {
-        font-size: 52px;
-      }
-
-      small {
-        font-size: 41px;
-      }
-
-      sup {
-        font-size: 22px;
-      }
-
-    }
-
     .service-call-title {
       margin: 15px 0;
       padding-left: ~"calc(100% - 130px)";
@@ -254,7 +242,7 @@
     }
 
     .form-side .title {
-      font-family: 'Panton', sans-serif;
+      .font-regular;
       font-size: 22px;
       text-transform: uppercase;
       text-align: right;
@@ -266,7 +254,7 @@
 
       span {
         display: block;
-        font-family: 'Panton Bold', sans-serif;
+        .font-bold;
       }
 
     }

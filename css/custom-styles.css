@@ -2457,14 +2457,44 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
+.font-thin {
+  font-weight: 100;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-regular {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-semibold-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+.font-black {
+  font-weight: 900;
+}
 /***********************************************************************************************************************
 *********** general styles
 ***********************************************************************************************************************/
 * {
+  font-weight: 400;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Panton', sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   font-size: 16px;
   line-height: 1.2;
   color: #333;
@@ -2623,14 +2653,14 @@ section {
   }
 }
 h2 {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 55px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
 h2 span {
-  font-family: inherit;
+  font-weight: inherit;
   font-size: inherit;
   color: #c90742;
 }
@@ -2785,7 +2815,7 @@ header[role='banner'] nav a {
   -o-transition: 0.2s;
   transition: 0.2s;
   background: #2366c9;
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
@@ -2801,6 +2831,7 @@ header[role='banner'] nav a span {
   line-height: 44px;
   padding: 0 10px;
   color: inherit;
+  font-size: inherit;
 }
 header[role='banner'] nav a:hover {
   background: #c90742;
@@ -2823,7 +2854,8 @@ header[role='banner'] .work-schedule .work-time {
 }
 header[role='banner'] .work-schedule .work-time span {
   font-size: 18px;
-  font-family: 'Panton Bold Italic', sans-serif;
+  font-weight: 700;
+  font-style: italic;
   color: #fff;
   text-shadow: 1px 0 2px #000;
   padding: 0 5px;
@@ -2844,7 +2876,7 @@ header[role='banner'] .work-schedule .phone-number {
   left: auto;
   color: #2366c9;
   margin-left: 20px;
-  font-size: 24px;
+  font-size: 20px;
 }
 @media (max-width: 768px) {
   header[role='banner'] .work-schedule .phone-number {
@@ -2870,15 +2902,10 @@ header[role='banner'] .work-schedule .to-schedule span {
   align-items: center;
   align-content: center;
   justify-content: center;
-  font-family: 'Panton', sans-serif;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 12px;
   line-height: 1;
   color: #fff;
-}
-@media (max-width: 768px) {
-  header[role='banner'] .work-schedule .to-schedule {
-    margin-right: 100px;
-  }
 }
 @media (max-width: 480px) {
   header[role='banner'] .work-schedule .to-schedule {
@@ -2914,6 +2941,9 @@ header[role='banner'] .work-schedule .to-schedule span {
     position: absolute;
     right: -15px;
     top: -5px;
+  }
+  header[role='banner'] .work-schedule .to-schedule:hover {
+    background: url(../source/images/icon-phone.png) no-repeat 0 0;
   }
 }
 header[role='banner'] .work-schedule span {
@@ -3125,7 +3155,7 @@ footer[role='contentinfo'] .footer-top:after {
   bottom: 0;
 }
 footer[role='contentinfo'] .title {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 18px;
   color: #e62c73;
   text-transform: uppercase;
@@ -3138,7 +3168,7 @@ footer[role='contentinfo'] .footer-links .title {
 }
 footer[role='contentinfo'] .footer-links a {
   display: block;
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   color: #1d2324;
   position: relative;
@@ -3147,7 +3177,7 @@ footer[role='contentinfo'] .footer-links a {
   margin: 15px 0 0;
 }
 footer[role='contentinfo'] .footer-links a:hover {
-  font-family: 'Panton ExtraBold', sans-serif;
+  font-weight: 900;
   color: #3467b1;
 }
 footer[role='contentinfo'] .footer-links a:hover:before {
@@ -3192,13 +3222,13 @@ footer[role='contentinfo'] .map-service .map-wrap #Layer_3 path {
 footer[role='contentinfo'] .map-service .note {
   display: none;
   position: absolute;
-  bottom: 0;
-  right: 160px;
+  bottom: -5px;
+  right: 200px;
 }
 footer[role='contentinfo'] .map-service .note span {
   display: block;
   white-space: nowrap;
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   color: #1d2324;
   text-align: right;
 }
@@ -3208,29 +3238,32 @@ footer[role='contentinfo'] .footer-contacts {
   position: relative;
 }
 footer[role='contentinfo'] .footer-contacts .our-name {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 30px;
   color: #1d2324;
   margin-top: 30px;
 }
 footer[role='contentinfo'] .footer-contacts .link-email {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   color: #1d2324;
 }
 footer[role='contentinfo'] .footer-contacts .sub-title {
-  font-family: 'Panton Semibold Italic', sans-serif;
+  font-weight: 600;
+  font-style: italic;
   font-size: 30px;
   color: #e62c73;
   margin: 30px 0 10px;
 }
 footer[role='contentinfo'] .footer-contacts .text {
-  font-family: 'Panton Semibold Italic', sans-serif;
+  font-weight: 600;
+  font-style: italic;
   color: #1d2324;
   font-size: 18px;
 }
 footer[role='contentinfo'] .footer-contacts .link-phone {
-  font-family: 'Panton Semibold Italic', sans-serif;
+  font-weight: 600;
+  font-style: italic;
   color: #1d2324;
   font-size: 30px;
 }
@@ -3285,7 +3318,7 @@ footer[role='contentinfo'] .footer-bottom .logo-footer {
 footer[role='contentinfo'] .footer-bottom .copyrights {
   text-align: center;
   color: #fff;
-  font-family: 'Panton Light', sans-serif;
+  font-weight: 300;
 }
 footer[role='contentinfo'] .footer-bottom .copyrights br {
   display: none;
@@ -3325,6 +3358,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     background: #2366c9;
   }
 }
+@media (max-width: 480px) {
+  footer[role='contentinfo'] .footer-bottom .copyrights {
+    font-size: 14px;
+  }
+}
 /***********************************************************************************************************************
 *********** top-block
 ***********************************************************************************************************************/
@@ -3354,13 +3392,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .top-block h1 span {
   color: inherit;
-  font-family: 'Panton Thin', sans-serif;
+  font-weight: 100;
   text-transform: uppercase;
   font-size: 50px;
 }
 .top-block h1 span.text-large {
   display: inline-block;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 50px;
   text-transform: uppercase;
 }
@@ -3412,7 +3450,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     margin: 0;
     font-size: 32px;
     display: block;
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
   }
   .top-block h1 span:last-of-type {
     text-align: center;
@@ -3499,7 +3537,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   opacity: .9;
 }
 .top-block .heating-services .title {
-  font-family: 'Panton ExtraBold', sans-serif;
+  font-weight: 900;
   font-size: 65px;
   color: #fff;
   line-height: 1;
@@ -3560,7 +3598,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   opacity: .9;
 }
 .top-block .cooling-services .title {
-  font-family: 'Panton ExtraBold', sans-serif;
+  font-weight: 900;
   font-size: 65px;
   color: #fff;
   line-height: 1;
@@ -3701,7 +3739,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   width: 100%;
   height: auto;
   text-align: center;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 65px;
   text-transform: uppercase;
   padding: 0;
@@ -3710,7 +3748,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .cooling-page .top-block h1 span {
   display: block;
-  font-family: 'Panton Light', sans-serif;
+  font-weight: 300;
   font-size: 45px;
   text-transform: none;
   padding: 0;
@@ -3825,16 +3863,16 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   bottom: -20px;
   opacity: .6;
 }
-.cooling-top-item a {
+.cooling-top-item .cooling-top-link {
   display: block;
   width: 100%;
   height: 53px;
   background: linear-gradient(to bottom, #fd629b, #e53072 50%);
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   color: #fff;
   line-height: 53px;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   position: relative;
   padding: 0 40px 0 0;
   margin: 30px 0 0 0;
@@ -3847,7 +3885,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   -o-transition: 0s;
   transition: 0s;
 }
-.cooling-top-item a:before {
+.cooling-top-item .cooling-top-link:before {
   content: '';
   display: block;
   width: 1px;
@@ -3857,7 +3895,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   bottom: 10px;
   right: 40px;
 }
-.cooling-top-item a:after {
+.cooling-top-item .cooling-top-link:after {
   content: '';
   display: block;
   width: 0;
@@ -4132,7 +4170,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   text-align: center;
 }
 .why-choose-us .why-choose-us-text span {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 26px;
   color: #4f4f4f;
 }
@@ -4287,7 +4325,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   display: block;
   width: 100%;
   height: 43px;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 28px;
   text-transform: uppercase;
   color: #fff;
@@ -4418,7 +4456,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .our-services .get-consultation .text span {
   color: inherit;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
 }
 .our-services .get-consultation .text:after {
   content: '';
@@ -4515,6 +4553,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   justify-content: space-between;
   align-items: stretch;
 }
+.promo-block h2 {
+  color: #2366c9;
+  font-size: 40px;
+  text-align: left;
+  line-height: 1;
+}
 .promo-block .promo-text {
   width: 50%;
   padding: 30px 60px;
@@ -4553,7 +4597,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .promo-block .work-schedule-hours {
   background: linear-gradient(to bottom, #fc609a, #c90742);
   padding: 15px 20px;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 48px;
   color: #fff;
 }
@@ -4568,11 +4612,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   transform: skew(30deg);
 }
 .promo-block .work-schedule-hours span:first-of-type {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 48px;
 }
 .promo-block .work-schedule-hours span:last-of-type {
-  font-family: 'Panton', sans-serif;
+  font-weight: 400;
   font-size: 30px;
   margin-top: -10px;
 }
@@ -4591,11 +4635,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   transform: skew(30deg);
 }
 .promo-block .work-schedule-days span:first-of-type {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 48px;
 }
 .promo-block .work-schedule-days span:last-of-type {
-  font-family: 'Panton', sans-serif;
+  font-weight: 400;
   font-size: 30px;
   margin-top: -10px;
 }
@@ -4637,7 +4681,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   .promo-block .promo-text .show-more span {
     color: #c90742;
     text-transform: uppercase;
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
   }
   .promo-block .promo-text .show-more span:last-of-type {
     display: none;
@@ -4794,7 +4838,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin: 0 auto;
 }
 .our-guarantees h3 {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   color: #2366c9;
   text-transform: uppercase;
@@ -4802,7 +4846,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin-bottom: 20px;
 }
 .our-guarantees .text {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 700;
   color: #555;
   line-height: 1.5;
   margin-bottom: 15px;
@@ -4870,7 +4914,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   text-align: center;
 }
 .form-request-service .title {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 45px;
   color: #c90742;
   margin-bottom: 5px;
@@ -5051,7 +5095,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .call-us-today .text {
   display: inline-block;
   vertical-align: middle;
-  font-family: 'Panton Light', sans-serif;
+  font-weight: 300;
   font-size: 36px;
   color: #2acfff;
   margin: 10px;
@@ -5121,7 +5165,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   float: left;
 }
 .cooling-about .cooling-info p {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   line-height: 1.6;
   margin: 20px 0;
@@ -5129,7 +5173,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .cooling-about .cooling-info a {
   display: inline-block;
   font-size: inherit;
-  font-family: inherit;
+  font-weight: inherit;
   color: inherit;
   text-decoration: none;
 }
@@ -5142,7 +5186,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .cooling-about .cooling-info li {
   display: block;
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   line-height: 1;
   margin: 15px 0;
@@ -5226,7 +5270,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     display: block;
   }
   .cooling-about .cooling-info .show-more span {
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
     color: #c90742;
@@ -5265,15 +5309,15 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background: #2366c9;
   text-align: center;
   color: #fff;
-  font-family: 'Panton Bold', sans-serif;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 26px;
   line-height: 1.2;
   padding: 15px 0;
 }
 .form-side .title span {
   font-size: inherit;
   color: inherit;
-  font-family: inherit;
+  font-weight: inherit;
   line-height: inherit;
 }
 .form-side .sub-title {
@@ -5340,7 +5384,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background: linear-gradient(to bottom, #fb5d97, #e53072 40%);
   height: 53px;
   line-height: 53px;
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 20px;
   color: #fff;
@@ -5501,14 +5545,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .cooling-advantages .cooling-advantages-item .text {
   display: block;
   width: 100%;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   color: #4f4f4f;
   max-height: 75px;
   overflow: hidden;
 }
 .cooling-advantages .cooling-advantages-item .text span {
-  font-family: inherit;
+  font-weight: inherit;
   font-size: 22px;
   color: inherit;
 }
@@ -5711,9 +5755,10 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
+  font-size: 46px;
 }
 .cooling-callback h2 span {
-  font-family: 'Panton Thin', sans-serif;
+  font-weight: 100;
   color: inherit;
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -5732,6 +5777,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   top: 0;
   z-index: -1;
 }
+@media (max-width: 640px) {
+  .cooling-callback h2 {
+    font-size: 42px;
+    padding-right: 0;
+  }
+}
 .cooling-callback .form-cooling-consultation {
   display: inline-block;
   width: 450px;
@@ -5746,21 +5797,21 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 }
 .cooling-callback .form-cooling-consultation .title {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 26px;
   color: #fff;
   text-shadow: 0 0 2px #000000;
 }
 .cooling-callback .form-cooling-consultation .title span {
-  font-family: 'Panton ExtraBold', sans-serif;
+  font-weight: 900;
   font-size: 26px;
   color: #ff75a8;
   text-transform: uppercase;
 }
 .cooling-callback .form-cooling-consultation .sub-title {
   color: #fff;
-  font-size: 50px;
-  font-family: 'Panton Bold', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
   text-shadow: 0 0 2px #000000;
   text-transform: uppercase;
   position: absolute;
@@ -5880,7 +5931,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     text-shadow: 0 0 20px #fff;
   }
   .cooling-callback h2 span {
-    font-family: 'Panton Light', sans-serif;
+    font-weight: 300;
   }
   .cooling-callback h2:before {
     display: none;
@@ -6050,7 +6101,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   transform: rotate(0);
 }
 .window .title {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 40px;
   color: #2366c9;
   margin-bottom: 5px;
@@ -6069,7 +6120,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   top: 0;
 }
 .window .sub-title {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   margin: 30px 0;
   color: #333333;
@@ -6184,7 +6235,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .window.window-successful .window-inner {
   width: 320px;
-  padding: 30px;
+  padding: 15px;
 }
 .window.window-successful .window-inner:before {
   width: 25px;
@@ -6200,6 +6251,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .window.window-successful .title {
   color: green;
+  font-size: 11px;
 }
 .window.window-successful .title:before {
   width: 25px;
@@ -6399,7 +6451,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   display: block;
   width: 100%;
   height: 30px;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
   color: #c90742;
@@ -6465,7 +6517,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   padding: 10px 0 10px 20px;
   margin: 0;
   color: #fff;
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 16px;
   position: relative;
   border-bottom: 1px solid #464e5d;
@@ -6491,7 +6543,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .conditioner-repair h1 {
   display: inline-block;
-  font-family: 'Panton ExtraBold', sans-serif;
+  font-weight: 900;
   font-size: 52px;
   color: #fff;
   text-shadow: 0 1px 2px #000000;
@@ -6504,7 +6556,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .conditioner-repair h1 span {
   display: block;
-  font-family: 'Panton SemiBold', sans-serif;
+  font-weight: 600;
   font-size: 36px;
   text-transform: none;
   color: inherit;
@@ -6563,8 +6615,8 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .conditioner-repair .service-call-cost span {
   display: block;
   width: 100%;
-  font-family: 'Panton ExtraBold', sans-serif;
-  font-size: 70px;
+  font-weight: 900;
+  font-size: 60px;
   color: #fff;
   margin: 0 0 10px 0;
   position: relative;
@@ -6583,25 +6635,28 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin: auto;
 }
 .conditioner-repair .service-call-cost small {
-  font-family: inherit;
-  font-size: 55px;
+  font-weight: inherit;
+  font-size: 50px;
   text-shadow: 0 1px 2px #000000;
   color: inherit;
 }
 .conditioner-repair .service-call-cost sup {
-  font-family: 'Panton Bold', sans-serif;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 26px;
   text-shadow: 0 1px 2px #000000;
   color: inherit;
 }
 .conditioner-repair .service-call-title {
-  font-size: 43px;
+  font-size: 38px;
   color: #fff;
-  padding: 20px 0 20px 30px;
+  padding: 20px 0 20px 40px;
   line-height: 1;
   background: #e53072;
   text-shadow: 0 1px 2px #000000;
   margin: 0 0 10px 0;
+}
+.conditioner-repair .form-side .title {
+  padding-left: 30px;
 }
 @media (max-width: 980px) {
   .conditioner-repair {
@@ -6634,15 +6689,16 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     left: -15px;
     top: -20px;
     background-size: cover;
+    font-size: 18px;
   }
   .conditioner-repair .service-call-cost span {
-    font-size: 52px;
+    font-size: 44px;
   }
   .conditioner-repair .service-call-cost small {
-    font-size: 41px;
+    font-size: 36px;
   }
   .conditioner-repair .service-call-cost sup {
-    font-size: 22px;
+    font-size: 18px;
   }
   .conditioner-repair .service-call-title {
     margin: 15px 0;
@@ -6671,22 +6727,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   .conditioner-repair .service-call br {
     display: block;
   }
-  .conditioner-repair .service-call-cost {
-    width: 150px;
-    height: 150px;
-    left: -15px;
-    top: -20px;
-    background-size: cover;
-  }
-  .conditioner-repair .service-call-cost span {
-    font-size: 52px;
-  }
-  .conditioner-repair .service-call-cost small {
-    font-size: 41px;
-  }
-  .conditioner-repair .service-call-cost sup {
-    font-size: 22px;
-  }
   .conditioner-repair .service-call-title {
     margin: 15px 0;
     padding-left: calc(100% - 130px);
@@ -6694,7 +6734,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     font-size: 30px;
   }
   .conditioner-repair .form-side .title {
-    font-family: 'Panton', sans-serif;
+    font-weight: 400;
     font-size: 22px;
     text-transform: uppercase;
     text-align: right;
@@ -6705,7 +6745,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
   .conditioner-repair .form-side .title span {
     display: block;
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
   }
   .conditioner-repair .form-side .sub-title {
     font-size: 22px;
@@ -6756,7 +6796,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .conditioner-repair-about .conditioner-repair-info h3 {
   color: #e53072;
   font-size: 24px;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   padding-bottom: 15px;
   position: relative;
@@ -6776,7 +6816,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin-top: 0;
 }
 .conditioner-repair-about .conditioner-repair-info p {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   line-height: 1.7;
   margin: 20px 0;
@@ -6787,7 +6827,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .conditioner-repair-about .conditioner-repair-info li {
   display: block;
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   margin: 15px 0;
   padding: 0 0 0 20px;
@@ -6808,7 +6848,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   left: 0;
 }
 .conditioner-repair-about .conditioner-repair-info li span {
-  font-family: 'Panton ExtraBold', sans-serif;
+  font-weight: 900;
   font-size: inherit;
   color: inherit;
 }
@@ -6883,7 +6923,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
   .conditioner-repair-about .conditioner-repair-info .show-more span {
     display: inline-block;
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
@@ -6936,7 +6976,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background: url(../source/images/background-common-desctop.png) no-repeat center top;
 }
 .common-problems h2 {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 72px;
   color: #fff;
   line-height: 1;
@@ -6967,7 +7007,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   padding: 5px 0;
 }
 .common-problems .problem-item span {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   color: #e53072;
   font-size: 24px;
   text-transform: uppercase;
@@ -7382,7 +7422,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     content: counter(list) '';
     counter-increment: list;
     display: block;
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
     font-size: 24px;
     line-height: 24px;
     color: #c90742;
@@ -7444,7 +7484,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   display: inline-block;
   background: #fff;
   padding: 0 10px;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 55px;
   color: #e53072;
   margin: -35px 0 0 0;
@@ -7657,7 +7697,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .form-fvac-expert button span {
   display: block;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -7706,7 +7746,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     margin: 20px 0 30px;
   }
   .form-fvac-expert .sub-title span {
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
   }
 }
 /***********************************************************************************************************************
@@ -7717,7 +7757,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background-size: cover;
 }
 .steps h2 {
-  font-family: 'Panton', sans-serif;
   font-size: 72px;
   color: #fff;
   font-weight: 400;
@@ -7733,6 +7772,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   transition: 0.4s;
   height: 694px;
   margin: 75px 0 0 0;
+  background: url(../source/images/condition-repair-step-list.png) no-repeat center;
 }
 .steps ul {
   display: block;
@@ -7770,7 +7810,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   top: -30px;
 }
 .steps .step-item h3 {
-  font-family: Panton SemiBold, sans-serif;
+  font-weight: 600;
   font-size: 24px;
   line-height: 1;
   color: #fff;
@@ -7839,7 +7879,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .steps .callback span {
   display: block;
   height: 50px;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   line-height: 50px;
   font-size: 20px;
   color: #fff;
@@ -7849,9 +7889,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .steps .callback:active span {
   line-height: 55px;
-}
-.steps.active .step-list {
-  background: url(../source/images/condition-repair-step-list.png) no-repeat center;
 }
 .steps.active .callback {
   opacity: 1;
@@ -7909,7 +7946,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     padding: 0 20px;
   }
   .steps h2 {
-    font-family: 'Panton', sans-serif;
     text-transform: none;
     font-size: 60px;
     color: #fff;
@@ -7955,6 +7991,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     text-align: right;
     padding-top: 10px;
   }
+  .steps .callback {
+    padding: 0 15px;
+  }
+  .steps .callback span {
+    font-size: 16px;
+  }
 }
 /***********************************************************************************************************************
 *********** conditioner-repair-points
@@ -7977,7 +8019,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .conditioner-repair-points h1 {
   display: block;
-  font-family: 'Panton ExtraBold', sans-serif;
+  font-weight: 900;
   font-size: 50px;
   color: #fff;
   text-shadow: 0 1px 2px #000000;
@@ -7989,14 +8031,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .conditioner-repair-points h1 span:first-of-type {
   display: block;
-  font-family: 'Panton Regular', sans-serif;
+  font-weight: 400;
   font-size: 55px;
   text-transform: none;
   color: inherit;
 }
 .conditioner-repair-points h1 span:last-of-type {
   display: block;
-  font-family: 'Panton SemiBold', sans-serif;
+  font-weight: 600;
   font-size: 40px;
   text-transform: none;
   color: inherit;
@@ -8048,8 +8090,8 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .conditioner-repair-points .service-call-cost span {
   display: block;
   width: 100%;
-  font-family: 'Panton ExtraBold', sans-serif;
-  font-size: 96px;
+  font-weight: 900;
+  font-size: 80px;
   color: #fff;
   margin: 0 0 10px 0;
   position: relative;
@@ -8068,14 +8110,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin: auto;
 }
 .conditioner-repair-points .service-call-cost small {
-  font-family: inherit;
-  font-size: 76px;
+  font-weight: inherit;
+  font-size: 68px;
   text-shadow: 0 1px 2px #000000;
   color: inherit;
 }
 .conditioner-repair-points .service-call-cost sup {
-  font-family: 'Panton Bold', sans-serif;
-  font-size: 42px;
+  font-weight: 700;
+  font-size: 36px;
   text-shadow: 0 1px 2px #000000;
   color: inherit;
 }
@@ -8130,28 +8172,28 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     margin: 0;
   }
   .conditioner-repair-points .service-call-cost {
-    padding: 0 0 20px 5px;
+    padding: 0 0 20px 10px;
     align-items: flex-end;
     align-content: flex-end;
     left: -20px;
     top: -50px;
     width: 140px;
     height: 140px;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
   .conditioner-repair-points .service-call-cost span {
-    font-size: 43px;
+    font-size: 36px;
     margin: 0;
   }
   .conditioner-repair-points .service-call-cost span:after {
     display: none;
   }
   .conditioner-repair-points .service-call-cost small {
-    font-size: 34px;
+    font-size: 30px;
   }
   .conditioner-repair-points .service-call-cost sup {
-    font-size: 18px;
+    font-size: 16px;
   }
   .conditioner-repair-points .service-call-cost:after {
     border-left: 15px solid #ea426c;
@@ -8170,7 +8212,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 @media (max-width: 480px) {
   .conditioner-repair-points h1 {
-    font-size: 22px;
+    font-size: 18px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 30px;
@@ -8190,13 +8232,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     max-width: 400px;
   }
   .conditioner-repair-points .form-side .title {
-    font-family: 'Panton Light', sans-serif;
+    font-weight: 300;
     text-transform: uppercase;
     font-size: 22px;
   }
   .conditioner-repair-points .form-side .title span {
     display: block;
-    font-family: 'Panton ExtraBold', sans-serif;
+    font-weight: 900;
     text-transform: uppercase;
   }
 }
@@ -8235,7 +8277,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   padding: 0;
 }
 .benefits h2 {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 60px;
   color: #fff;
   line-height: 1;
@@ -8247,7 +8289,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .benefits h2 span {
   font-size: inherit;
   color: inherit;
-  font-family: inherit;
+  font-weight: inherit;
   line-height: inherit;
 }
 .benefits .benefit-list {
@@ -8373,8 +8415,8 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  font-family: 'Panton Bold', sans-serif;
-  font-size: 32px;
+  font-weight: 700;
+  font-size: 26px;
   line-height: 36px;
   text-transform: uppercase;
   color: #fff;
@@ -8398,12 +8440,16 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   transition: 0.4s;
   display: block;
   width: 250px;
-  font-family: 'Panton Bold', sans-serif;
-  font-size: 22px;
+  font-weight: 700;
+  font-size: 18px;
   position: absolute;
   top: 175px;
   left: 120%;
   z-index: 10;
+}
+.benefits .benefit-item:hover:nth-of-type(1) h3 {
+  right: 90px;
+  left: auto;
 }
 .benefits .benefit-item:hover:nth-of-type(1) p {
   right: 50px;
@@ -8442,7 +8488,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     transition: 0.4s;
     display: block;
     width: 250px;
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
     font-size: 22px;
     position: absolute;
     top: 175px;
@@ -8605,7 +8651,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 *********** points
 ***********************************************************************************************************************/
 .points h2 {
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   font-size: 55px;
   color: #e53072;
   text-transform: none;
@@ -8613,7 +8659,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin: 0 auto 30px;
 }
 .points h2 span {
-  font-family: inherit;
+  font-weight: inherit;
   font-size: inherit;
   color: inherit;
 }
@@ -8623,12 +8669,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  margin: 0 0 15px 30px;
-  opacity: 0;
+  margin: 0 0 30px 30px;
 }
 .points .points-note span {
   display: block;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   line-height: 1;
 }
 .points .points-note span:nth-of-type(1) {
@@ -8653,9 +8698,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   width: calc(100% - 60px);
   height: 155px;
   margin: 0 30px;
-  border: 2px solid transparent;
   padding: 0 135px;
   position: relative;
+  border: 2px solid #2366c9;
 }
 .points .point-list:nth-of-type(1) {
   border-left: none;
@@ -8671,9 +8716,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   right: -2px;
   bottom: 0;
   z-index: 1;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
   border-radius: 50px;
+  border-right: 2px solid #2366c9;
+  border-bottom: 2px solid #2366c9;
 }
 .points .point-list:nth-of-type(1):after {
   content: '';
@@ -8736,7 +8781,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   opacity: 0;
 }
 .points .point-item span {
-  font-family: 'Panton Semibold', sans-serif;
+  font-weight: 600;
   font-size: 18px;
 }
 .points .point-item i {
@@ -8765,7 +8810,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  opacity: 0;
   display: block;
   width: 100%;
   max-width: 270px;
@@ -8778,7 +8822,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .points .callback span {
   display: block;
-  font-family: 'Panton Bold', sans-serif;
+  font-weight: 700;
   width: 100%;
   line-height: 30px;
   font-size: 32px;
@@ -8786,27 +8830,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .points .callback:hover {
   background: linear-gradient(to top, #fc609a, #c90742 70%);
-}
-.points.active .point-list {
-  border: 2px solid #2366c9;
-}
-.points.active .point-list:nth-of-type(1) {
-  border-left: none;
-  border-bottom: none;
-}
-.points.active .point-list:nth-of-type(1):before {
-  border-right: 2px solid #2366c9;
-  border-bottom: 2px solid #2366c9;
-}
-.points.active .point-list:nth-of-type(2) {
-  border-right: none;
-}
-.points.active .point-list:nth-of-type(3) {
-  border: none;
-}
-.points.active .points-note,
-.points.active .callback {
-  opacity: 1;
 }
 @media (max-width: 1230px) {
   .points .point-list {
@@ -8842,10 +8865,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     position: static;
     border: none!important;
     width: 100%!important;
+    max-width: 450px;
     height: auto;
     display: block;
     text-align: center;
-    margin: 25px 0;
+    margin: 25px auto;
     padding: 0 20px!important;
   }
   .points .point-list:before,
@@ -8853,13 +8877,24 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     display: none!important;
   }
   .points .point-item {
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     text-align: left;
-    margin: 25px 10px;
+    margin: 15px 0;
+    padding: 0;
+  }
+  .points .point-item span {
+    order: 2;
+  }
+  .points .point-item span br {
+    display: none;
   }
   .points .point-item i {
     text-align: center;
+    position: static;
+    margin: 0 10px 0 0;
+    order: 1;
   }
   .points .callback {
     opacity: 1;
@@ -8870,12 +8905,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 @media (max-width: 768px) {
   .points h2 {
-    font-family: 'Panton Light', sans-serif;
+    font-weight: 300;
     font-size: 30px;
   }
   .points h2 span {
     display: block;
-    font-family: 'Panton Bold', sans-serif;
+    font-weight: 700;
     font-size: 36px;
   }
 }
@@ -8909,7 +8944,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     background: #fff;
   }
   .points .point-item span {
-    font-family: "Panton Regular", sans-serif;
+    font-weight: 400;
     font-size: 18px;
   }
 }
