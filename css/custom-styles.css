@@ -3813,6 +3813,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     padding: 0 10px;
   }
 }
+@media (max-width: 480px) {
+  .cooling-top-list {
+    padding: 0;
+  }
+}
 .cooling-top-item {
   display: block;
   width: 330px;
@@ -4004,7 +4009,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 @media (max-width: 480px) {
   .cooling-top-item {
+    width: 300px;
     margin: 25px 0;
+  }
+  .cooling-top-item .cooling-top-link {
+    font-size: 14px;
   }
 }
 /***********************************************************************************************************************
