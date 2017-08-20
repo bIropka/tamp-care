@@ -35,7 +35,16 @@
 
   h2 {
     color: @color-blue;
-    font-size: 40px;
+    .font-bold;
+    font-size: 32px;
+    text-align: left;
+    line-height: 1;
+  }
+
+  h3 {
+    color: @color-blue;
+    .font-regular;
+    font-size: 32px;
     text-align: left;
     line-height: 1;
   }
@@ -46,7 +55,7 @@
     float: left;
 
     p {
-      .font-semibold;
+      .font-regular;
       font-size: 18px;
       line-height: 1.6;
       margin: 20px 0;
@@ -72,7 +81,7 @@
 
     li {
       display: block;
-      .font-semibold;
+      .font-regular;
       font-size: 18px;
       line-height: 1;
       margin: 15px 0;
@@ -111,8 +120,12 @@
     a {
       display: inline-block;
       vertical-align: middle;
-      max-width: 100%;
+      max-width: 45%;
       margin: 15px 10px;
+
+      &:last-of-type {
+        max-width: 90%;
+      }
 
       img {
         width: auto;
@@ -221,6 +234,14 @@
 
       }
 
+    }
+
+  }
+
+  @media(max-width: 768px) {
+
+    h2 {
+      font-size: 28px;
     }
 
   }

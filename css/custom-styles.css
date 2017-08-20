@@ -2,38 +2,6 @@
 *********** fonts
 ***********************************************************************************************************************/
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&subset=cyrillic');
-@font-face {
-  font-family: 'Panton';
-  src: url("../source/fonts/PANTON.OTF") format("opentype");
-}
-@font-face {
-  font-family: 'Panton Thin';
-  src: url("../source/fonts/PANTON_LIGHT.OTF") format("opentype");
-}
-@font-face {
-  font-family: 'Panton Thin';
-  src: url("../source/fonts/PANTON_THIN.OTF") format("opentype");
-}
-@font-face {
-  font-family: 'Panton Semibold';
-  src: url("../source/fonts/PANTON_SEMIBOLD.OTF") format("opentype");
-}
-@font-face {
-  font-family: 'Panton Semibold Italic';
-  src: url("../source/fonts/PANTON_SEMIBOLD_ITALIC.OTF") format("opentype");
-}
-@font-face {
-  font-family: 'Panton Bold';
-  src: url("../source/fonts/PANTON_BOLD.OTF") format("opentype");
-}
-@font-face {
-  font-family: 'Panton Bold Italic';
-  src: url("../source/fonts/PANTON_BOLD_ITALIC.OTF") format("opentype");
-}
-@font-face {
-  font-family: 'Panton ExtraBold';
-  src: url("../source/fonts/PANTON_EXTRABOLD.OTF") format("opentype");
-}
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3155,7 +3123,7 @@ footer[role='contentinfo'] .footer-top:after {
   bottom: 0;
 }
 footer[role='contentinfo'] .title {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
   color: #e62c73;
   text-transform: uppercase;
@@ -3168,7 +3136,7 @@ footer[role='contentinfo'] .footer-links .title {
 }
 footer[role='contentinfo'] .footer-links a {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   color: #1d2324;
   position: relative;
@@ -3177,7 +3145,7 @@ footer[role='contentinfo'] .footer-links a {
   margin: 15px 0 0;
 }
 footer[role='contentinfo'] .footer-links a:hover {
-  font-weight: 900;
+  font-weight: 500;
   color: #3467b1;
 }
 footer[role='contentinfo'] .footer-links a:hover:before {
@@ -3199,6 +3167,12 @@ footer[role='contentinfo'] .footer-links a:hover:before {
 }
 footer[role='contentinfo'] .footer-links:first-of-type {
   border-right: 1px solid #c0d0e6;
+}
+@media (max-width: 480px) {
+  footer[role='contentinfo'] .footer-links .title,
+  footer[role='contentinfo'] .footer-links a {
+    padding-left: 0;
+  }
 }
 footer[role='contentinfo'] .map-service {
   text-align: center;
@@ -3228,7 +3202,7 @@ footer[role='contentinfo'] .map-service .note {
 footer[role='contentinfo'] .map-service .note span {
   display: block;
   white-space: nowrap;
-  font-weight: 600;
+  font-weight: 500;
   color: #1d2324;
   text-align: right;
 }
@@ -3238,31 +3212,30 @@ footer[role='contentinfo'] .footer-contacts {
   position: relative;
 }
 footer[role='contentinfo'] .footer-contacts .our-name {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 30px;
   color: #1d2324;
   margin-top: 30px;
 }
 footer[role='contentinfo'] .footer-contacts .link-email {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   color: #1d2324;
 }
 footer[role='contentinfo'] .footer-contacts .sub-title {
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 500;
   font-size: 30px;
   color: #e62c73;
   margin: 30px 0 10px;
+  font-style: italic;
 }
 footer[role='contentinfo'] .footer-contacts .text {
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 500;
   color: #1d2324;
   font-size: 18px;
 }
 footer[role='contentinfo'] .footer-contacts .link-phone {
-  font-weight: 600;
+  font-weight: 500;
   font-style: italic;
   color: #1d2324;
   font-size: 30px;
@@ -3336,6 +3309,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   footer[role='contentinfo'] .footer-links a:hover:before {
     display: none;
   }
+  footer[role='contentinfo'] .footer-links:first-of-type {
+    border-right: none;
+  }
   footer[role='contentinfo'] .map-service {
     display: none;
   }
@@ -3394,12 +3370,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   color: inherit;
   font-weight: 100;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 40px;
 }
 .top-block h1 span.text-large {
   display: inline-block;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 40px;
   text-transform: uppercase;
 }
 .top-block h1 span.text-large:first-of-type {
@@ -3461,6 +3437,21 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
   .top-block h1 br + .text-large {
     margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .top-block h1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .top-block h1 span.text-large {
+    font-size: 28px;
+  }
+  .top-block h1 span.text-large-thin {
+    font-size: 24px;
+  }
+  .top-block h1 span:last-of-type {
+    font-size: 18px;
   }
 }
 .top-block .background-blue-left {
@@ -3538,7 +3529,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .top-block .heating-services .title {
   font-weight: 900;
-  font-size: 65px;
+  font-size: 61px;
   color: #fff;
   line-height: 1;
 }
@@ -3559,7 +3550,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background: #fff;
   position: absolute;
   bottom: 13px;
-  right: 145px;
+  right: 160px;
 }
 .top-block .heating-services .title span:after {
   content: '';
@@ -3599,7 +3590,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .top-block .cooling-services .title {
   font-weight: 900;
-  font-size: 65px;
+  font-size: 61px;
   color: #fff;
   line-height: 1;
 }
@@ -3619,7 +3610,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background: #fff;
   position: absolute;
   bottom: 13px;
-  left: 145px;
+  left: 160px;
 }
 .top-block .cooling-services .title span:after {
   content: '';
@@ -3722,6 +3713,18 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   .top-block {
     background: url(../source/images/background-decor-left.png) no-repeat center bottom;
   }
+  .top-block .heating-services .title {
+    font-size: 24px;
+  }
+  .top-block .heating-services .title span {
+    font-size: 20px;
+  }
+  .top-block .cooling-services .title {
+    font-size: 24px;
+  }
+  .top-block .cooling-services .title span {
+    font-size: 20px;
+  }
 }
 .cooling-page .top-block {
   background: url(../source/images/cooling-background-top.jpg) no-repeat center top;
@@ -3774,6 +3777,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   .cooling-page .top-block h1 span {
     color: #fc609a;
     font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .cooling-page .top-block h1 {
+    font-size: 32px;
+  }
+  .cooling-page .top-block h1 span {
+    font-size: 26px;
   }
 }
 @media (max-width: 768px) {
@@ -4028,6 +4039,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .why-choose-us h2 {
   color: #2366c9;
 }
+@media (max-width: 480px) {
+  .why-choose-us h2 {
+    font-size: 28px;
+  }
+}
 .why-choose-us .why-choose-us-list {
   display: flex;
   flex-wrap: wrap;
@@ -4061,9 +4077,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   .why-choose-us .why-choose-us-item:nth-of-type(4),
   .why-choose-us .why-choose-us-item:nth-of-type(5) {
     margin: 15px 25px;
-  }
-  .why-choose-us .why-choose-us-item:nth-of-type(5) br {
-    display: none;
   }
 }
 @media (max-width: 480px) {
@@ -4398,6 +4411,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     left: 0;
   }
 }
+@media (max-width: 480px) {
+  .our-services .title span {
+    font-size: 20px;
+  }
+}
 .our-services ul {
   margin: 100px 0 0;
 }
@@ -4419,7 +4437,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   left: -30px;
 }
 .our-services .get-consultation {
-  max-width: 475px;
+  max-width: 485px;
   margin: 35px auto 0;
   position: relative;
 }
@@ -4521,6 +4539,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     white-space: nowrap;
   }
 }
+@media (max-width: 480px) {
+  .our-services .get-consultation {
+    margin-top: 0;
+  }
+  .our-services .get-consultation .btn-get-consultation span {
+    font-size: 18px;
+  }
+}
 /***********************************************************************************************************************
 *********** promo-block
 ***********************************************************************************************************************/
@@ -4598,7 +4624,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   background: linear-gradient(to bottom, #fc609a, #c90742);
   padding: 15px 20px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   color: #fff;
 }
 .promo-block .work-schedule-hours span {
@@ -4613,12 +4639,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .promo-block .work-schedule-hours span:first-of-type {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
 }
 .promo-block .work-schedule-hours span:last-of-type {
   font-weight: 400;
-  font-size: 30px;
-  margin-top: -10px;
+  font-size: 24px;
+  margin-top: 0;
 }
 .promo-block .work-schedule-days {
   background: linear-gradient(to bottom, #357de8, #2366c9);
@@ -4636,12 +4662,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .promo-block .work-schedule-days span:first-of-type {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
 }
 .promo-block .work-schedule-days span:last-of-type {
   font-weight: 400;
-  font-size: 30px;
-  margin-top: -10px;
+  font-size: 24px;
+  margin-top: 0;
 }
 @media (max-width: 768px) {
   .promo-block .wrapper-inner {
@@ -4705,6 +4731,10 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
   .promo-block .promo-text {
     margin-top: 375px;
+  }
+  .promo-block .work-schedule-full {
+    top: 40px;
+    left: 75px;
   }
   .promo-block .work-schedule-hours {
     padding: 15px;
@@ -4819,6 +4849,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .our-guarantees .guarantees-item {
   display: inline-block;
+  vertical-align: top;
   width: 100%;
   max-width: 400px;
   margin: 25px 35px;
@@ -4846,17 +4877,26 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin-bottom: 20px;
 }
 .our-guarantees .text {
-  font-weight: 700;
+  font-weight: 400;
   color: #555;
   line-height: 1.5;
   margin-bottom: 15px;
 }
 @media (max-width: 480px) {
   .our-guarantees .guarantees-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
     font-size: 0;
   }
   .our-guarantees .guarantees-item {
-    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
     margin: 20px 0;
     padding: 0;
     position: relative;
@@ -4865,11 +4905,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     content: '';
     display: block;
     height: 1px;
-    width: 100%;
+    width: 90%;
     background: #ccc;
     position: absolute;
     bottom: -20px;
     left: 0;
+    right: 0;
+    margin: auto;
   }
   .our-guarantees .guarantees-item:after {
     content: '';
@@ -4890,7 +4932,8 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
   .our-guarantees h3 {
     display: block;
-    font-size: 18px;
+    width: 100%;
+    font-size: 15px;
     text-align: center;
     max-width: 120px;
     margin: 0 auto;
@@ -5116,7 +5159,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     margin: 0;
   }
   .call-us-today a {
-    font-size: 40px;
+    font-size: 28px;
     margin: 0;
   }
 }
@@ -5155,7 +5198,15 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .cooling-about h2 {
   color: #2366c9;
-  font-size: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: left;
+  line-height: 1;
+}
+.cooling-about h3 {
+  color: #2366c9;
+  font-weight: 400;
+  font-size: 32px;
   text-align: left;
   line-height: 1;
 }
@@ -5165,7 +5216,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   float: left;
 }
 .cooling-about .cooling-info p {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
   margin: 20px 0;
@@ -5186,7 +5237,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .cooling-about .cooling-info li {
   display: block;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1;
   margin: 15px 0;
@@ -5219,8 +5270,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .cooling-about .cooling-logos a {
   display: inline-block;
   vertical-align: middle;
-  max-width: 100%;
+  max-width: 45%;
   margin: 15px 10px;
+}
+.cooling-about .cooling-logos a:last-of-type {
+  max-width: 90%;
 }
 .cooling-about .cooling-logos a img {
   width: auto;
@@ -5290,6 +5344,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .cooling-about h2 {
+    font-size: 28px;
+  }
+}
 /***********************************************************************************************************************
 *********** form-side
 ***********************************************************************************************************************/
@@ -5312,7 +5371,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 .form-side .title span {
   font-size: inherit;
@@ -5325,6 +5384,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   color: #333;
   text-align: center;
   margin: 30px 0;
+  padding: 0 10px;
 }
 .form-side label {
   display: block;
@@ -5755,7 +5815,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
-  font-size: 46px;
+  font-size: 44px;
 }
 .cooling-callback h2 span {
   font-weight: 100;
@@ -5783,6 +5843,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     padding-right: 0;
   }
 }
+@media (max-width: 480px) {
+  .cooling-callback h2 {
+    font-size: 32px;
+  }
+}
 .cooling-callback .form-cooling-consultation {
   display: inline-block;
   width: 450px;
@@ -5798,13 +5863,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .cooling-callback .form-cooling-consultation .title {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 24px;
   color: #fff;
   text-shadow: 0 0 2px #000000;
 }
 .cooling-callback .form-cooling-consultation .title span {
   font-weight: 900;
-  font-size: 26px;
+  font-size: inherit;
   color: #ff75a8;
   text-transform: uppercase;
 }
@@ -5969,10 +6034,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     padding: 20px 15px;
   }
   .cooling-callback .form-cooling-consultation .sub-title {
-    font-size: 36px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
   .cooling-callback .form-cooling-consultation .title {
-    font-size: 22px;
+    font-size: 18px;
+  }
+  .cooling-callback .form-cooling-consultation button span {
+    font-size: 18px;
   }
 }
 /***********************************************************************************************************************
@@ -6544,7 +6613,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .conditioner-repair h1 {
   display: inline-block;
   font-weight: 900;
-  font-size: 52px;
+  font-size: 43px;
   color: #fff;
   text-shadow: 0 1px 2px #000000;
   text-transform: uppercase;
@@ -6816,7 +6885,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   margin-top: 0;
 }
 .conditioner-repair-about .conditioner-repair-info p {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   line-height: 1.7;
   margin: 20px 0;
@@ -6827,7 +6896,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .conditioner-repair-about .conditioner-repair-info li {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   margin: 15px 0;
   padding: 0 0 0 20px;
@@ -6848,7 +6917,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   left: 0;
 }
 .conditioner-repair-about .conditioner-repair-info li span {
-  font-weight: 900;
+  font-weight: 600;
   font-size: inherit;
   color: inherit;
 }
@@ -7009,7 +7078,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .common-problems .problem-item span {
   font-weight: 700;
   color: #e53072;
-  font-size: 24px;
+  font-size: 21px;
   text-transform: uppercase;
 }
 .common-problems .problem-item .problem-relation {
@@ -7444,8 +7513,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     background: url(../source/images/background-common.jpg) no-repeat center top;
     background-size: cover;
   }
+  .common-problems h2 {
+    font-size: 36px;
+  }
   .common-problems .problems-list {
-    max-width: 220px;
+    max-width: 260px;
   }
   .common-problems .problem-item span {
     font-size: 16px;
@@ -7649,6 +7721,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   padding: 0 35px 0 20px;
   text-align: left;
   position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   z-index: 1;
 }
 .form-fvac-expert .custom-select .current-value span {
@@ -7737,16 +7812,28 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
 }
 @media (max-width: 480px) {
+  .form-fvac-expert {
+    padding: 0 15px 20px;
+  }
+  .form-fvac-expert fieldset {
+    padding: 0;
+  }
   .form-fvac-expert .title {
-    font-size: 40px;
+    font-size: 26px;
     line-height: 1;
   }
   .form-fvac-expert .sub-title {
-    font-size: 22px;
+    font-size: 18px;
     margin: 20px 0 30px;
   }
   .form-fvac-expert .sub-title span {
     font-weight: 700;
+  }
+  .form-fvac-expert .custom-select .current-value {
+    padding: 0 35px 0 10px;
+  }
+  .form-fvac-expert input {
+    padding: 0 10px;
   }
 }
 /***********************************************************************************************************************
@@ -7946,11 +8033,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     padding: 0 20px;
   }
   .steps h2 {
-    text-transform: none;
-    font-size: 60px;
-    color: #fff;
-    font-weight: 400;
-    line-height: 55px;
+    font-size: 32px;
   }
   .steps h2 br {
     display: block;
@@ -7973,11 +8056,16 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     top: -10px;
   }
   .steps .step-item h3 {
+    font-size: 18px;
+    height: 36px;
     color: #fff;
     padding: 0 0 0 90px;
+    margin: 10px 0;
   }
   .steps .step-item p {
+    font-size: 15px;
     color: #fff;
+    padding-top: 10px!important;
   }
   .steps .step-item:nth-of-type(2n):before {
     left: auto;
@@ -8020,26 +8108,26 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .conditioner-repair-points h1 {
   display: block;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 43px;
   color: #fff;
   text-shadow: 0 1px 2px #000000;
   text-transform: uppercase;
   text-align: left;
   background: rgba(22, 186, 255, 0.7);
-  padding: 30px 0 20px 140px;
+  padding: 30px 0 20px 170px;
   position: relative;
 }
 .conditioner-repair-points h1 span:first-of-type {
   display: block;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 50px;
   text-transform: none;
   color: inherit;
 }
 .conditioner-repair-points h1 span:last-of-type {
   display: block;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   text-transform: none;
   color: inherit;
 }
@@ -8081,7 +8169,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   border-radius: 50%;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   position: absolute;
-  left: -200px;
+  left: -140px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -8647,6 +8735,14 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     display: block;
   }
 }
+@media (max-width: 480px) {
+  .benefits h2 {
+    font-size: 32px;
+  }
+  .benefits h2 span {
+    font-size: 36px;
+  }
+}
 /***********************************************************************************************************************
 *********** points
 ***********************************************************************************************************************/
@@ -8915,6 +9011,12 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
 }
 @media (max-width: 480px) {
+  .points h2 {
+    font-size: 28px;
+  }
+  .points h2 span {
+    font-size: 32px;
+  }
   .points .points-note {
     text-align: left;
   }
@@ -8946,5 +9048,8 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   .points .point-item span {
     font-weight: 400;
     font-size: 18px;
+  }
+  .points .callback span {
+    font-size: 24px;
   }
 }

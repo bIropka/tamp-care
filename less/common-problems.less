@@ -46,7 +46,7 @@
     span {
       .font-bold;
       color: @color-crimson-medium;
-      font-size: 24px;
+      font-size: 21px;
       text-transform: uppercase;
     }
 
@@ -458,8 +458,12 @@
     background: url(../source/images/background-common.jpg) no-repeat center top;
     background-size: cover;
 
+    h2 {
+      font-size: 36px;
+      }
+
     .problems-list {
-      max-width: 220px;
+      max-width: 260px;
     }
 
     .problem-item {
@@ -673,6 +677,9 @@
       padding: 0 35px 0 20px;
       text-align: left;
       position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       z-index: 1;
 
       span {
@@ -777,20 +784,37 @@
   }
 
   @media(max-width: 480px) {
+    padding: 0 15px 20px;
+
+    fieldset {
+      padding: 0;
+    }
 
     .title {
-      font-size: 40px;
+      font-size: 26px;
       line-height: 1;
     }
 
     .sub-title {
-      font-size: 22px;
+      font-size: 18px;
       margin: 20px 0 30px;
 
       span {
         .font-bold;
       }
 
+    }
+
+    .custom-select {
+
+      .current-value {
+        padding: 0 35px 0 10px;
+      }
+
+    }
+
+    input {
+      padding: 0 10px;
     }
 
   }

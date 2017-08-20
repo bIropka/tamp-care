@@ -33,7 +33,7 @@
     text-shadow: 1px 2px 2px rgba(0, 0, 0, .5);
     position: relative;
     z-index: 1;
-    font-size: 46px;
+    font-size: 44px;
 
     span {
       .font-thin;
@@ -58,6 +58,10 @@
       padding-right: 0;
     }
 
+    @media(max-width: 480px) {
+      font-size: 32px;
+    }
+
   }
 
   .form-cooling-consultation {
@@ -75,13 +79,13 @@
 
     .title {
       .font-semibold;
-      font-size: 26px;
+      font-size: 24px;
       color: #fff;
       text-shadow: 0 0 2px rgba(0, 0, 0, 1);
 
       span {
         .font-black;
-        font-size: 26px;
+        font-size: inherit;
         color: #ff75a8;
         text-transform: uppercase;
       }
@@ -193,6 +197,7 @@
       }
 
     }
+
   }
 
   @media(max-width: 1230px) {
@@ -263,11 +268,20 @@
       padding: 20px 15px;
 
       .sub-title {
-        font-size: 36px;
+        font-size: 24px;
+        margin-bottom: 10px;
       }
 
       .title {
-        font-size: 22px;
+        font-size: 18px;
+      }
+
+      button {
+
+        span {
+          font-size: 18px;
+        }
+
       }
 
     }

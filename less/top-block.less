@@ -30,12 +30,12 @@
       color: inherit;
       .font-thin;
       text-transform: uppercase;
-      font-size: 50px;
+      font-size: 40px;
 
       &.text-large {
         display: inline-block;
         .font-bold;
-        font-size: 50px;
+        font-size: 40px;
         text-transform: uppercase;
 
         &:first-of-type {
@@ -121,6 +121,28 @@
 
     }
 
+    @media(max-width: 480px) {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      span {
+
+        &.text-large {
+          font-size: 28px;
+        }
+
+        &.text-large-thin {
+          font-size: 24px;
+        }
+
+        &:last-of-type {
+          font-size: 18px;
+        }
+
+      }
+
+    }
+
   }
 
   .background-blue-left {
@@ -201,7 +223,7 @@
 
     .title {
       .font-black;
-      font-size: 65px;
+      font-size: 61px;
       color: #fff;
       line-height: 1;
 
@@ -222,7 +244,7 @@
           background: #fff;
           position: absolute;
           bottom: 13px;
-          right: 145px;
+          right: 160px;
         }
 
         &:after {
@@ -273,7 +295,7 @@
 
     .title {
       .font-black;
-      font-size: 65px;
+      font-size: 61px;
       color: #fff;
       line-height: 1;
 
@@ -293,7 +315,7 @@
           background: #fff;
           position: absolute;
           bottom: 13px;
-          left: 145px;
+          left: 160px;
         }
 
         &:after {
@@ -424,6 +446,33 @@
 
   @media(max-width: 540px) {
     background: url(../source/images/background-decor-left.png) no-repeat center bottom;
+
+    .heating-services {
+
+      .title {
+        font-size: 24px;
+
+        span {
+          font-size: 20px;
+        }
+
+      }
+
+    }
+
+    .cooling-services {
+
+      .title {
+        font-size: 24px;
+
+        span {
+          font-size: 20px;
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -483,6 +532,15 @@
         span {
           color: @color-crimson-light;
           font-size: 32px;
+        }
+
+      }
+
+      @media(max-width: 480px) {
+        font-size: 32px;
+
+        span {
+          font-size: 26px;
         }
 
       }
