@@ -202,8 +202,11 @@
 @media(max-width: 640px) {
 
   .projects {
-    position: relative;
-    padding: 20px 0;
+    padding: 0;
+
+    .wrapper-inner {
+      padding-bottom: 30px;
+    }
 
     h2 {
       width: ~"calc(100% + 30px)";
@@ -229,38 +232,9 @@
       width: ~"calc(100% + 30px)";
       margin-left: -15px;
 
-      .slick-prev {
-        background: none;
-        width: auto;
-        height: auto;
-        bottom: 120px;
-        top: auto;
-
-        &:before {
-          content: 'before';
-          .font-bold;
-          font-size: 18px;
-          text-transform: uppercase;
-          color: @color-crimson-medium;
-        }
-
-      }
-
+      .slick-prev,
       .slick-next {
-        background: none;
-        width: auto;
-        height: auto;
-        bottom: 120px;
-        top: auto;
-
-        &:before {
-          content: 'next';
-          .font-bold;
-          font-size: 18px;
-          text-transform: uppercase;
-          color: @color-crimson-medium;
-        }
-
+        display: none;
       }
 
     }
@@ -287,7 +261,7 @@
     }
 
     .project-data {
-      padding: 0 15px 140px;
+      padding: 0 15px 110px;
       position: relative;
     }
 
@@ -317,5 +291,9 @@
 
   }
 
+  .projects-installation,
+  .projects-repair {
+    background: none;
+  }
 
 }

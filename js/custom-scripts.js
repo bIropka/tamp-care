@@ -173,11 +173,25 @@ $(window).ready(function () {
     });
 
     $('.projects-installation .slider').slick({
-
+        responsive: [
+            {
+                breakpoint: 641,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.projects-repair .slider').slick({
-
+        responsive: [
+            {
+                breakpoint: 641,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 
     var track = $('.cooling-advantages .track');

@@ -6291,16 +6291,29 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 768px) {
+  .window .window-inner {
+    top: 0;
+  }
   .window .title {
-    font-size: 28px;
+    font-size: 20px;
   }
   .window .sub-title {
-    font-size: 16px;
+    font-size: 15px;
+    margin: 10px 0;
+  }
+  .window label {
+    margin: 20px auto;
+  }
+  .window input {
+    height: 40px;
+  }
+  .window button {
+    margin-top: 20px;
   }
   .window button span {
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
   }
   .window button:hover {
     background: linear-gradient(to top, #fc609a, #c90742 70%);
@@ -7791,9 +7804,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .form-fvac-expert button:hover {
   background: linear-gradient(to top, #fc609a, #c90742 70%);
 }
-.form-fvac-expert button:active span {
-  line-height: 55px;
-}
 @media (max-width: 980px) {
   .form-fvac-expert {
     padding: 0 30px 20px;
@@ -9223,8 +9233,10 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 @media (max-width: 640px) {
   .projects {
-    position: relative;
-    padding: 20px 0;
+    padding: 0;
+  }
+  .projects .wrapper-inner {
+    padding-bottom: 30px;
   }
   .projects h2 {
     width: calc(100% + 30px);
@@ -9247,33 +9259,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     width: calc(100% + 30px);
     margin-left: -15px;
   }
-  .projects .slider .slick-prev {
-    background: none;
-    width: auto;
-    height: auto;
-    bottom: 120px;
-    top: auto;
-  }
-  .projects .slider .slick-prev:before {
-    content: 'before';
-    font-weight: 700;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #e53072;
-  }
+  .projects .slider .slick-prev,
   .projects .slider .slick-next {
-    background: none;
-    width: auto;
-    height: auto;
-    bottom: 120px;
-    top: auto;
-  }
-  .projects .slider .slick-next:before {
-    content: 'next';
-    font-weight: 700;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #e53072;
+    display: none;
   }
   .projects .project-images {
     height: 300px;
@@ -9292,7 +9280,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     display: none;
   }
   .projects .project-data {
-    padding: 0 15px 140px;
+    padding: 0 15px 110px;
     position: relative;
   }
   .projects .callback {
@@ -9314,5 +9302,9 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     position: absolute;
     left: 0;
     top: -20px;
+  }
+  .projects-installation,
+  .projects-repair {
+    background: none;
   }
 }
