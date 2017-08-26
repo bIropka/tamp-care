@@ -40,41 +40,6 @@
 
     }
 
-    .slick-arrow {
-      display: block;
-      width: 29px;
-      height: 52px;
-      position: absolute;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-      color: transparent;
-      font-size: 0;
-      border: none;
-      cursor: pointer;
-      .smooth(none);
-    }
-
-    .slick-prev {
-      background: url(../source/images/arrow-left.png) no-repeat right top;
-      left: -70px;
-
-      &:hover {
-        background: url(../source/images/arrow-left.png) no-repeat left top;
-      }
-
-    }
-
-    .slick-next{
-      background: url(../source/images/arrow-right.png) no-repeat left top;
-      right: -70px;
-
-      &:hover {
-        background: url(../source/images/arrow-right.png) no-repeat right top;
-      }
-
-    }
-
     @media(max-width: 768px) {
       width: ~"calc(100% - 80px)";
       margin: 30px auto;
@@ -87,6 +52,55 @@
         right: -33px;
       }
 
+    }
+
+  }
+
+}
+
+.slider {
+
+  .slide:hover,
+  .slide:active,
+  .slide:focus {
+    outline: none;
+  }
+
+}
+
+.slider {
+
+  .slick-arrow {
+    display: block;
+    width: 29px;
+    height: 52px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    color: transparent;
+    font-size: 0;
+    border: none;
+    cursor: pointer;
+    .smooth(none);
+  }
+
+  .slick-prev {
+    background: url(../source/images/arrow-left.png) no-repeat right top;
+    left: -70px;
+
+    &:hover {
+      background: url(../source/images/arrow-left.png) no-repeat left top;
+    }
+
+  }
+
+  .slick-next{
+    background: url(../source/images/arrow-right.png) no-repeat left top;
+    right: -70px;
+
+    &:hover {
+      background: url(../source/images/arrow-right.png) no-repeat right top;
     }
 
   }

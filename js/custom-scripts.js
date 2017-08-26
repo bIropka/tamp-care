@@ -144,7 +144,7 @@ $(window).ready(function () {
 
     });
 
-    $('.slider').slick({
+    $('.slider-clients').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
@@ -170,6 +170,14 @@ $(window).ready(function () {
             }
 
         ]
+    });
+
+    $('.projects-installation .slider').slick({
+
+    });
+
+    $('.projects-repair .slider').slick({
+
     });
 
     var track = $('.cooling-advantages .track');
