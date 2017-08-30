@@ -111,8 +111,7 @@ $(window).ready(function () {
                 url: scriptFile,
                 data: formNm.serialize(),
                 success: function (data) {
-                    $('.window').fadeOut();
-                    $('.window-successful').fadeIn();
+                    $(location).attr('href', 'http://tempcare.us/thanks.html');
                 },
                 error: function (data) {
                     $('.window').fadeOut();

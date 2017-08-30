@@ -1,0 +1,212 @@
+/***********************************************************************************************************************
+*********** thanks
+***********************************************************************************************************************/
+
+.page-thanks {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  footer {
+    flex-grow: 0;
+  }
+
+}
+
+.thanks {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-grow: 1;
+  background: url(../source/images/thanks-background-1.png) no-repeat center;
+  background-size: cover;
+  padding: 0;
+
+  .wrapper-inner {
+    background: url(../source/images/thanks-background-2.png) no-repeat right top;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+}
+
+.thanks-content {
+  width: 480px;
+  text-align: center;
+
+  > p {
+
+    &:nth-of-type(1) {
+      .font-bold;
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    &:nth-of-type(2) {
+      font-size: 24px;
+      line-height: 1;
+      margin-top: 10px;
+    }
+
+    &:nth-of-type(3) {
+      .font-bold;
+      font-size: 24px;
+      line-height: 1;
+      margin-top: 70px;
+    }
+
+    &:nth-of-type(4) {
+      font-size: 18px;
+      line-height: 1;
+      margin: 15px 0;
+
+      a {
+        font-size: inherit;
+        color: @color-blue;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+      }
+
+    }
+
+  }
+
+  > a {
+    display: inline-block;
+    width: 100%;
+    max-width: 450px;
+    background: @color-blue-light;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    margin-top: 70px;
+
+    &:hover {
+      background: @color-blue;
+    }
+
+  }
+
+  @media(max-width: 768px) {
+    width: 100%;
+
+    br {
+      display: none;
+    }
+
+  }
+
+  @media(max-width: 480px) {
+
+    > p {
+
+      &:nth-of-type(1) {
+        .font-bold;
+        font-size: 20px;
+      }
+
+      &:nth-of-type(2) {
+        font-size: 16px;
+      }
+
+      &:nth-of-type(3) {
+        .font-bold;
+        font-size: 20px;
+        margin-top: 30px;
+      }
+
+      &:nth-of-type(4) {
+        font-size: 16px;
+      }
+
+    }
+
+    > a {
+      margin-top: 30px;
+    }
+
+  }
+
+}
+
+.form-thanks {
+  display: inline-block;
+  width: 100%;
+  max-width: 450px;
+
+  label {
+    display: block;
+    width: ~"calc(100% - 150px)";
+    float: left;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 0 20px;
+    border-left: 2px solid rgba(0, 0, 0, .25);
+    border-top: 2px solid rgba(0, 0, 0, .25);
+
+    &:focus {
+      border: none;
+      border-right: 2px solid rgba(0, 0, 0, .25);
+      border-bottom: 2px solid rgba(0, 0, 0, .25);
+    }
+
+  }
+
+  button {
+    width: 130px;
+    height: 60px;
+    border: 3px solid @color-blue;
+    color: @color-blue;
+    line-height: 56px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    background: none;
+    float: right;
+    background: transparent;
+    transition: .4s;
+
+    &:hover {
+      background: @color-blue;
+      color: #fff;
+    }
+
+  }
+
+  p {
+    font-size: 18px;
+    color: @color-blue;
+    line-height: 1;
+    padding-top: 15px;
+    clear: both;
+  }
+
+  @media(max-width: 480px) {
+    padding: 0 10px;
+
+    label {
+      width: 100%;
+      float: none;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      float: none;
+      height: auto;
+      border: none;
+      line-height: 1;
+    }
+
+  }
+
+}
