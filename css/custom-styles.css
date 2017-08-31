@@ -9996,3 +9996,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   text-transform: uppercase;
   font-weight: 700;
 }
+.page-coupons {
+  min-width: 1400px;
+}
