@@ -106,6 +106,9 @@ $(window).ready(function () {
             if (formID == 'form-ac-control') scriptFile = 'php/mail-ac-control.php';
             if (formID == 'form-ac-control-2') scriptFile = 'php/mail-ac-control-2.php';
             if (formID == 'form-fvac-expert') scriptFile = 'php/mail-fvac-expert.php';
+            if (formID == 'coupon-form-1') scriptFile = 'php/mail-coupon-1.php';
+            if (formID == 'coupon-form-2') scriptFile = 'php/mail-coupon-2.php';
+            if (formID == 'coupon-form-3') scriptFile = 'php/mail-coupon-3.php';
             $.ajax({
                 type: "POST",
                 url: scriptFile,
@@ -191,6 +194,11 @@ $(window).ready(function () {
                 }
             }
         ]
+    });
+
+    $('.slider-coupons').slick({
+        dots: true,
+        initialSlide: 2
     });
 
     var track = $('.cooling-advantages .track');
