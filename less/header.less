@@ -393,7 +393,11 @@ header[role='banner'] {
 
   .our-service-item {
     display: block;
-    padding: 15px 20px 15px 50px;
+    padding: 15px 20px 15px 20px;
+
+    .our-services-list-link {
+      padding-left: 20px;
+    }
 
     .title {
       color: inherit;
@@ -406,7 +410,13 @@ header[role='banner'] {
     }
 
     ul {
-      display: none;
+      display: block;
+      padding-top: 15px;
+
+      li {
+        padding: 5px 20px;
+      }
+
     }
 
     .image-wrap {

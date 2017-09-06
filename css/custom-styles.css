@@ -3330,7 +3330,10 @@ header[role='banner'] .burger {
 }
 .nav-services-list .our-service-item {
   display: block;
-  padding: 15px 20px 15px 50px;
+  padding: 15px 20px 15px 20px;
+}
+.nav-services-list .our-service-item .our-services-list-link {
+  padding-left: 20px;
 }
 .nav-services-list .our-service-item .title {
   color: inherit;
@@ -3340,7 +3343,11 @@ header[role='banner'] .burger {
   line-height: 1;
 }
 .nav-services-list .our-service-item ul {
-  display: none;
+  display: block;
+  padding-top: 15px;
+}
+.nav-services-list .our-service-item ul li {
+  padding: 5px 20px;
 }
 .nav-services-list .our-service-item .image-wrap {
   display: none;
@@ -6886,6 +6893,11 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 }
 .modal-services .our-services-list li:hover {
   background: #2366c9;
+}
+.modal-services .our-services-list li a {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 .modal-services .our-services-list:before,
 .modal-services .our-services-list:after {
