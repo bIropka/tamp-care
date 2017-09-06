@@ -4,6 +4,14 @@ $(window).ready(function () {
         $('.wrapper').animate({opacity: 1}, 500);
     }, 500);
 
+    $(document).click(function(event) {
+
+        if (!$(event.target).closest(".custom-select").length) {
+            $('.custom-select').removeClass('active');
+        }
+
+    });
+
     $('#Layer_3').hover(
         function() {
             $(this).find('polygon').css('fill', '#E53072');
@@ -128,6 +136,8 @@ $(window).ready(function () {
     /* for cooling-page */
 
     $('.custom-select .current-value').click(function() {
+
+        $('.custom-select').removeClass('active');
 
         $(this).parent().toggleClass('active');
 

@@ -166,9 +166,12 @@
                         <div class="form-label">Type of property</div>
 
                         <div class="custom-select">
-                            <div class="current-value">Single-Family Home</div>
+                            <div class="current-value">
+                                <span>Single-Family Home</span>
+                                <i class="fa fa-angle-down"></i>
+                            </div>
                             <ul>
-                                <li>Item - 1</li>
+                                <li class="active">Single-Family Home</li>
                                 <li>Item - 2</li>
                                 <li>Item - 3</li>
                             </ul>
@@ -182,9 +185,12 @@
                         <div class="form-label">System you want <br>to install</div>
 
                         <div class="custom-select">
-                            <div class="current-value">Air Conditioner</div>
+                            <div class="current-value">
+                                <span>Air Conditioner</span>
+                                <i class="fa fa-angle-down"></i>
+                            </div>
                             <ul>
-                                <li>Item - 1</li>
+                                <li class="active">Air Conditioner</li>
                                 <li>Item - 2</li>
                                 <li>Item - 3</li>
                             </ul>
@@ -201,6 +207,11 @@
 
                             <div class="scale-footage"></div>
 
+                            <div class="scale-fields scale-footage-fields">
+                                <label><input type="text" id="footage-min-cost"/></label>
+                                <label><input type="text" id="footage-max-cost"/></label>
+                            </div>
+
                         </div>
 
                     </fieldset>
@@ -209,11 +220,15 @@
 
                         <div class="form-label">desired <br>efficiency level:</div>
 
-                        <input type="radio" id="install-efficiency-regular" name="install-efficiency" value="Regular efficiency">
-                        <label for="install-efficiency-regular"><span>Regular efficiency</span></label>
+                        <div class="radio-wrapper">
 
-                        <input type="radio" id="install-efficiency-high" name="install-efficiency" value="High efficiency">
-                        <label for="install-efficiency-high"><span>High-efficiency</span></label>
+                            <input type="radio" id="install-efficiency-regular" name="install-efficiency" value="Regular efficiency">
+                            <label for="install-efficiency-regular"><span>Regular efficiency</span></label>
+
+                            <input type="radio" id="install-efficiency-high" name="install-efficiency" value="High efficiency" checked>
+                            <label for="install-efficiency-high"><span>High-efficiency</span></label>
+
+                        </div>
 
                     </fieldset>
 
@@ -558,9 +573,12 @@
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="lib/jQRangeSlider-5.7.2/jQRangeSlider-min.js"></script>
 <script src="lib/slick/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
 <script src="js/custom-scripts.js"></script>
+<script src="js/customRangeSlider.js"></script>
 
 <script>
 
