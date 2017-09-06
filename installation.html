@@ -130,7 +130,8 @@
                 <span>3</span>
                 factors to consider
                 <span>when making the decision</span>
-                to repair or replace
+                <span>to repair or replace</span>
+
             </h2>
 
             <div class="factors-list">
@@ -159,7 +160,7 @@
 
                 <h2>Calculate your A/C installation cost</h2>
 
-                <form action="#" class="form-installation-cost">
+                <form action="#" id="form-installation-cost" class="form-installation-cost">
 
                     <fieldset>
 
@@ -175,7 +176,7 @@
                                 <li>Item - 2</li>
                                 <li>Item - 3</li>
                             </ul>
-                            <label><input type="text" id="install-property" name="install-property"></label>
+                            <label><input type="text" id="install-property" name="install-property" value="Single-Family Home"></label>
                         </div>
 
                     </fieldset>
@@ -194,7 +195,7 @@
                                 <li>Item - 2</li>
                                 <li>Item - 3</li>
                             </ul>
-                            <label><input type="text" id="install-system" name="install-system"></label>
+                            <label><input type="text" id="install-system" name="install-system" value="Air Conditioner"></label>
                         </div>
 
                     </fieldset>
@@ -205,12 +206,13 @@
 
                         <div class="scale-wrap">
 
-                            <div class="scale-footage"></div>
+                            <div class="scale-footage-min"><span></span>sq.ft</div>
 
-                            <div class="scale-fields scale-footage-fields">
-                                <label><input type="text" id="footage-min-cost"/></label>
-                                <label><input type="text" id="footage-max-cost"/></label>
-                            </div>
+                            <div class="scale-footage-max"><span></span>sq.ft</div>
+
+                            <div class="scale-footage" id="scale-footage"></div>
+
+                            <label><input type="text" id="footage-value" value="2000 sq.ft"/></label>
 
                         </div>
 
@@ -238,13 +240,45 @@
 
                         <div class="scale-wrap">
 
-                            <div class="scale-budget"></div>
+                            <div class="scale-budget-min"></div>
+
+                            <div class="scale-budget-max"></div>
+
+                            <div id='scale-budget' class="scale-budget"></div>
+
+                            <div class="scale-labels">
+
+                                <label><input type="text" name="budget-value-min" id="budget-value-min" disabled/></label>
+
+                                <span> - </span>
+
+                                <label><input type="text" name="budget-value-max" id="budget-value-max" disabled/></label>
+
+                            </div>
 
                         </div>
 
                     </fieldset>
 
-                    <button type="submit">Calculate My Order</button>
+                    <button class="call-form">Calculate My Order</button>
+
+                    <div class="window window-cost-inner">
+
+                        <div class="window-inner">
+
+                            <div class="close-window"></div>
+
+                            <div class="title">Leave your contact information</div>
+
+                            <label><input type="text" id="install-name" name="install-name" placeholder="Name" required></label>
+
+                            <label><input type="text" id="install-phone" name="install-phone" placeholder="Phone" required></label>
+
+                            <button type="submit">Calculate My Order</button>
+
+                        </div>
+
+                    </div>
 
                 </form>
 
@@ -306,50 +340,77 @@
 
         <div class="wrapper-inner">
 
-            <h2>Calculate your A/C <br>installation cost</h2>
+            <div class="calculate-cost-inner">
 
-            <img src="source/images/installation-cooler.png" alt="cooler">
+                <h2>Calculate your A/C<br> installation cost</h2>
 
-            <div class="calculate-cost-data">
+                <img src="source/images/installation-cooler.png" alt="cooler">
 
-                <h5></h5>
+                <div class="calculate-cost-data">
 
-                <p></p>
+                    <h5>Leave request right now</h5>
 
-                <div class="timer-wrap">
+                    <p>to get high efficiency A/C unit for the price of regular</p>
 
-                    <p></p>
+                    <div class="timer-wrap">
 
-                    <div class="timer"></div>
+                        <p>Until the end of the promotion</p>
+
+                        <ul class="countdown">
+                            <li>
+                                <span class="days">00</span>
+                                <span class="days_ref">day(s)</span>
+                            </li>
+                            <li>
+                                <span class="hours">00</span>
+                                <span class="hours_ref">hour</span>
+                            </li>
+                            <li>
+                                <span class="minutes">00</span>
+                                <span class="minutes_ref">minute</span>
+                            </li>
+                            <li>
+                                <span class="seconds">00</span>
+                                <span class="seconds_ref">second</span>
+                            </li>
+                        </ul>
+
+                    </div>
 
                 </div>
 
+                <form action="#" id="form-cost" class="form-cost">
+
+                    <div class="title">Discount <br>reuqest </div>
+
+                    <div class="sub-title">for high efficiency unit for the price of regular</div>
+
+                    <label>
+                        <input type="text" id="cost-name" name="cost-name" placeholder="Name" required>
+                        <span class="icon">
+                            <img src="source/images/icon-person.png" alt="icon">
+                        </span>
+                    </label>
+
+                    <label>
+                        <input type="text" id="cost-phone" name="cost-phone" placeholder="Phone" required>
+                        <span class="icon">
+                            <img src="source/images/icon-phone-empty.png" alt="icon">
+                        </span>
+                    </label>
+
+                    <label>
+                        <input type="text" id="cost-email" name="cost-email" placeholder="Email" required>
+                        <span class="icon">
+                            <img src="source/images/icon-envelope.png" alt="icon">
+                        </span>
+                    </label>
+
+                    <button type="submit">Get a discount</button>
+
+                </form>
+
             </div>
-
-            <form action="#" class="form-cost">
-
-                <div class="title">Discount <br>reuqest </div>
-
-                <div class="sub-title">for high efficiency unit for the price of regular</div>
-
-                <label>
-                    <input type="text" id="cost-name" name="cost-name" placeholder="Name" required>
-                    <i class="fa fa-user"></i>
-                </label>
-
-                <label>
-                    <input type="text" id="cost-phone" name="cost-phone" placeholder="Phone" required>
-                    <i class="fa fa-phone"></i>
-                </label>
-
-                <label>
-                    <input type="text" id="cost-email" name="cost-email" placeholder="Email" required>
-                    <i class="fa fa-envelope"></i>
-                </label>
-
-                <button type="submit">Get a discount</button>
-
-            </form>
 
         </div>
 
@@ -411,75 +472,71 @@
 
     <section class="reviews">
 
-        <div class="wrapper-inner">
+        <h2>What Our Happy <span>Customers Have To Say</span></h2>
 
-            <h2>What Our Happy <span>Customers Have To Say</span></h2>
-
-            <div class="slider slider-reviews">
+        <div class="slider slider-reviews">
 
                 <div class="slide">
-                    <div class="review-text">«Bluefrog did an <br>excellent job»</div>
+                    <div class="review-text"><span>«Bluefrog did an <br>excellent job»</span></div>
                     <div class="review-author">Kyle, Dallas</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Fantastic <br>Service!»</div>
+                    <div class="review-text"><span>«Fantastic <br>Service!»</span></div>
                     <div class="review-author">Laura, Little Rock</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Professionalism <br>and quality work»</div>
+                    <div class="review-text"><span>«Professionalism <br>and quality work»</span></div>
                     <div class="review-author">Quick response, great <br>service, San Antonio</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Bluefrog did an <br>excellent job»</div>
+                    <div class="review-text"><span>«Bluefrog did an <br>excellent job»</span></div>
                     <div class="review-author">Kyle, Dallas</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Fantastic <br>Service!»</div>
+                    <div class="review-text"><span>«Fantastic <br>Service!»</span></div>
                     <div class="review-author">Laura, Little Rock</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Professionalism <br>and quality work»</div>
+                    <div class="review-text"><span>«Professionalism <br>and quality work»</span></div>
                     <div class="review-author">Quick response, great <br>service, San Antonio</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Bluefrog did an <br>excellent job»</div>
+                    <div class="review-text"><span>«Bluefrog did an <br>excellent job»</span></div>
                     <div class="review-author">Kyle, Dallas</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Fantastic <br>Service!»</div>
+                    <div class="review-text"><span>«Fantastic <br>Service!»</span></div>
                     <div class="review-author">Laura, Little Rock</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Professionalism <br>and quality work»</div>
+                    <div class="review-text"><span>«Professionalism <br>and quality work»</span></div>
                     <div class="review-author">Quick response, great <br>service, San Antonio</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Bluefrog did an <br>excellent job»</div>
+                    <div class="review-text"><span>«Bluefrog did an <br>excellent job»</span></div>
                     <div class="review-author">Kyle, Dallas</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Fantastic <br>Service!»</div>
+                    <div class="review-text"><span>«Fantastic <br>Service!»</span></div>
                     <div class="review-author">Laura, Little Rock</div>
                 </div>
 
                 <div class="slide">
-                    <div class="review-text">«Professionalism <br>and quality work»</div>
+                    <div class="review-text"><span>«Professionalism <br>and quality work»</span></div>
                     <div class="review-author">Quick response, great <br>service, San Antonio</div>
                 </div>
 
             </div>
-
-        </div>
 
     </section>
 
@@ -573,22 +630,17 @@
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<script src="lib/jQRangeSlider-5.7.2/jQRangeSlider-min.js"></script>
+<script src="lib/noUiSlider/nouislider.min.js"></script>
+<script src="lib/noUiSlider/wNumb.js"></script>
 <script src="lib/slick/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
+<script src="lib/downCount/jquery.downCount.js"></script>
 <script src="js/custom-scripts.js"></script>
-<script src="js/customRangeSlider.js"></script>
+<script src="js/for-installation.js"></script>
 
 <script>
 
-    if($(window).width() > 1230) {
-        if ($(window).scrollTop() > $('.steps').offset().top + 70)  {
-            showSteps();
-        }
-    }
-
-    $(window).scroll(function() {
+    $(window).ready(function() {
 
         if($(window).width() > 1230) {
             if ($(window).scrollTop() > $('.steps').offset().top + 70)  {
@@ -596,77 +648,42 @@
             }
         }
 
-    });
+        $(window).scroll(function() {
 
-    var stepsItems = $('.step-list').find('.step-item');
-
-    function showSteps() {
-
-        setTimeout(function() {
-            $('.steps').addClass('active');
-        }, 2000);
-
-        var counter = 0;
-
-        (function showStepsInner() {
-
-            $(stepsItems[counter++]).addClass('active');
-
-            if (counter >= stepsItems.length) {
-                counter = 0;
-                return;
+            if($(window).width() > 1230) {
+                if ($(window).scrollTop() > $('.steps').offset().top + 70)  {
+                    showSteps();
+                }
             }
 
-            setTimeout(showStepsInner, 300);
+        });
 
-        })();
+        var stepsItems = $('.step-list').find('.step-item');
 
-    }
+        function showSteps() {
 
-</script>
+            setTimeout(function() {
+                $('.steps').addClass('active');
+            }, 2000);
 
-<script>
+            var counter = 0;
 
-    if($(window).width() > 1230) {
-        if ($(window).scrollTop() > $('.points').offset().top + 70)  {
-            showPoints();
-        }
-    }
+            (function showStepsInner() {
 
-    $(window).scroll(function() {
+                $(stepsItems[counter++]).addClass('active');
 
-        if($(window).width() > 1230) {
-            if ($(window).scrollTop() > $('.points').offset().top + 70)  {
-                showPoints();
-            }
+                if (counter >= stepsItems.length) {
+                    counter = 0;
+                    return;
+                }
+
+                setTimeout(showStepsInner, 300);
+
+            })();
+
         }
 
     });
-
-    var pointsItems = $('.point-list').find('.point-item');
-
-    function showPoints() {
-
-        setTimeout(function() {
-            $('.points').addClass('active');
-        }, 2500);
-
-        var counter = 0;
-
-        (function showPointsInner() {
-
-            $(pointsItems[counter++]).addClass('active');
-
-            if (counter >= pointsItems.length) {
-                counter = 0;
-                return;
-            }
-
-            setTimeout(showPointsInner, 100);
-
-        })();
-
-    }
 
 </script>
 

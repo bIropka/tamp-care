@@ -117,6 +117,8 @@ $(window).ready(function () {
             if (formID == 'coupon-form-1') scriptFile = 'php/mail-coupon-1.php';
             if (formID == 'coupon-form-2') scriptFile = 'php/mail-coupon-2.php';
             if (formID == 'coupon-form-3') scriptFile = 'php/mail-coupon-3.php';
+            if (formID == 'form-cost') scriptFile = 'php/mail-cost.php';
+            if (formID == 'form-installation-cost') scriptFile = 'php/mail-calculator.php';
             $.ajax({
                 type: "POST",
                 url: scriptFile,
@@ -137,7 +139,7 @@ $(window).ready(function () {
 
     $('.custom-select .current-value').click(function() {
 
-        $('.custom-select').removeClass('active');
+        $(this).parents('fieldset').siblings().find('.custom-select').removeClass('active');
 
         $(this).parent().toggleClass('active');
 
@@ -211,6 +213,22 @@ $(window).ready(function () {
         initialSlide: 2
     });
 
+    $('.slider-reviews').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
+    });
+
     var track = $('.cooling-advantages .track');
 
     if($(window).width() > 1230) {
@@ -267,5 +285,11 @@ $(window).ready(function () {
         })();
 
     }
+
+    $('.call-form').click(function() {
+
+        $('.window-cost-inner').fadeIn();
+
+    });
 
 });

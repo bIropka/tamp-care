@@ -1,0 +1,99 @@
+/***********************************************************************************************************************
+*********** reviews
+***********************************************************************************************************************/
+
+.reviews {
+  background: url(../source/images/background-guarantees.png) center;
+
+  h2 {
+    color: @color-crimson-medium;
+    font-size: 48px;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+    margin-bottom: 50px;
+
+    span {
+      display: block;
+      color: @color-blue;
+      text-transform: none;
+    }
+
+  }
+
+}
+
+.slider-reviews {
+  width: 2160px;
+  margin-left: ~"calc(50% - 1080px)";
+
+  .slide {
+    width: 240px;
+    text-align: center;
+    margin: 0 15px;
+  }
+
+  .review-text {
+    display: block;
+    width: 237px;
+    height: 157px;
+    background: url(../source/images/installation-background-review.png) no-repeat;
+    background-size: 100%;
+    padding: 35px 20px;
+    margin: 0 auto 5px;
+
+    span {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      line-height: 30px;
+      height: 60px;
+      color: #fff;
+      overflow: hidden;
+    }
+
+  }
+
+  .review-author {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    color: @color-crimson-medium;
+    padding-left: 40px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 1px;
+      background: @color-crimson-medium;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+
+  }
+
+}
+
+@media(max-width: 768px) {
+
+  .reviews {
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .slider-reviews {
+    width: 1890px;
+    margin-left: ~"calc(50% - 945px)";
+  }
+
+}
