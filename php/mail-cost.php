@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['cost-email'])) {$email = $_POST['cost-email'];}
 	if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
-	$to = "biropka@gmail.com";
+	$to = "sereda.maksim95@gmail.com";
 	$sendfrom   = "tamp-care";
 	$headers  = "From: " . strip_tags($sendfrom) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";

@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	if (isset($_POST['cost-name'])) {$name = $_POST['cost-name'];}
-	if (isset($_POST['cost-phone'])) {$phone = $_POST['cost-phone'];}
+	if (isset($_POST['install-name'])) {$name = $_POST['install-name'];}
+	if (isset($_POST['install-phone'])) {$phone = $_POST['install-phone'];}
 	if (isset($_POST['install-property'])) {$property = $_POST['install-property'];}
 	if (isset($_POST['install-system'])) {$system = $_POST['install-system'];}
 	if (isset($_POST['install-footage-value'])) {$footage = $_POST['install-footage-value'];}
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['budget-value-max'])) {$budgetMax = $_POST['budget-value-max'];}
 	if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
-	$to = "biropka@gmail.com";
+	$to = "sereda.maksim95@gmail.com";
 	$sendfrom   = "tamp-care";
 	$headers  = "From: " . strip_tags($sendfrom) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";

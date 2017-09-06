@@ -4,9 +4,16 @@
 
 /* countdown */
 
+var curDate = new Date();
+
+var offset = -curDate.getTimezoneOffset() / 60;
+var date = '' + (curDate.getMonth() + 1) + '/' + (curDate.getDate() + 1) + '/' + curDate.getFullYear() + ' ' + '0:0:0';
+
+console.log(date);
+
 $('.countdown').downCount({
-    date: '09/30/2017 12:00:00',
-    offset: +2
+    date: date,
+    offset: offset
 });
 
 /* footage */
@@ -76,7 +83,7 @@ scaleBudget.noUiSlider.on('update', function( values, handle ) {
     if (temp === 0) {
         value = '$' + value.split('.')[0] + 'K';
     } else {
-        value = '$' + value + 'K';
+        value = '$' + value;
     }
 
     if ( handle ) {
