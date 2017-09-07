@@ -9,8 +9,6 @@ var curDate = new Date();
 var offset = -curDate.getTimezoneOffset() / 60;
 var date = '' + (curDate.getMonth() + 1) + '/' + (curDate.getDate() + 1) + '/' + curDate.getFullYear() + ' ' + '0:0:0';
 
-console.log(date);
-
 $('.countdown').downCount({
     date: date,
     offset: offset
@@ -92,3 +90,35 @@ scaleBudget.noUiSlider.on('update', function( values, handle ) {
         inputLogBudgetMin.value = value;
     }
 });
+
+var gifts = $('.gifts-list');
+
+var curNumber, curTime;
+
+gifts.slick({
+    vertical: true,
+    arrows: false,
+    slidesToShow: 3,
+    swipe: false
+});
+
+$('.gifts-control span').click(function() {
+
+    curTime = randomInteger(30, 100) * 100;
+    curNumber = randomInteger(5, 10);
+
+    gifts.slick('slickSetOption', 'speed', curTime, true);
+    gifts.slick('slickSetOption', 'slidesToScroll', curNumber);
+    gifts.slick('slickNext');
+
+});
+
+gifts.on('afterChange', function(event, slick, currentSlide){
+    $('#gifts-gift').attr('value', $('.gifts-list .slick-current + .slick-active').find('h3').text());
+});
+
+function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1);
+    rand = Math.round(rand);
+    return rand;
+}

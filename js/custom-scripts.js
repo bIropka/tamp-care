@@ -119,6 +119,7 @@ $(window).ready(function () {
             if (formID == 'coupon-form-3') scriptFile = 'php/mail-coupon-3.php';
             if (formID == 'form-cost') scriptFile = 'php/mail-cost.php';
             if (formID == 'form-installation-cost') scriptFile = 'php/mail-calculator.php';
+            if (formID == 'form-gifts') scriptFile = 'php/mail-gifts.php';
             $.ajax({
                 type: "POST",
                 url: scriptFile,
@@ -286,9 +287,15 @@ $(window).ready(function () {
 
     }
 
-    $('.call-form').click(function() {
+    $('.form-installation-cost .call-form').click(function() {
 
         $('.window-cost-inner').fadeIn();
+
+    });
+
+    $('.form-gifts .call-form').click(function() {
+
+        $('.window-gifts-inner').fadeIn();
 
     });
 
