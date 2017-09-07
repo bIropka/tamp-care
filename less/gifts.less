@@ -25,13 +25,105 @@
   span {
     display: block;
     position: absolute;
-    left: ~"calc(100% + 20px)";
+    left: ~"calc(100% + 80px)";
     top: 0;
     font-size: 20px;
     color: #fff;
     white-space: nowrap;
+    cursor: pointer;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
   }
 
+  .gifts-lever {
+    width: 60px;
+    height: 204px;
+    background: url(../source/images/lever-vertical.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 3px;
+    top: 0;
+  }
+
+  .gifts-tip {
+    width: 59px;
+    height: 59px;
+    background: url(../source/images/lever-vertical-tip.png) no-repeat;
+    position: absolute;
+    left: 30px;
+    top: -20px;
+    cursor: pointer;
+  }
+
+  &:hover span {
+    -webkit-animation-name: control-vertical;
+    animation-name: control-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+  &.active span {
+    font-size: 22px;
+    .smooth(1s);
+  }
+
+}
+
+@-webkit-keyframes control-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes control-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 .form-gifts {
@@ -40,32 +132,40 @@
   position: relative;
   margin: 0 auto;
 
-  &:before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 40px solid #e53072;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    position: absolute;
-    left: 10px;
-    top: 180px;
-    z-index: 11;
-  }
-
+  &:before,
   &:after {
     content: '';
     display: block;
     width: 0;
     height: 0;
-    border-right: 40px solid #e53072;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     position: absolute;
-    right: 10px;
     top: 180px;
     z-index: 11;
+    .smooth(.8s);
+  }
+
+  &:before {
+    border-left: 40px solid #e53072;
+    left: 10px;
+  }
+
+  &:after {
+    border-right: 40px solid #e53072;
+    right: 10px;
+  }
+
+  &.active {
+
+    &:before {
+      left: 20px;
+    }
+
+    &:after {
+      right: 20px;
+    }
+
   }
 
   .call-form,
@@ -196,6 +296,139 @@
 
   .title {
     font-size: 24px;
+  }
+
+}
+
+@media(max-width: 1200px) {
+
+  .form-gifts {
+    margin-left: ~"calc(50% - 450px)";
+    margin-right: 0;
+  }
+
+}
+
+@media(max-width: 980px) {
+
+  .form-gifts {
+    margin: 0 auto;
+  }
+
+  .gifts-wrap {
+    margin: 100px auto 50px;
+  }
+
+  .gifts-control {
+    width: 280px;
+    height: 20px;
+    right: 0;
+    left: 0;
+    top: -40px;
+    margin:auto;
+
+    span {
+      left: 60px;
+      top: auto;
+      bottom: 40px;
+      font-size: 18px;
+    }
+
+    .gifts-lever {
+      width: 115px;
+      height: 31px;
+      background: url(../source/images/lever-horizontal.png) no-repeat;
+      background-size: 100%;
+      left: 30px;
+      top: auto;
+      bottom: 5px;
+    }
+
+    .gifts-tip {
+      width: 27px;
+      height: 27px;
+      background: url(../source/images/lever-horizontal-tip.png) no-repeat;
+      left: 20px;
+      top: auto;
+      bottom: 20px;
+      cursor: pointer;
+    }
+
+  }
+
+}
+
+@media(max-width: 640px) {
+
+  .form-gifts {
+    max-width: 280px;
+
+    &:before,
+    &:after {
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      top: 135px;
+    }
+
+    &:before {
+      border-left: 20px solid #e53072;
+      left: 10px;
+    }
+
+    &:after {
+      border-right: 20px solid #e53072;
+      right: 10px;
+    }
+
+    .call-form {
+      font-size: 24px;
+    }
+
+  }
+
+  .gifts-wrap {
+    border-radius: 25px;
+
+    &:before,
+    &:after {
+      padding-top: 35%;
+      background-size: 100% 100%;
+    }
+
+  }
+
+  .gifts-list {
+    height: 255px;
+    padding: 0;
+  }
+
+  .gift-item {
+    height: 85px!important;
+    border-bottom: none!important;
+    margin: 0;
+
+    h3 {
+      font-size: 18px;
+      padding-left: 0;
+      padding-right: 15px;
+
+      br {
+        display: none;
+      }
+
+    }
+
+  }
+
+  .gift-icon {
+    width: 45px;
+    margin: 0 20px;
+    flex-shrink: 0;
+
+    &:after {
+      display: none;
+    }
+
   }
 
 }

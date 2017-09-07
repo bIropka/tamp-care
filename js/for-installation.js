@@ -99,21 +99,24 @@ gifts.slick({
     vertical: true,
     arrows: false,
     slidesToShow: 3,
-    swipe: false
+    swipe: false,
+    speed: 4000
 });
 
-$('.gifts-control span').click(function() {
+$('.gifts-control .control').click(function() {
 
-    curTime = randomInteger(30, 100) * 100;
+    $(this).parent().addClass('active');
+
     curNumber = randomInteger(5, 10);
 
-    gifts.slick('slickSetOption', 'speed', curTime, true);
     gifts.slick('slickSetOption', 'slidesToScroll', curNumber);
     gifts.slick('slickNext');
 
 });
 
 gifts.on('afterChange', function(event, slick, currentSlide){
+    $('.gifts-control').removeClass('active');
+    formAnimate();
     $('#gifts-gift').attr('value', $('.gifts-list .slick-current + .slick-active').find('h3').text());
 });
 
@@ -121,4 +124,11 @@ function randomInteger(min, max) {
     var rand = min - 0.5 + Math.random() * (max - min + 1);
     rand = Math.round(rand);
     return rand;
+}
+
+function formAnimate() {
+    $('.form-gifts').addClass('active');
+    setInterval(function() {
+        $('.form-gifts').removeClass('active');
+    }, 1000);
 }
