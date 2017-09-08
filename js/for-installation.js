@@ -2,6 +2,22 @@
 /* installation scripts */
 /***********************/
 
+if ($(window).width() < 768) {
+    $('.factors-form h2').prependTo('.form-installation-cost');
+} else {
+    $('.form-installation-cost h2').prependTo('.factors-form');
+}
+
+$(window).resize(function() {
+
+    if ($(window).width() < 768) {
+        $('.factors-form h2').prependTo('.form-installation-cost');
+    } else {
+        $('.form-installation-cost h2').prependTo('.factors-form');
+    }
+
+});
+
 /* countdown */
 
 var curDate = new Date();
@@ -116,7 +132,6 @@ $('.gifts-control .control').click(function() {
 
 gifts.on('afterChange', function(event, slick, currentSlide){
     $('.gifts-control').removeClass('active');
-    formAnimate();
     $('#gifts-gift').attr('value', $('.gifts-list .slick-current + .slick-active').find('h3').text());
 });
 
@@ -124,11 +139,4 @@ function randomInteger(min, max) {
     var rand = min - 0.5 + Math.random() * (max - min + 1);
     rand = Math.round(rand);
     return rand;
-}
-
-function formAnimate() {
-    $('.form-gifts').addClass('active');
-    setInterval(function() {
-        $('.form-gifts').removeClass('active');
-    }, 1000);
 }

@@ -11013,6 +11013,10 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     text-transform: uppercase;
     text-align: center;
   }
+  .form-installation-cost h2 {
+    font-size: 24px;
+    color: #2366c9;
+  }
 }
 @media (max-width: 540px) {
   .form-installation-cost {
@@ -11191,7 +11195,10 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .form-cost button:hover {
   background: linear-gradient(to top, #fb5d97, #e53072 40%);
 }
-@media (max-width: 1170px) {
+@media (max-width: 1200px) {
+  .calculate-cost {
+    padding: 0;
+  }
   .calculate-cost h2 {
     text-align: center;
   }
@@ -11459,11 +11466,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   position: absolute;
   top: 180px;
   z-index: 11;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
 }
 .form-gifts:before {
   border-left: 40px solid #e53072;
@@ -11472,12 +11474,6 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .form-gifts:after {
   border-right: 40px solid #e53072;
   right: 10px;
-}
-.form-gifts.active:before {
-  left: 20px;
-}
-.form-gifts.active:after {
-  right: 20px;
 }
 .form-gifts .call-form,
 .form-gifts button[type="submit"] {
