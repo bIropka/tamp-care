@@ -89,6 +89,12 @@ $(window).ready(function () {
         $('.window-consultation').fadeIn();
     });
 
+    $('.slider-coupons .call-form').click(function() {
+
+        $(this).siblings('.coupon-form-wrap').fadeIn().css('display', 'flex');
+
+    });
+
     $('.window').click(function (event) {
         $target = $(event.target);
         if (!$target.closest($('.window-inner')).length) {
@@ -96,6 +102,16 @@ $(window).ready(function () {
         }
         if ($target.hasClass('close-window')){
             $('.window').fadeOut();
+        }
+    });
+
+    $('.coupon-form-wrap').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('form')).length) {
+            $('.coupon-form-wrap').fadeOut();
+        }
+        if ($target.hasClass('close-window')){
+            $('.coupon-form-wrap').fadeOut();
         }
     });
 
@@ -209,9 +225,19 @@ $(window).ready(function () {
         ]
     });
 
-    $('.slider-coupons').slick({
-        dots: true,
-        initialSlide: 2
+    if ($(window).width() < 768) {
+        $('.slider-coupons').slick('unslick');
+    } else {
+        $('.slider-coupons').slick({
+            dots: true,
+            initialSlide: 2
+        });
+    }
+
+    $(window).resize(function() {
+        if ($(window).width() < 768) {
+            $('.slider-coupons').slick('unslick');
+        }
     });
 
     $('.slider-reviews').slick({
