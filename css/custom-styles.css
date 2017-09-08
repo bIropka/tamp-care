@@ -3280,7 +3280,7 @@ header[role='banner'] .burger {
   header[role='banner'] nav {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 70px;
@@ -3291,6 +3291,7 @@ header[role='banner'] .burger {
     -ms-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
+    overflow: auto;
   }
   header[role='banner'] nav a {
     display: block;
@@ -3301,7 +3302,7 @@ header[role='banner'] .burger {
     transform: none;
     background: none;
     border-bottom: 1px solid #454950;
-    padding: 0 20px 0 50px;
+    padding: 0 20px;
   }
   header[role='banner'] nav a:last-of-type {
     border-bottom: none;
@@ -3325,12 +3326,12 @@ header[role='banner'] .burger {
 }
 .nav-services-list {
   display: none;
-  padding: 0 30px;
+  padding: 0 15px;
   border-bottom: 1px solid #454950;
 }
 .nav-services-list .our-service-item {
   display: block;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 10px 15px 0;
 }
 .nav-services-list .our-service-item .our-services-list-link {
   padding-left: 20px;
@@ -3347,7 +3348,12 @@ header[role='banner'] .burger {
   padding-top: 15px;
 }
 .nav-services-list .our-service-item ul li {
-  padding: 5px 20px;
+  padding: 5px 0;
+  display: block;
+}
+.nav-services-list .our-service-item ul li a {
+  padding: 0 10px 0 45px;
+  white-space: normal;
 }
 .nav-services-list .our-service-item .image-wrap {
   display: none;
@@ -4079,6 +4085,30 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .heating-page .top-block {
   background: url(../source/images/background-heating-top.jpg) no-repeat center top;
   background-size: cover;
+}
+.heating-page .cooling-top-list {
+  margin-top: 75px;
+}
+.heating-page .cooling-top-item .image-wrap {
+  width: 160px;
+}
+.heating-page .cooling-top-item .icon {
+  top: 30px;
+}
+.heating-page .cooling-top-item .decor {
+  top: 85px;
+  height: 180px;
+}
+@media (max-width: 768px) {
+  .heating-page .cooling-top-item .cooling-top-link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .heating-page .top-block {
+    background: url(../source/images/background-heating-top-mobile.jpg) no-repeat center top;
+    background-size: cover;
+  }
 }
 .cooling-top-list {
   display: flex;
@@ -11758,10 +11788,8 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   .calculate-cost h2 {
     font-size: 32px;
   }
-}
-@media (max-width: 480px) {
   .calculate-cost-inner {
-    padding: 20px 20px 0;
+    padding: 0 20px;
   }
   .calculate-cost-inner > img {
     display: none;
@@ -11770,11 +11798,37 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
     width: calc(100% + 40px);
     max-width: none;
     margin-left: -20px;
+    margin-top: 0;
     border: none;
     box-shadow: none;
+    padding: 25px 20px;
   }
   .form-cost button {
     font-size: 24px;
+  }
+  .form-cost .title,
+  .form-cost .sub-title {
+    display: none;
+  }
+  .form-cost h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .form-cost h2 br {
+    display: none;
+  }
+  .form-cost h5 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .form-cost p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .form-cost .timer-wrap {
+    margin-top: 20px;
   }
 }
 /***********************************************************************************************************************

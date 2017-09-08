@@ -4,16 +4,32 @@
 
 if ($(window).width() < 768) {
     $('.factors-form h2').prependTo('.form-installation-cost');
+    $('.calculate-cost-data > p').prependTo('.form-cost');
+    $('.calculate-cost-data h5').prependTo('.form-cost');
+    $('.calculate-cost-inner h2').prependTo('.form-cost');
+    $('.calculate-cost-data .timer-wrap').appendTo('.form-cost');
 } else {
     $('.form-installation-cost h2').prependTo('.factors-form');
+    $('.form-cost p').prependTo('.calculate-cost-data');
+    $('.form-cost h5').prependTo('.calculate-cost-data');
+    $('.form-cost h2').prependTo('.calculate-cost-inner');
+    $('.form-cost .timer-wrap').appendTo('.calculate-cost-data');
 }
 
 $(window).resize(function() {
 
     if ($(window).width() < 768) {
         $('.factors-form h2').prependTo('.form-installation-cost');
+        $('.calculate-cost-data > p').prependTo('.form-cost');
+        $('.calculate-cost-data h5').prependTo('.form-cost');
+        $('.calculate-cost-inner h2').prependTo('.form-cost');
+        $('.calculate-cost-data .timer-wrap').appendTo('.form-cost');
     } else {
         $('.form-installation-cost h2').prependTo('.factors-form');
+        $('.form-cost p').prependTo('.calculate-cost-data');
+        $('.form-cost h5').prependTo('.calculate-cost-data');
+        $('.form-cost h2').prependTo('.calculate-cost-inner');
+        $('.form-cost .timer-wrap').appendTo('.calculate-cost-data');
     }
 
 });
