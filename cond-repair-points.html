@@ -608,7 +608,7 @@
             </a>
             <ul>
                 <li><a href="maintenance.html">Furnace Maintenance</a></li>
-                <li><a href="#">Furnace Repair</a></li>
+                <li><a href="furnace-repair.html">Furnace Repair</a></li>
                 <li><a href="#">Furnace Replacement</a></li>
             </ul>
         </div>
@@ -651,51 +651,7 @@
 <script src="lib/slick/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
 <script src="js/custom-scripts.js"></script>
-
-<script>
-
-    if($(window).width() > 1230) {
-        if ($(window).scrollTop() > $('.points').offset().top + 70)  {
-            showPoints();
-        }
-    }
-
-    $(window).scroll(function() {
-
-        if($(window).width() > 1230) {
-            if ($(window).scrollTop() > $('.points').offset().top + 70)  {
-                showPoints();
-            }
-        }
-
-    });
-
-    var pointsItems = $('.point-list').find('.point-item');
-
-    function showPoints() {
-
-        setTimeout(function() {
-            $('.points').addClass('active');
-        }, 2500);
-
-        var counter = 0;
-
-        (function showPointsInner() {
-
-            $(pointsItems[counter++]).addClass('active');
-
-            if (counter >= pointsItems.length) {
-                counter = 0;
-                return;
-            }
-
-            setTimeout(showPointsInner, 100);
-
-        })();
-
-    }
-
-</script>
+<script src="js/for-points.js"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
