@@ -137,7 +137,7 @@ gifts.slick({
 
 $('.gifts-control .control').click(function() {
 
-    $(this).parent().addClass('active');
+    $(this).parents('.gifts-control').addClass('active');
 
     curNumber = randomInteger(5, 10);
 
