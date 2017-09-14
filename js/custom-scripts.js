@@ -203,6 +203,40 @@ $(window).ready(function () {
         ]
     });
 
+    $('.slider-clients-furnace').slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 981,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+
+        ]
+    });
+
     $('.projects-installation .slider').slick({
         responsive: [
             {

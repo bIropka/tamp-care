@@ -302,3 +302,41 @@
   }
 
 }
+
+.page-furnace .steps {
+  background: url(../source/images/background-guarantees.png) no-repeat left bottom;
+  background-size: cover;
+
+  h2 {
+    color: @color-blue;
+  }
+
+  .step-list {
+    background: url(../source/images/condition-repair-step-list-dark.png) no-repeat center;
+  }
+
+  .step-item {
+
+    &:before {
+      background: @color-blue;
+    }
+
+    h3 {
+      color: @color-crimson-medium;
+    }
+
+    p {
+      color: #333;
+    }
+
+  }
+
+  @media(max-width: 1200px) {
+
+    .step-list {
+      background: none;
+    }
+
+  }
+
+}

@@ -5089,11 +5089,13 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
 .our-clients h2 {
   color: #2366c9;
 }
+.our-clients .slider-clients-furnace,
 .our-clients .slider-clients {
   display: block;
   width: 80%;
   margin: 100px auto 30px;
 }
+.our-clients .slider-clients-furnace .slide,
 .our-clients .slider-clients .slide {
   min-height: 110px;
   outline: 0;
@@ -5101,6 +5103,7 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   position: relative;
   margin: 0 10px;
 }
+.our-clients .slider-clients-furnace .slide img,
 .our-clients .slider-clients .slide img {
   display: block;
   width: auto;
@@ -5113,18 +5116,23 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   right: 0;
   margin: auto;
 }
+.our-clients .slider-clients-furnace .slide:hover,
 .our-clients .slider-clients .slide:hover,
+.our-clients .slider-clients-furnace .slide:active,
 .our-clients .slider-clients .slide:active {
   outline: 0;
 }
 @media (max-width: 768px) {
+  .our-clients .slider-clients-furnace,
   .our-clients .slider-clients {
     width: calc(100% - 80px);
     margin: 30px auto;
   }
+  .our-clients .slider-clients-furnace .slick-prev,
   .our-clients .slider-clients .slick-prev {
     left: -33px;
   }
+  .our-clients .slider-clients-furnace .slick-next,
   .our-clients .slider-clients .slick-next {
     right: -33px;
   }
@@ -9235,6 +9243,30 @@ footer[role='contentinfo'] .footer-bottom .copyrights br {
   }
   .steps .callback span {
     font-size: 16px;
+  }
+}
+.page-furnace .steps {
+  background: url(../source/images/background-guarantees.png) no-repeat left bottom;
+  background-size: cover;
+}
+.page-furnace .steps h2 {
+  color: #2366c9;
+}
+.page-furnace .steps .step-list {
+  background: url(../source/images/condition-repair-step-list-dark.png) no-repeat center;
+}
+.page-furnace .steps .step-item:before {
+  background: #2366c9;
+}
+.page-furnace .steps .step-item h3 {
+  color: #e53072;
+}
+.page-furnace .steps .step-item p {
+  color: #333;
+}
+@media (max-width: 1200px) {
+  .page-furnace .steps .step-list {
+    background: none;
   }
 }
 /***********************************************************************************************************************
