@@ -25,6 +25,10 @@
 
 </head>
 
+<script>
+    fbq('track', 'Lead');
+</script>
+
 <body>
 
 <div class="wrapper page-thanks" id="home">
@@ -40,7 +44,7 @@
             </div>
 
             <nav>
-                <a href="#home"><span>HOME</span></a>
+                <a href="index.html"><span>HOME</span></a>
                 <a class="nav-services"><span>SERVICES</span></a>
                 <a href="index.html#why-us"><span>WHY US</span></a>
                 <a href="index.html#about-us"><span>ABOUT</span></a>
@@ -78,8 +82,8 @@
 
                 <p>Get a Free Access to our <a href="#">monthly maintenace tips</a> <br>& discount offers.</p>
 
-                <form action="#" class="form-thanks">
-                    <label><input type="email" placeholder="Email"></label>
+                <form action="php/mail-thanks.php" class="form-thanks" id="form-thanks">
+                    <label><input type="email" name="thanks-email" id="thanks-email" placeholder="Email"></label>
                     <button type="submit">SING UP</button>
                     <p>Free content. Unsubscribe at any time. <br>No spam.</p>
                 </form>

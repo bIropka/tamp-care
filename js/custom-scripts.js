@@ -123,25 +123,30 @@ $(window).ready(function () {
 
             var formNm = $('#' + formID);
             var scriptFile;
-            if (formID == 'form-consultation') scriptFile = 'php/mail-consultation.php';
-            if (formID == 'form-cooling-consultation') scriptFile = 'php/mail-cooling-consultation.php';
-            if (formID == 'form-appointment') scriptFile = 'php/mail-appointment.php';
-            if (formID == 'form-request-service') scriptFile = 'php/mail-request-service.php';
-            if (formID == 'form-ac-control') scriptFile = 'php/mail-ac-control.php';
-            if (formID == 'form-ac-control-2') scriptFile = 'php/mail-ac-control-2.php';
-            if (formID == 'form-fvac-expert') scriptFile = 'php/mail-fvac-expert.php';
-            if (formID == 'coupon-form-1') scriptFile = 'php/mail-coupon-1.php';
-            if (formID == 'coupon-form-2') scriptFile = 'php/mail-coupon-2.php';
-            if (formID == 'coupon-form-3') scriptFile = 'php/mail-coupon-3.php';
-            if (formID == 'form-cost') scriptFile = 'php/mail-cost.php';
-            if (formID == 'form-installation-cost') scriptFile = 'php/mail-calculator.php';
-            if (formID == 'form-gifts') scriptFile = 'php/mail-gifts.php';
+            if (formID === 'form-consultation') scriptFile = 'php/mail-consultation.php';
+            if (formID === 'form-cooling-consultation') scriptFile = 'php/mail-cooling-consultation.php';
+            if (formID === 'form-appointment') scriptFile = 'php/mail-appointment.php';
+            if (formID === 'form-request-service') scriptFile = 'php/mail-request-service.php';
+            if (formID === 'form-ac-control') scriptFile = 'php/mail-ac-control.php';
+            if (formID === 'form-ac-control-2') scriptFile = 'php/mail-ac-control-2.php';
+            if (formID === 'form-fvac-expert') scriptFile = 'php/mail-fvac-expert.php';
+            if (formID === 'coupon-form-1') scriptFile = 'php/mail-coupon-1.php';
+            if (formID === 'coupon-form-2') scriptFile = 'php/mail-coupon-2.php';
+            if (formID === 'coupon-form-3') scriptFile = 'php/mail-coupon-3.php';
+            if (formID === 'form-cost') scriptFile = 'php/mail-cost.php';
+            if (formID === 'form-installation-cost') scriptFile = 'php/mail-calculator.php';
+            if (formID === 'form-gifts') scriptFile = 'php/mail-gifts.php';
+            if (formID === 'form-thanks') scriptFile = 'php/mail-thanks.php';
             $.ajax({
                 type: "POST",
                 url: scriptFile,
                 data: formNm.serialize(),
                 success: function (data) {
-                    $(location).attr('href', 'http://tempcare.us/thanks.html');
+                    if (formID === 'form-thanks') {
+                        $(location).attr('href', 'http://tempcare.us');
+                    } else {
+                        $(location).attr('href', 'http://tempcare.us/thanks.html');
+                    }
                 },
                 error: function (data) {
                     $('.window').fadeOut();
